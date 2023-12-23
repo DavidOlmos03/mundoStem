@@ -22,6 +22,6 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('project1_1 app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('mundoStem app is running!');
   });
 });
