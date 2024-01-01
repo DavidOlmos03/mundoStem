@@ -1,13 +1,13 @@
-:host {
-    height: 220vh;
+  :host {
+    height: 250vh;
     display: flex;
   }
-  
-  .col-lg-3 {
+
+  .inside {
     overflow-y: auto;
-    max-height: 220vh;
+    max-height: 280vh;
   }
-  
+
   .col-lg-9 {
     padding: 20px;
   }
@@ -30,5 +30,5 @@
 
 /* Cambia el color del pulgar de la barra de desplazamiento cuando se desplaza */
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #555;  
+  background-color: #555;
 }
