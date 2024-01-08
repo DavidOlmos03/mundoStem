@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container-fluid lateral-container" *ngIf="!isCarouselMode">
   <div class="row">
     <div class="inside bg-light">
       <!-- Lateral container content goes here -->
@@ -19,10 +19,96 @@
           <div class="container">
             <img src="https://cdn.britannica.com/08/3008-004-F87BC031/Godfrey-Kneller-Isaac-Newton-portrait-1689.jpg?s=1500x700&q=85" class="img-fluid" alt="Imagen">
             <a href="https://www.britannica.com/biography/Isaac-Newton">Isaac Newton<br></a>
-            <a>Was an English mathematician, physicist, astronomer, alchemist, theologian, and author who was described in his time as a natural philosopher. He was a key figure in the Scientific Revolution and the Enlightenment that followed. His pioneering book Philosophiæ Naturalis Principia Mathematica (Mathematical Principles of Natural Philosophy), first published in 1687, consolidated many previous results and established classical mechanics.[17][18] Newton also made seminal contributions to optics, and shares credit with German mathematician Gottfried Wilhelm Leibniz for developing infinitesimal calculus.</a>
+            <a>Was an English mathematician, physicist, astronomer, alchemist, theologian, and author who was described in his time as a natural philosopher. He was a key figure in the Scientific Revolution and the Enlightenment that followed. 
+              His pioneering book Philosophiæ Naturalis Principia Mathematica (Mathematical Principles of Natural Philosophy), first published in 1687, consolidated many previous results and established classical mechanics.
+              [17][18] Newton also made seminal contributions to optics, and shares credit with German mathematician Gottfried Wilhelm Leibniz for developing infinitesimal calculus.</a>
           </div>
       </div>
     </div>
   </div>
 </div>
+
+
+ <div id="carouselExampleCaptions" class="carousel slide" *ngIf="isCarouselMode">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="container">
+        <img src="https://cdn.britannica.com/27/190027-050-A9A35298/Carl-Friedrich-Gauss-engraving.jpg" class="img-fluid" alt="Imagen">
+        <a href="https://www.britannica.com/biography/Carl-Friedrich-Gauss">Carl Friedrich Gauss</a>
+        <p>
+          Was a German mathematician, geodesist, and physicist who made significant contributions to many fields in mathematics and science.
+          Gauss had an exceptional influence in many fields of mathematics and science and ranks among history's most influential mathematicians.
+        </p>
+      </div>
+
+
+
+
+      <!--<img src="https://cdn.britannica.com/27/190027-050-A9A35298/Carl-Friedrich-Gauss-engraving.jpg" class="img-fluid" alt="Imagen">
+      <div class="carousel-caption">
+        <h5>Carl Friedrich Gauss</h5>
+        <p>Was a German mathematician, geodesist, and physicist who made significant contributions to many fields in mathematics and science.
+          Gauss had an exceptional influence in many fields of mathematics and science and ranks among history's most influential mathematicians.</p>
+      </div>-->
+    </div>
+    <div class="carousel-item">
+      <div class="container">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Evariste_Galois.jpg/220px-Evariste_Galois.jpg" class="img-fluid" alt="Imagen">
+        <a href="https://www.britannica.com/biography/Evariste-Galois">Évariste Galois</a>
+        <p>Was a French mathematician and political activist. While still in his teens, he was able to determine a necessary and sufficient condition for a polynomial to be
+           solvable by radicals, thereby solving a problem that had been open for 350 years. His work laid the foundations for Galois theory and group theory,[2] 
+           two major branches of abstract algebra. He was a staunch republican and was heavily involved in the political turmoil that surrounded the French Revolution of 1830.</p>
+      </div>
+
+
+
+
+
+      <!--<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Evariste_Galois.jpg/220px-Evariste_Galois.jpg" class="img-fluid" alt="Imagen">
+      <div class="carousel-caption">
+        <h5>Évariste Galois</h5>
+        <p>Was an English mathematician, physicist, astronomer, alchemist, theologian, and author who was described in his time as a natural philosopher. He was a key figure
+          in the Scientific Revolution and the Enlightenment that followed. 
+          His pioneering book Philosophiæ Naturalis Principia Mathematica (Mathematical Principles of Natural Philosophy),first published in 1687, consolidated many previous results and established classical mechanics.
+          [17][18] Newton also made seminal contributions to optics, and shares credit with German mathematician Gottfried Wilhelm Leibniz for developing infinitesimal calculus.
+
+        </p>
+      </div>-->
+    </div>
+    <div class="carousel-item">
+      <div class="container">
+        <img src="https://cdn.britannica.com/08/3008-004-F87BC031/Godfrey-Kneller-Isaac-Newton-portrait-1689.jpg?s=1500x700&q=85" class="img-fluid" alt="Imagen">
+        <a href="https://www.britannica.com/biography/Isaac-Newton">Isaac Newton</a>
+        <p>Was an English mathematician, physicist, astronomer, alchemist, theologian, and author who was described in his time as a natural philosopher. He was a key figure in the Scientific Revolution and the Enlightenment that followed. 
+          His pioneering book Philosophiæ Naturalis Principia Mathematica (Mathematical Principles of Natural Philosophy), first published in 1687, consolidated many previous results and established classical mechanics.
+          [17][18] Newton also made seminal contributions to optics, and shares credit with German mathematician Gottfried Wilhelm Leibniz for developing infinitesimal calculus.</p>
+      </div>
+
+
+
+
+      <!--<img src="https://cdn.britannica.com/08/3008-004-F87BC031/Godfrey-Kneller-Isaac-Newton-portrait-1689.jpg?s=1500x700&q=85" class="img-fluid" alt="Imagen">
+      <div class="carousel-caption">
+        <h5>Isaac Newton</h5>
+        <p>Was an English mathematician, physicist, astronomer, alchemist, theologian, and author who was described in his time as a natural philosopher. He was a key figure in the Scientific Revolution and the Enlightenment that followed. 
+          His pioneering book Philosophiæ Naturalis Principia Mathematica (Mathematical Principles of Natural Philosophy), first published in 1687, consolidated many previous results and established classical mechanics.
+          [17][18] Newton also made seminal contributions to optics, and shares credit with German mathematician Gottfried Wilhelm Leibniz for developing infinitesimal calculus.
+       </p>
+      </div>-->
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+ </div>
 
