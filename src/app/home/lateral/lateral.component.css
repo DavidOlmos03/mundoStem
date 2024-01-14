@@ -38,13 +38,40 @@ background-color: #555;
 /* Estilo para el carrusel */
 #carouselExampleCaptions {
   margin-top: auto; /* Ajusta el margen superior según sea necesario */
- 
-  
+  height: 500px;
+  width: 85%;
+  margin:auto;
+  display: flex;
+  background-color:transparent;
 }
+
 
 /* Estilo para la imagen en el carrusel */
 .carousel-item img {
-  width: 100%; /* Ajusta el ancho de la imagen al 100% del contenedor */
-  height: auto; /* Ajusta la altura automáticamente proporcionalmente al ancho */
+  height: 500px; /* Ajusta el ancho de la imagen al 100% del contenedor */
+  /*height: auto;*/ /* Ajusta la altura automáticamente proporcionalmente al ancho */
+  margin:auto;
+  display: flex;
+  filter: blur(1.5px);
 }
 
+.carousel-item p{
+  color:rgb(0, 0, 0);
+  font-weight: bold;
+  text-align: justify;
+}
+
+/* Cambiar el color de los botones del carrusel */
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: #ffffff; /* Cambia el color de fondo según tus preferencias */
+  color: #ffffff; /* Cambia el color del texto según tus preferencias */
+  border: none; /* Elimina el borde si lo deseas */
+}
+
+/* Cambiar el color de los botones del carrusel al pasar el ratón */
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background-color: #56565643; /* Cambia el color de fondo al pasar el ratón según tus preferencias */
+  color: #ffffff; /* Cambia el color del texto al pasar el ratón según tus preferencias */
+}
