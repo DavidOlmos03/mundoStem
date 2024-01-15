@@ -41,7 +41,8 @@ background-color: #555;
   height: 500px;
   width: 85%;
   margin:auto;
-  display: flex;
+  z-index: 0;
+  /*display: flex;*/
   background-color:transparent;
 }
 
@@ -51,7 +52,7 @@ background-color: #555;
   height: 500px; /* Ajusta el ancho de la imagen al 100% del contenedor */
   /*height: auto;*/ /* Ajusta la altura automáticamente proporcionalmente al ancho */
   margin:auto;
-  display: flex;
+  /*display: flex;*/
   filter: blur(1.5px);
 }
 
@@ -75,3 +76,10 @@ background-color: #555;
   background-color: #56565643; /* Cambia el color de fondo al pasar el ratón según tus preferencias */
   color: #ffffff; /* Cambia el color del texto al pasar el ratón según tus preferencias */
 }
+
+p{
+  line-height: 1.5;
+  text-align: justify;
+  font-family: oblique;
+}
+

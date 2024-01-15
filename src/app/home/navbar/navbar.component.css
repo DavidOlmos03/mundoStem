@@ -3,31 +3,25 @@
     MENU
 */
 
+nav {
+  position: fixed;
+  width: 98%;
+  height: 65px;
+}
+
 .buttons{
   margin-left: 30%;
 }
+
+/*
 .login{
   position: absolute;
   width: 100%;
   z-index: 2;
 }
+
 .signup{
   position: absolute;
   width: 100%;
   z-index: 2;
-}
-
-:host {
-  display: block;
-  position: fixed;
-  background-color: #ffffff; /* Cambia el color de fondo según tus preferencias */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Agrega sombra según sea necesario */
-  transition: background-color 0.3s, box-shadow 0.3s;
-}
-
-:host(.scrolled) {
-  margin-top: 0%;
-  padding-top: 0%;
-  background-color: #f2f2f2; /* Cambia el color de fondo cuando se desplaza */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Cambia la sombra cuando se desplaza */
-}
+}*/

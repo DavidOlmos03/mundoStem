@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.css','./header.component.scss']
 })
 export class HeaderComponent {
-
+  mostrarLogin = false;
+  mostrarSingup = false;
+  login() {
+    this.mostrarLogin = !this.mostrarLogin;
+    this.mostrarSingup = false;
+  }
+  signup() {
+    this.mostrarSingup = !this.mostrarSingup;
+    this.mostrarLogin = false;
+  }
 }

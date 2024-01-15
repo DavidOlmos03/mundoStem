@@ -9,6 +9,7 @@ import { HeaderMechanicsComponent } from './mechanics/header/header.component';
 import { SharedModule } from '../shared/shared.module';
 import { HeaderComputationalComponent } from './computational/header/header.component';
 import { HeaderMotivationComponent } from './motivation/header/header.component';
+import { ContentComponent } from './mechanics/content/content.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { HeaderMotivationComponent } from './motivation/header/header.component'
     HeaderMechanicsComponent,
     HeaderElectromagnetismComponent,
     HeaderComputationalComponent,
-    HeaderMotivationComponent
+    HeaderMotivationComponent,
+    ContentComponent
   ],
   imports: [
     CommonModule,
