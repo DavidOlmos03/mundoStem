@@ -1,0 +1,22 @@
+/*.page-container{
+  height: auto;
+  display: block;
+  width: 100%;
+}
+*/
+/*
+.header{
+  display: block;
+  position: fixed;
+  width: 100%;
+}*/
+.header{
+  z-index: 1;
+}
+.page-container{
+  z-index: 0;
+}
+body{
+  margin: auto;
+  height: auto;
+}

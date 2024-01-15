@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+//import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -16,4 +17,11 @@ export class NavbarComponent {
     this.mostrarSingup = !this.mostrarSingup;
     this.mostrarLogin = false;
   }
+
+  /**
+   * Comportamiento del navbar al hacer scroll
+   */
+
+
+
 }

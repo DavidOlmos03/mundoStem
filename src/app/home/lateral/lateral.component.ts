@@ -19,9 +19,17 @@ import { Component, OnInit, OnDestroy, Renderer2, ElementRef } from '@angular/co
 export class LateralComponent implements OnInit, OnDestroy {
   private resizeListener: () => void = () => {}; // Inicialización por defecto
   public isCarouselMode: boolean = false;
+  mostrarTextoCompleto = false;
+
 
   constructor(private renderer: Renderer2, private el: ElementRef) {}
 
+  toggleTextoCompleto() {
+    this.mostrarTextoCompleto = !this.mostrarTextoCompleto;
+  }
+  toggleOcultarTexto(){
+    this.mostrarTextoCompleto = false;
+  }
   ngOnInit(): void {
     // Escucha el evento de cambio de tamaño de pantalla
     this.resizeListener = this.renderer.listen('window', 'resize', () => {
@@ -53,23 +61,23 @@ export class LateralComponent implements OnInit, OnDestroy {
   private convertToCarousel(): void {
     // Ocultar el lateral normal
     this.renderer.setStyle(this.el.nativeElement.querySelector('.lateral-container'), 'display', 'none');
-  
+
     // Mostrar el carrusel
     this.renderer.setStyle(this.el.nativeElement.querySelector('#carouselExampleCaptions'), 'display', '');
-  
+
     console.log('Convertir a carrusel');
   }
-  
+
   private convertToNormal(): void {
     // Ocultar el carrusel
     this.renderer.setStyle(this.el.nativeElement.querySelector('#carouselExampleCaptions'), 'display', 'none');
-  
+
     // Mostrar el lateral normal
     this.renderer.setStyle(this.el.nativeElement.querySelector('.lateral-container'), 'display', '');
-  
+
     console.log('Convertir a lateral normal');
   }
 
 
-  
+
 }
