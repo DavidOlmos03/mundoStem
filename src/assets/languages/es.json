@@ -1,0 +1,36 @@
+{
+  "navbar":{
+    "home":"Inicio",
+    "mathematics":"Matemáticas",
+    "math-list":{
+      "vectorGeo":"Geometria vectorial",
+      "algebra":"Álgebra",
+      "calculus":"Cálculo"
+    },
+    "physics":"Física",
+    "physics-list":{
+      "mechanics":"Mecánica",
+      "electromagnetism":"Electromagnetismo",
+      "computational":"Física computacional"
+    },
+    "programming":"Programación",
+    "programming-list":{
+      "segurity":"Seguridad Informática",
+      "blog":"Blog de programación"
+    },
+    "motivation":"Motivación",
+    "tutorials":"Tutoriales"
+  },
+  "home":{
+    "content":{
+      "language":"Cambiar idioma a:",
+      "whatMath":"¿Qué es la matemática pura?",
+      "whatMathText":"La matemática pura es el estudio de conceptos matemáticos independientemente de cualquier aplicación fuera de las matemáticas. Estos conceptos pueden originarse en preocupaciones del mundo real, y los resultados obtenidos pueden resultar más tarde útiles para aplicaciones prácticas, pero los matemáticos puros no están motivados principalmente por tales aplicaciones."
+    }
+  },
+  "about":{
+    "whoIam":"¿Quién soy?",
+    "student":"Un Estudiante de Desarrollo de Software ubicado en nuestra hermosa tierra",
+    "russell":"La buena vida es aquella inspirada por el amor y guiada por el conocimiento."
+  }
+}

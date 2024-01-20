@@ -10,6 +10,7 @@ import { SharedModule } from '../shared/shared.module';
 import { HeaderComputationalComponent } from './computational/header/header.component';
 import { HeaderMotivationComponent } from './motivation/header/header.component';
 import { ContentComponent } from './mechanics/content/content.component';
+import {YouTubePlayerModule} from '@angular/youtube-player';
 
 @NgModule({
   declarations: [
@@ -22,13 +23,16 @@ import { ContentComponent } from './mechanics/content/content.component';
     HeaderComputationalComponent,
     HeaderMotivationComponent,
     ContentComponent
+
   ],
   imports: [
     CommonModule,
-    SharedModule
+    SharedModule,
+    YouTubePlayerModule
   ],
   exports:[
 
   ]
 })
 export class PhysicsModule { }
+

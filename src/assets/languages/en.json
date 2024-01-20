@@ -1,0 +1,38 @@
+{
+  "navbar":{
+    "home":"Home",
+    "mathematics":"Mathematics",
+    "math-list":{
+      "vectorGeo":"Vector Geometry",
+      "algebra":"Algebra",
+      "calculus":"Calculus"
+    },
+    "physics":"Physics",
+    "physics-list":{
+      "mechanics":"Mechanics",
+      "electromagnetism":"Electromagnetism",
+      "computational":"Computational physics"
+    },
+    "programming":"Programming",
+    "programming-list":{
+      "segurity":"Informatic segurity",
+      "blog":"Programmer blog"
+    },
+    "motivation":"Motivation",
+    "tutorials":"Tutorials"
+  },
+  "home":{
+    "content":{
+      "language":"Change Language to:",
+      "whatMath":"What is pure math?",
+      "whatMathText":"Pure mathematics is the study of mathematical concepts independently of any application outside  mathematics.  These concepts may originate in real-world concerns, and the results obtained may later turn  out to be useful for practical applications, but pure mathematicians are not primarily motivated by  such applications."
+
+    }
+  },
+  "about":{
+    "whoIam":"Who am I ?",
+    "student":"A Software Development Student located in our lovely earth",
+    "russell":"The good life is one inspired by love and guided by knowledge."
+  }
+
+}

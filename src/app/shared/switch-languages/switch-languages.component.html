@@ -1,0 +1,6 @@
+<div class="container-switch row">
+  <p>{{'home.content.language'|translate}}</p>
+  <select class="form-select" (change)="onChange($event)" [(ngModel)]="selectedLanguage">
+    <option *ngFor="let option of options" [value]="option.value">{{option.display}}</option>
+  </select>
+</div>
