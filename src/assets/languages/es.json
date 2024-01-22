@@ -19,18 +19,51 @@
       "blog":"Blog de programación"
     },
     "motivation":"Motivación",
-    "tutorials":"Tutoriales"
+    "tutorials":"Tutoriales",
+    "login":"Ingresar",
+    "signup":"Registrarse"
+  },
+  "footer":{
+    "contact":"Contacto",
+    "aboutUs":"Sobre nosotros",
+    "termsConditions":"Términos y condiciones"
   },
   "home":{
+    "readMore":"...Leer más",
+    "readLess":"Leer menos",
     "content":{
       "language":"Cambiar idioma a:",
       "whatMath":"¿Qué es la matemática pura?",
-      "whatMathText":"La matemática pura es el estudio de conceptos matemáticos independientemente de cualquier aplicación fuera de las matemáticas. Estos conceptos pueden originarse en preocupaciones del mundo real, y los resultados obtenidos pueden resultar más tarde útiles para aplicaciones prácticas, pero los matemáticos puros no están motivados principalmente por tales aplicaciones."
+      "whatMathText":"La matemática pura es el estudio de conceptos matemáticos independientemente de cualquier aplicación fuera de las matemáticas. Estos conceptos pueden originarse en preocupaciones del mundo real, y los resultados obtenidos pueden resultar más tarde útiles para aplicaciones prácticas, pero los matemáticos puros no están motivados principalmente por tales aplicaciones.",
+      "instead":"Más bien, el atractivo se atribuye al desafío intelectual y la belleza estética de elaborar las consecuencias lógicas de los principios básicos. Si bien las matemáticas puras han existido como actividad al menos desde la antigua Grecia, el concepto se desarrolló alrededor del año 1900, después de la introducción de teorías con propiedades contrarias a la intuición (como las geometrías no euclidianas y la teoría de los conjuntos infinitos de Cantor), y el descubrimiento de paradojas aparentes (como funciones continuas que no son diferenciables en ninguna parte y la paradoja de Russell). Esto introdujo la necesidad de renovar el concepto de rigor matemático y reescribir todas las matemáticas en consecuencia, con un uso sistemático de métodos axiomáticos. Esto llevó a muchos matemáticos a centrarse en las matemáticas por sí mismas, es decir, en las matemáticas puras.",
+      "wikipedia":"Definición de wikipedia",
+      "goodVideo":"Buen video sobre matemáticas (español)",
+      "mathQuotes":"Algulas citas matemáticas",
+      "quote1Dirac":"Parece ser una de las características fundamentales de la naturaleza que las leyes físicas fundamentales se describen en términos de una teoría matemática de gran belleza y poder, y que se necesita un nivel matemático bastante alto para entenderla. Quizás te preguntes: ¿por qué la naturaleza se construye de esta manera? Sólo se puede responder que nuestro conocimiento actual parece mostrar que la naturaleza está construida de esa manera. Simplemente tenemos que aceptarlo. Quizás se podría describir la situación diciendo que Dios es un matemático de muy alto nivel y que utilizó matemáticas muy avanzadas para construir el Universo.",
+      "quote2Dirac":"Es más importante tener belleza en la ecuación que hacer ajustes en el experimento.",
+      "quoteNorth":"Concedamos que la búsqueda de las matemáticas es una locura divina del espíritu humano.",
+      "whatPhysics":"¿Qué es la física?",
+      "whatPhysicsText1":"La física es la ciencia natural que estudia la materia, sus constituyentes fundamentales, su movimiento y comportamiento a través del espacio y el tiempo, y las entidades relacionadas de energía y fuerza. La física es una de las disciplinas científicas más fundamentales y su principal objetivo es comprender cómo se comporta el universo.",
+      "whatPhysicsText2":"La física es una de las disciplinas académicas más antiguas y, gracias a la inclusión de la astronomía, quizás la más antigua. Durante gran parte de los últimos dos milenios, la física, la química, la biología y ciertas ramas de las matemáticas fueron parte de la filosofía natural, pero durante la Revolución Científica del siglo XVII estas ciencias naturales surgieron como esfuerzos de investigación únicos por derecho propio. La física se cruza con muchas áreas interdisciplinarias de investigación, como la biofísica y la química cuántica, y los límites de la física no están definidos rígidamente. Las nuevas ideas en física a menudo explican los mecanismos fundamentales estudiados por otras ciencias y sugieren nuevas vías de investigación en éstas y otras disciplinas académicas como las matemáticas y la filosofía.",
+      "whatPhysicsText3":"Los avances en física a menudo permiten avances en nuevas tecnologías. Por ejemplo, los avances en la comprensión del electromagnetismo, la física del estado sólido y la física nuclear condujeron directamente al desarrollo de nuevos productos que han transformado dramáticamente la sociedad moderna, como la televisión, las computadoras, los electrodomésticos y las armas nucleares; los avances en termodinámica condujeron al desarrollo de la industrialización; y los avances en la mecánica inspiraron el desarrollo del cálculo."
+    },
+    "lateral":{
+      "Gauss1":"Fue un matemático, geodesta y físico alemán que hizo importantes contribuciones en muchos campos de las matemáticas y las ciencias. ",
+      "Gauss2":"Gauss tuvo una influencia excepcional en muchos campos de las matemáticas y la ciencia y se encuentra entre los matemáticos más influyentes de la historia.",
+      "Galois1":"Fue un matemático y activista político francés. Cuando aún era un adolescente, pudo determinar una condición necesaria y suficiente",
+      "Galois2": "para que un polinomio pudiera resolverse mediante radicales, resolviendo así un problema que había estado abierto durante 350 años. Su trabajo sentó las bases de la teoría de Galois y la teoría de grupos, dos ramas principales del álgebra abstracta. Era un republicano acérrimo y estuvo muy involucrado en la agitación política que rodeó la Revolución Francesa de 1830.",
+      "Newton1":"Fue un matemático, físico, astrónomo, alquimista, teólogo y autor inglés que fue descrito en su época como un filósofo natural. ",
+      "Newton2":"Fue una figura clave en la Revolución Científica y la Ilustración que siguió. Su libro pionero Philosophiæ Naturalis Principia Mathematica (Principios matemáticos de la filosofía natural), publicado por primera vez en 1687, consolidó muchos resultados anteriores y estableció la mecánica clásica. Newton también hizo contribuciones fundamentales a la óptica y comparte el mérito con el matemático alemán Gottfried Wilhelm Leibniz por desarrollar el cálculo infinitesimal.",
+      "Ramanujan":"Fue un matemático indio cuyas contribuciones a la teoría de números incluyen descubrimientos pioneros de las propiedades de la función de partición.",
+      "Pythagoras1":"Filósofo, matemático griego y fundador de la hermandad pitagórica que, aunque de carácter religioso, ",
+      "Pythagoras2":"formuló principios que influyeron en el pensamiento de Platón y Aristóteles y contribuyeron al desarrollo de las matemáticas y la filosofía racional occidental. (Para un tratamiento más completo de Pitágoras y el pensamiento pitagórico, consulte Pitagorismo).",
+      "Perelman1":"Matemático ruso que recibió (y rechazó) la Medalla Fields en 2006 ",
+      "Perelman2":"por su trabajo sobre la conjetura de Poincaré y la conjetura de geometrización del medallista Fields William Thurston. En 2003, Perelman había abandonado la academia y aparentemente había abandonado las matemáticas. Fue el primer matemático en rechazar la Medalla Fields."
     }
   },
-  "about":{
-    "whoIam":"¿Quién soy?",
-    "student":"Un Estudiante de Desarrollo de Software ubicado en nuestra hermosa tierra",
-    "russell":"La buena vida es aquella inspirada por el amor y guiada por el conocimiento."
+  "physics-module":{
+    "history":"Historia",
+    "history-text":"La física mecánica es una rama de la física que se centra en el estudio del movimiento y las fuerzas que lo provocan. A lo largo de la historia, numerosos científicos han contribuido al desarrollo de la mecánica, desde las primeras observaciones hasta las teorías más avanzadas."
   }
+
 }

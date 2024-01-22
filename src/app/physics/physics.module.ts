@@ -11,6 +11,12 @@ import { HeaderComputationalComponent } from './computational/header/header.comp
 import { HeaderMotivationComponent } from './motivation/header/header.component';
 import { ContentComponent } from './mechanics/content/content.component';
 import {YouTubePlayerModule} from '@angular/youtube-player';
+/**
+ * Modulos necesarios para crear la página multilenguaje
+ */
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -28,7 +34,15 @@ import {YouTubePlayerModule} from '@angular/youtube-player';
   imports: [
     CommonModule,
     SharedModule,
-    YouTubePlayerModule
+    YouTubePlayerModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader:{
+        provide:TranslateLoader,
+        useFactory:HttLoaderFactory,
+        deps:[HttpClient]
+      }
+    })
   ],
   exports:[
 
@@ -36,3 +50,6 @@ import {YouTubePlayerModule} from '@angular/youtube-player';
 })
 export class PhysicsModule { }
 
+export function HttLoaderFactory(http: HttpClient){
+  return new TranslateHttpLoader(http,'src/assets/languages','.json');
+}

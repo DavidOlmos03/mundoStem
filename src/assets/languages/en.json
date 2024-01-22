@@ -19,20 +19,51 @@
       "blog":"Programmer blog"
     },
     "motivation":"Motivation",
-    "tutorials":"Tutorials"
+    "tutorials":"Tutorials",
+    "login":"Log in",
+    "signup":"Sign up"
+  },
+  "footer":{
+    "contact":"Contact",
+    "aboutUs":"About us",
+    "termsConditions":"Terms and Conditions"
   },
   "home":{
+    "readMore":"...Read more",
+    "readLess":"Read less",
     "content":{
       "language":"Change Language to:",
       "whatMath":"What is pure math?",
-      "whatMathText":"Pure mathematics is the study of mathematical concepts independently of any application outside  mathematics.  These concepts may originate in real-world concerns, and the results obtained may later turn  out to be useful for practical applications, but pure mathematicians are not primarily motivated by  such applications."
-
+      "whatMathText":"Pure mathematics is the study of mathematical concepts independently of any application outside  mathematics.  These concepts may originate in real-world concerns, and the results obtained may later turn  out to be useful for practical applications, but pure mathematicians are not primarily motivated by  such applications.",
+      "instead":"Instead, the appeal is attributed to the intellectual challenge and aesthetic beauty of working out the logical consequences of basic principles. While pure mathematics has existed as an activity since at least Ancient Greece, the concept was elaborated upon around the year 1900, after the introduction of theories with counter-intuitive properties (such as non-Euclidean geometries and Cantor's theory of infinite sets), and the discovery of apparent paradoxes (such as continuous functions that are nowhere differentiable, and Russell's paradox). This introduced the need to renew the concept of mathematical rigor and rewrite all mathematics accordingly, with a systematic use of axiomatic methods. This led many mathematicians to focus on mathematics for its own sake, that is, pure mathematics.",
+      "wikipedia":"Wikipedia definition",
+      "goodVideo":"Good video about mathematics(Spanish)",
+      "mathQuotes":"Some math quotes",
+      "quote1Dirac":"It seems to be one of the fundamental features of nature that fundamental physics laws are described in terms of a mathematical theory ofgreat beauty andpower, needing quite a high standard ofmathematics for one understand it. You may wonde'r: why is nature constructed along these lines? One can only answer that our present knowledge seems to show that nature is so constructed. We simply have to accept it. One could perhaps describe the situation by saying that Cod is a mathematician of a ver' high order, and He used very advanced mathematics in constructing the Universe.",
+      "quote2Dirac":"It is more important to have beauty in one’s equation than to have them fit experiment",
+      "quoteNorth":"Let us grant that the pursuit of mathematics is a divine madness of the human spirit.",
+      "whatPhysics":"What is the physics?",
+      "whatPhysicsText1":"Physics is the natural science that studies matter, its fundamental constituents, its motion and behavior through space and time, and the related entities of energy and force. Physics is one of the most fundamental scientific disciplines, and its main goal is to understand how the universe behaves.",
+      "whatPhysicsText2":"Physics is one of the oldest academic disciplines and, through its inclusion of astronomy, perhaps the oldest. Over much of the past two millennia, physics, chemistry, biology, and certain branches of mathematics were a part of natural philosophy, but during the Scientific Revolution in the 17th century these natural sciences emerged as unique research endeavors in their own right. Physics intersects with many interdisciplinary areas of research, such as biophysics and quantum chemistry, and the boundaries of physics are not rigidly defined. New ideas in physics often explain the fundamental mechanisms studied by other sciences and suggest new avenues of research in these and other academic disciplines such as mathematics and philosophy.",
+      "whatPhysicsText3":"Advances in physics often enable advances in new technologies. For example, advances in the understanding of electromagnetism, solid-state physics, and nuclear physics led directly to the development of new products that have dramatically transformed modern-day society, such as television, computers, domestic appliances, and nuclear weapons; advances in thermodynamics led to the development of industrialization; and advances in mechanics inspired the development of calculus."
+    },
+    "lateral":{
+      "Gauss1":"Was a German mathematician, geodesist, and physicist who made significant contributions to many fields in mathematics and science.",
+      "Gauss2":"Gauss had an exceptional influence in many fields of mathematics and science and ranks among history's most influential mathematicians.",
+      "Galois1":"Was a French mathematician and political activist. While still in his teens, he was able to determine a necessary and sufficient condition",
+      "Galois2":"for a polynomial to be solvable by radicals, thereby solving a problem that had been open for 350 years. His work laid the foundations for Galois theory and group theory, two major branches of abstract algebra. He was a staunch republican and was heavily involved in the political turmoil that surrounded the French Revolution of 1830.",
+      "Newton1":"Was an English mathematician, physicist, astronomer, alchemist, theologian, and author who was described in his time as a natural philosopher.",
+      "Newton2":"He was a key figure in the Scientific Revolution and the Enlightenment that followed. His pioneering book Philosophiæ Naturalis Principia Mathematica (Mathematical Principles of Natural Philosophy), first published in 1687, consolidated many previous results and established classical mechanics. Newton also made seminal contributions to optics, and shares credit with German mathematician Gottfried Wilhelm Leibniz for developing infinitesimal calculus.",
+      "Ramanujan":"Was Indian mathematician whose contributions to the theory of numbers include pioneering discoveries of the properties of the partition function.",
+      "Pythagoras1":"Greek philosopher, mathematician, and founder of the Pythagorean brotherhood that, although religious in nature, ",
+      "Pythagoras2":"formulated principles that influenced the thought of Plato and Aristotle and contributed to the development of mathematics and Western rational philosophy. (For a fuller treatment of Pythagoras and Pythagorean thought, see Pythagoreanism).",
+      "Perelman1":"Russian mathematician who was awarded—and declined—the Fields Medal in 2006",
+      "Perelman2":"for his work on the Poincaré conjecture and Fields medalist William Thurston’s geometrization conjecture. In 2003 Perelman had left academia and apparently had abandoned mathematics. He was the first mathematician ever to decline the Fields Medal."
     }
   },
-  "about":{
-    "whoIam":"Who am I ?",
-    "student":"A Software Development Student located in our lovely earth",
-    "russell":"The good life is one inspired by love and guided by knowledge."
+  "physics-module":{
+    "history":"History",
+    "history-text":"Mechanical physics is a branch of physics that focuses on the study of motion and the forces that cause it. Throughout history, numerous scientists have contributed to the development of mechanics,from the first observations to the most advanced theories."
   }
 
 }
