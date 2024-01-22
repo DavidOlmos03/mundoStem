@@ -44,22 +44,19 @@
         <li class="nav-item active"><a class="nav-link" href="">{{'navbar.tutorials'|translate}}</a></li>
       </ul>
       <div class="buttons">
-        <button (click)="login()" class="btn buttom_Form btn-dark">{{'navbar.login'|translate}}</button>
-        <button (click)="signup()" class="btn buttom_Form btn-dark">{{'navbar.signup'|translate}}</button>
+          <a href="login" class="btn buttom_Form btn-dark">{{'navbar.login'|translate}}</a>
+          <a href="signup" class="btn buttom_Form btn-dark">{{'navbar.signup'|translate}}</a>
       </div>
-
-
     </div>
-
   </nav>
 
 
-  <div class="login" *ngIf="mostrarLogin">
-  <app-login></app-login>
-</div>
-<div class="signup" *ngIf="mostrarSingup">
+  <!--<div class="login" *ngIf="mostrarLogin">-->
+  <!--<app-login></app-login>
+</div>-->
+<!--<div class="signup" *ngIf="mostrarSingup">
   <app-signup></app-signup>
-</div>
+</div>-->
 
 
 

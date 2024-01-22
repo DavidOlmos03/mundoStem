@@ -5,8 +5,9 @@ import { PhysicsModule } from './physics/physics.module';
 import { AppComponent } from './app.component';
 import { HomeModule } from './home/home.module';
 import { AppRoutingModule } from './app-routing.module';
-
+import { LoginModule } from './login/login.module';
 import { TranslateService } from '@ngx-translate/core';
+import { SignupModule } from './signup/signup.module';
 /**
  * Modulos necesarios para crear la página multilenguaje
  */
@@ -25,6 +26,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     FormsModule,
     HomeModule,
     AppRoutingModule,
+    LoginModule,
+    SignupModule,
     PhysicsModule,
     TranslateModule.forRoot({
       loader:{

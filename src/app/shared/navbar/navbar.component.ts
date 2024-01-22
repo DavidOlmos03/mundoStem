@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
-  mostrarLogin = false;
+  /*mostrarLogin = false;
   mostrarSingup = false;
   login() {
     this.mostrarLogin = !this.mostrarLogin;
@@ -15,5 +15,5 @@ export class NavbarComponent {
   signup() {
     this.mostrarSingup = !this.mostrarSingup;
     this.mostrarLogin = false;
-  }
+  }*/
 }

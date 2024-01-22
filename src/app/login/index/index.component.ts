@@ -3,17 +3,16 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  selector: 'app-index',
+  templateUrl: './index.component.html',
+  styleUrls: ['./index.component.css']
 })
 
-//import { HeaderContainerComponent } from '../header-container/header-container.component';
 @Injectable({
   providedIn: 'root',
 })
 
-export class LoginComponent {
+export class IndexLoginComponent {
   email_address: string = "";
   password: string = "";
   datosIngresados: any;

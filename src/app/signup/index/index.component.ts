@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
-  selector: 'app-signup',
-  templateUrl: './signup.component.html',
-  styleUrls: ['./signup.component.css']
+  selector: 'app-index',
+  templateUrl: './index.component.html',
+  styleUrls: ['./index.component.css']
 })
-export class SignupComponent {
+export class IndexSignupComponent {
   id: number  = 0;
   full_name: string = "";
   email_address: string = "";
