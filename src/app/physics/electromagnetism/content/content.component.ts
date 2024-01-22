@@ -1,12 +1,11 @@
-import { Component} from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-content',
+  selector: 'app-contentElectromagnetism',
   templateUrl: './content.component.html',
-  template: '<youtube-player videoId="mVjYG9TSN88"/>',
-  styleUrls: ['./content.component.css'],
+  styleUrls: ['./content.component.css']
 })
-export class ContentMechanicsComponent{
+export class ContentElectromagnetismComponent {
   mostrarTextoCompleto = false;
   toggleTextoCompleto() {
     this.mostrarTextoCompleto = !this.mostrarTextoCompleto;
