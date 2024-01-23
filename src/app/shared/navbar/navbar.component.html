@@ -7,59 +7,57 @@
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav bg-dark">
         <li class="nav-item active">
-          <a class="nav-link" href="#">Home</a>
+          <a class="nav-link" href="#">{{'navbar.home'|translate}}</a>
         </li>
         <li class="Mathematics nav-item dropdown">
-          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Mathematics</a>
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">{{'navbar.mathematics'|translate}}</a>
           <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="vectorGeometry.html">Vector Geometry</a></li>
-              <li><a class="dropdown-item" href="">Calculus</a></li>
-              <li><a class="dropdown-item" href="">Algebra</a></li>
-              <li><a class="dropdown-item" href="">Motivation</a></li>
+              <li><a class="dropdown-item" href="vectorGeometry.html">{{'navbar.math-list.vectorGeo'|translate}}</a></li>
+              <li><a class="dropdown-item" href="">{{'navbar.math-list.calculus'|translate}}</a></li>
+              <li><a class="dropdown-item" href="">{{'navbar.math-list.algebra'|translate}}</a></li>
+              <li><a class="dropdown-item" href="">{{'navbar.motivation'|translate}}</a></li>
           </ul>
         </li>
         <li class="physics nav-item dropdown">
-          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Physics</a>
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">{{'navbar.physics'|translate}}</a>
           <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="mechanics">Mechanics</a></li>
-              <li><a class="dropdown-item" href="electromagnetism">Electromagnetism</a></li>
-              <li><a class="dropdown-item" href="computational">Computational physics</a></li>
-              <li><a class="dropdown-item" href="physics_motivation">Motivation</a></li>
+              <li><a class="dropdown-item" href="mechanics">{{'navbar.physics-list.mechanics'|translate}}</a></li>
+              <li><a class="dropdown-item" href="electromagnetism">{{'navbar.physics-list.electromagnetism'|translate}}</a></li>
+              <li><a class="dropdown-item" href="computational">{{'navbar.physics-list.computational'|translate}}</a></li>
+              <li><a class="dropdown-item" href="physics_motivation">{{'navbar.motivation'|translate}}</a></li>
           </ul>
         </li>
         <!--<li class="nav-item">
           <a class="nav-link" href="#">Pricing</a>
         </li>-->
         <li class="programming nav-item dropdown">
-          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Programming</a>
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">{{'navbar.programming'|translate}}</a>
           <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="javaPart.html">Java</a></li>
-              <li><a class="dropdown-item" href="inforSecPart.html">Informatic segurity</a></li>
-              <li><a class="dropdown-item" href="">Programmer blog</a></li>
-              <li><a class="dropdown-item" href="">Motivation</a></li>
+              <li><a class="dropdown-item" href="">Python</a></li>
+              <li><a class="dropdown-item" href="">HTML & CSS</a></li>
+              <li><a class="dropdown-item" href="inforSecPart.html">{{'navbar.programming-list.segurity'|translate}}</a></li>
+              <li><a class="dropdown-item" href="">{{'navbar.programming-list.blog'|translate}}</a></li>
+              <li><a class="dropdown-item" href="">{{'navbar.motivation'|translate}}</a></li>
           </ul>
         </li>
-        <li class="nav-item active"><a class="nav-link" href="">Tutorials</a></li>
+        <li class="nav-item active"><a class="nav-link" href="">{{'navbar.tutorials'|translate}}</a></li>
       </ul>
-      <!--<div class="buttons">
-        <button (click)="login()" class="btn buttom_Form btn-dark">log in</button>
-        <button (click)="signup()" class="btn buttom_Form btn-dark">signup</button>
-      </div>-->
-
-
+      <div class="buttons">
+          <a href="login" class="btn buttom_Form btn-dark">{{'navbar.login'|translate}}</a>
+          <a href="signup" class="btn buttom_Form btn-dark">{{'navbar.signup'|translate}}</a>
+      </div>
     </div>
-
   </nav>
 
-<!--
-  <div class="login" *ngIf="mostrarLogin">
-  <app-login></app-login>
-</div>
-<div class="signup" *ngIf="mostrarSingup">
-  <app-signup></app-signup>
-</div>
 
--->
+  <!--<div class="login" *ngIf="mostrarLogin">-->
+  <!--<app-login></app-login>
+</div>-->
+<!--<div class="signup" *ngIf="mostrarSingup">
+  <app-signup></app-signup>
+</div>-->
+
 
 
 

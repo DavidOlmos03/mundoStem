@@ -10,17 +10,3 @@
   /*background-image: url("img\pi_gray.jpg");*/
   /*background-size: 60px;*/
 }
-
-#Tittle{
-  color:rgb(0, 0, 0);
-  font-size:50px;
-  font-family:papyrus, fantasy;
-  position: static;
-}
-#description{
-  color:rgb(0, 0, 0);
-  /*font-size:17px;*/
-  font-family:cursive;
-  position: static;
-}
-

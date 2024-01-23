@@ -9,7 +9,15 @@ import { HeaderMechanicsComponent } from './mechanics/header/header.component';
 import { SharedModule } from '../shared/shared.module';
 import { HeaderComputationalComponent } from './computational/header/header.component';
 import { HeaderMotivationComponent } from './motivation/header/header.component';
-import { ContentComponent } from './mechanics/content/content.component';
+import { ContentMechanicsComponent } from './mechanics/content/content.component';
+import { YouTubePlayerModule } from '@angular/youtube-player';
+import { ContentElectromagnetismComponent } from './electromagnetism/content/content.component';
+/**
+ * Modulos necesarios para crear la página multilenguaje
+ */
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -21,14 +29,29 @@ import { ContentComponent } from './mechanics/content/content.component';
     HeaderElectromagnetismComponent,
     HeaderComputationalComponent,
     HeaderMotivationComponent,
-    ContentComponent
+    ContentMechanicsComponent,
+    ContentElectromagnetismComponent
+
   ],
   imports: [
     CommonModule,
-    SharedModule
+    SharedModule,
+    YouTubePlayerModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader:{
+        provide:TranslateLoader,
+        useFactory:HttLoaderFactory,
+        deps:[HttpClient]
+      }
+    })
   ],
   exports:[
 
   ]
 })
 export class PhysicsModule { }
+
+export function HttLoaderFactory(http: HttpClient){
+  return new TranslateHttpLoader(http,'src/assets/languages','.json');
+}

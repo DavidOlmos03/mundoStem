@@ -41,6 +41,14 @@
   text-align: justify;
   font-family: oblique;
 }
+#switch-language{
+  max-width: 300px;
+  margin-left: 70%;
+  background-color: transparent;
+}
 
-
+.internal-section{
+  margin-left: 5%;
+  margin-right: 5%;
+}
 

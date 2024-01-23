@@ -5,7 +5,7 @@
 
 .inside {
   overflow-y: auto;
-  max-height: 280vh;
+  max-height: 300vh;
 }
 
 .col-lg-9 {
@@ -53,13 +53,17 @@ background-color: #555;
   /*height: auto;*/ /* Ajusta la altura automáticamente proporcionalmente al ancho */
   margin:auto;
   /*display: flex;*/
-  filter: blur(1.5px);
+  /*filter: blur(1.5px);*/
 }
 
 .carousel-item p{
   color:rgb(0, 0, 0);
   font-weight: bold;
   text-align: justify;
+
+}
+.carousel-item p:hover{
+  background-color: rgba(255, 255, 255, 0.308);
 }
 
 /* Cambiar el color de los botones del carrusel */
