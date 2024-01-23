@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IndexSignupComponent } from './index/index.component';
 import { SharedModule } from '../shared/shared.module';
+import { FormsModule } from '@angular/forms';
 /**
  * Modulos necesarios para crear la página multilenguaje
  */
@@ -16,6 +17,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
   imports: [
     CommonModule,
     SharedModule,
+    FormsModule,
     HttpClientModule,
     TranslateModule.forRoot({
       loader:{

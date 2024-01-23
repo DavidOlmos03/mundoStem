@@ -19,7 +19,7 @@ body::before {
     width: 100%;
     height: 100%;
     background-color: #fff;
-    background: url("../../../assets/imgs/login2.avif");
+    background: url("../../../assets/imgs/login3.avif");
     background-size: cover;
     background-position: center;
     position: fixed;
@@ -84,7 +84,7 @@ nav .btn{
 .form-wrapper {
   position: fixed;
     border-radius: 4px;
-    padding: 70px;
+    padding: 20px 70px 70px 70px;
     width: 400px;
     max-height: 480px;
     margin-left: 5%;
@@ -104,7 +104,7 @@ nav .btn{
 }
 
 form .form-control {
-    height: 50px;
+    height: 40px;
     position: relative;
     margin-bottom: 16px;
 }

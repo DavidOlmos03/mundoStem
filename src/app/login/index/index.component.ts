@@ -36,7 +36,7 @@ export class IndexLoginComponent {
         this.successMessage = 'Se ha ingresado con exito'
         // Realizar acciones adicionales con la respuesta de la API
         // Redireccionar a la URL deseada (en este caso, a https://www.npmjs.com/package/bcrypt)
-        window.location.href = 'https://www.npmjs.com/package/bcrypt';
+        window.location.href = 'http://localhost:4200/';
         // Por ejemplo, mostrar un mensaje de éxito
         this.errorMessage = '';
       },
