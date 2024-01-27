@@ -1,11 +1,12 @@
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';
 
 @Component({
   selector: 'app-content',
   templateUrl: './content.component.html',
-  styleUrls: ['./content.component.css']
+  template: '<youtube-player videoId="mVjYG9TSN88"/>',
+  styleUrls: ['./content.component.css'],
 })
-export class ContentComponent {
+export class ContentMechanicsComponent{
   mostrarTextoCompleto = false;
   toggleTextoCompleto() {
     this.mostrarTextoCompleto = !this.mostrarTextoCompleto;

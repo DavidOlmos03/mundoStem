@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class NavbarComponent {
 
+  logueadoFunction() {
+    return localStorage.getItem('acceso');
+  }
+  cerrarSesion(): void {
+    localStorage.removeItem('acceso');
+  }
+
 }
