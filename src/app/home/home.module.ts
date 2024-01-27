@@ -29,7 +29,11 @@ import { NavbarComponent } from './navbar/navbar.component';
   ],
   exports: [
     FooterComponent,
-    IndexComponent
+    IndexComponent,
+    HeaderComponent,
+    NavbarComponent,
+    ContentComponent
+
 
     //ContentWrapContainerComponent
   ]
