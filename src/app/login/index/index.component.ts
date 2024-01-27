@@ -34,8 +34,11 @@ export class IndexLoginComponent {
       (response) => {
         console.log('Solicitud POST exitosa', response);
         this.successMessage = 'Se ha ingresado con exito'
+
         // Realizar acciones adicionales con la respuesta de la API
-        // Redireccionar a la URL deseada (en este caso, a https://www.npmjs.com/package/bcrypt)
+        localStorage.setItem('acceso', 'true'); //Al darse el acceso se cuarda la variable de sesion en localStorage
+
+        // Redireccionar a la URL deseada
         window.location.href = 'http://localhost:4200/';
         // Por ejemplo, mostrar un mensaje de éxito
         this.errorMessage = '';
@@ -53,5 +56,6 @@ export class IndexLoginComponent {
     this.errorMessage = '';
     this.successMessage = '';
   }
+
 
 }
