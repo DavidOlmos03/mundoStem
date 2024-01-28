@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-index',
@@ -16,7 +17,23 @@ export class IndexSignupComponent {
   successMessage: String = '';
   url = 'http://localhost:8000/api/Create_user'; // Dirección de la API
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private router: Router) { }
+  /**
+   * Se verifica que el usuario no este logueado para que pueda acceder al login
+   */
+  logueadoFunction() {
+    return localStorage.getItem('acceso');
+  }
+  /**
+   * Desde que se inicia la página se verifica si el usuario esta logueado o no
+   */
+  ngOnInit() {
+    if (this.logueadoFunction() !== null && this.logueadoFunction()) {
+      // Redireccionar a la ruta deseada si el usuario está logueado
+      this.router.navigate(['']);
+    }
+
+  }
   //OBS. el control del ingreso de datos, deberia hacerse desde el backend, ie verificar que el usuario no exista
   //deberia controlarse desde el backend
   guardarDatos(): void {
@@ -34,6 +51,10 @@ export class IndexSignupComponent {
         this.successMessage = 'Usuario registrado con exito'
         // Realizar acciones adicionales con la respuesta de la API
 
+        localStorage.setItem('acceso', 'true'); //Al darse el acceso se cuarda la variable de sesion en localStorage
+
+        // Redireccionar a la URL deseada
+        window.location.href = 'http://localhost:4200/';
         // Por ejemplo, mostrar un mensaje de éxito
         this.errorMessage = '';
       },

@@ -21,7 +21,8 @@
     "motivation":"Motivación",
     "tutorials":"Tutoriales",
     "login":"Ingresar",
-    "signup":"Registrarse"
+    "signup":"Registrarse",
+    "exit":"Salir"
   },
   "footer":{
     "contact":"Contacto",

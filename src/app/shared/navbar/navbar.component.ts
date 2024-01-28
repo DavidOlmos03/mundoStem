@@ -15,7 +15,7 @@ export class NavbarComponent {
     localStorage.removeItem('acceso');
   }
 
-  showAlert() {
+  showAlertExit() {
     Swal.fire({
       title: "¿Seguro que quieres cerrar sesión?",
       showDenyButton: true,
@@ -25,7 +25,7 @@ export class NavbarComponent {
       /* Read more about isConfirmed, isDenied below */
       if (result.isConfirmed) {
         this.cerrarSesion()
-        Swal.fire("Sesión cerrada con exito", "", "success");
+        Swal.fire("Sesión cerrada con éxito", "", "success");
       } else if (result.isDenied) {
         Swal.fire("Es un gusto tenerte en mundoSteam", "");
       }
