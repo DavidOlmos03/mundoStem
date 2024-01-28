@@ -77,6 +77,16 @@
     "advantage1":"Access to tables with data on useful books, dealing with different topics such as those presented above (mathematics, physics, programming)",
     "advantage2":"Contact us in an easier way",
     "advantage3":"Integrate more with the members of this mundoStem community"
+  },
+  "signUp":{
+    "name":"Name",
+    "email":"Email",
+    "password":"Password",
+    "signUp":"Sign Up",
+    "rememberMe":"Remember me",
+    "help":"Need help?",
+    "account":"You have an account?",
+    "loginNow":"Login now"
   }
 
 }

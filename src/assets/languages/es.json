@@ -77,6 +77,16 @@
     "advantage1":"Acceso a tablas con datos sobre libros utiles, tratando diferentes temas como los expuestos anteriormente (matemáticas,física.programación)",
     "advantage2":"Contacta con nosotros de una forma mas facil",
     "advantage3":"Integrate más con los miembros de esta comunidad mundoStem"
+  },
+  "signUp":{
+    "name":"Nombre",
+    "email":"Correo",
+    "password":"Contraseña",
+    "signUp":"Registrarse",
+    "rememberMe":"Recuerdame",
+    "help":"¿Necesitas ayuda?",
+    "account":"Tienes una cuenta?",
+    "loginNow":"Ingresar ahora"
   }
 
 }
