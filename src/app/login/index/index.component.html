@@ -31,38 +31,37 @@
           <form action="#" (ngSubmit)="enviarDatos()">
               <div class="form-control">
                   <input type="text" name="email_address" [(ngModel)]="email_address" required>
-                  <label>Email</label>
+                  <label>{{'login.email'|translate}}</label>
               </div>
               <div class="form-control">
                   <input type="password" name="password" [(ngModel)]="password" required>
-                  <label>Password</label>
+                  <label>{{'login.password'|translate}}</label>
               </div>
-              <button type="submit" >Login</button>
+              <button type="submit" >{{'login.login'|translate}}</button>
               <!--<input type="submit" value="Login" />-->
               <div class="form-help">
                   <div class="remember-me">
                       <input type="checkbox" id="remember-me">
-                      <label for="remember-me">Remember me</label>
+                      <label for="remember-me">{{'login.rememberMe'|translate}}</label>
                   </div>
-                  <a href="#">Need help?</a>
+                  <a href="#">{{'login.help'|translate}}</a>
               </div>
           </form>
-          <p>New to MundoStem? <a href="signup">Sign up now</a></p>
+          <p>{{'login.new'|translate}}<a href="signup">{{'login.signUpNow'|translate}}</a></p>
       </div>
       </div>
       <div class="description col-6">
         <h1>MUNDO STEM</h1>
-        <p><b>Ventajas del login:</b>
+        <p><b>{{'login.advantages'|translate}}</b>
           <br>
           <br>
-        1. Acceso a tablas con datos sobre libros utiles, tratando diferentes temas como los expuestos anteriormente
-        (matemáticas,física.programación)
+        1. {{'login.advantage1'|translate}}
         <br>
         <br>
-        2. Contacta con nosotros de una forma mas facil
+        2. {{'login.advantage2'|translate}}
         <br>
         <br>
-        3. Integrate más con los miembros de esta comunidad mundoStem</p>
+        3. {{'login.advantage3'|translate}}</p>
 
       </div>
     </div>

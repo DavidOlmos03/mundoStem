@@ -64,6 +64,19 @@
   "physics-module":{
     "history":"Historia",
     "history-text":"La física mecánica es una rama de la física que se centra en el estudio del movimiento y las fuerzas que lo provocan. A lo largo de la historia, numerosos científicos han contribuido al desarrollo de la mecánica, desde las primeras observaciones hasta las teorías más avanzadas."
+  },
+  "login":{
+    "email":"Correo",
+    "password":"Contraseña",
+    "login":"Ingresar",
+    "rememberMe":"Recuerdame",
+    "help":"¿Necesitas ayuda?",
+    "new":"¿Nuevo en mundoSteam?",
+    "signUpNow":"Registrate ahora",
+    "advantages":"Ventajas del login:",
+    "advantage1":"Acceso a tablas con datos sobre libros utiles, tratando diferentes temas como los expuestos anteriormente (matemáticas,física.programación)",
+    "advantage2":"Contacta con nosotros de una forma mas facil",
+    "advantage3":"Integrate más con los miembros de esta comunidad mundoStem"
   }
 
 }

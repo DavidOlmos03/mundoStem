@@ -64,6 +64,19 @@
   "physics-module":{
     "history":"History",
     "history-text":"Mechanical physics is a branch of physics that focuses on the study of motion and the forces that cause it. Throughout history, numerous scientists have contributed to the development of mechanics,from the first observations to the most advanced theories."
+  },
+  "login":{
+    "email":"Email",
+    "password":"Password",
+    "login":"Login",
+    "rememberMe":"Remember me",
+    "help":"Need help?",
+    "new":"New to mundoSteam?",
+    "signUpNow":"Sign up now",
+    "advantages":"Advantages of login:",
+    "advantage1":"Access to tables with data on useful books, dealing with different topics such as those presented above (mathematics, physics, programming)",
+    "advantage2":"Contact us in an easier way",
+    "advantage3":"Integrate more with the members of this mundoStem community"
   }
 
 }
