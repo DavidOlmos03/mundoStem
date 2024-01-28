@@ -36,7 +36,16 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     })
   ],
   exports: [
+<<<<<<< HEAD
+    FooterComponent,
+    IndexComponent,
+    HeaderComponent,
+    NavbarComponent,
+    ContentComponent
+
+=======
     IndexComponent
+>>>>>>> fce7463b9600983e8bb9d4f45adfa4114c5bd941
 
     //ContentWrapContainerComponent
   ]
