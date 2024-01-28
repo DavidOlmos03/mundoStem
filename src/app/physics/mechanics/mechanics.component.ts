@@ -7,8 +7,10 @@ import * as $ from 'jquery';
   styleUrls: ['./mechanics.component.css','./mechanics.component.scss']
 })
 export class MechanicsComponent implements OnInit, OnDestroy{
+
   ngOnInit() {
     $(window).on('scroll', this.handleScroll);
+
   }
 
   ngOnDestroy() {

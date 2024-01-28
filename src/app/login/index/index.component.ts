@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-index',
   templateUrl: './index.component.html',
@@ -12,15 +12,35 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root',
 })
 
-export class IndexLoginComponent {
+export class IndexLoginComponent implements OnInit{
   email_address: string = "";
   password: string = "";
   datosIngresados: any;
   errorMessage: string = '';
   successMessage: String = '';
-  url = 'http://localhost:8000/api/read_user_by_email'; // Dirección de la API
+  /**
+   * Se utiliza una url para almacenar la dirección de la API
+   */
+  url = 'http://localhost:8000/api/read_user_by_email';
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private router: Router) { }
+  /**
+   * Se verifica que el usuario no este logueado para que pueda acceder al login
+   */
+  logueadoFunction() {
+    return localStorage.getItem('acceso');
+  }
+  /**
+   * Desde que se inicia la página se verifica si el usuario esta logueado o no
+   */
+  ngOnInit() {
+    if (this.logueadoFunction() !== null && this.logueadoFunction()) {
+      // Redireccionar a la ruta deseada si el usuario está logueado
+      this.router.navigate(['']);
+    }
+
+  }
+
   //OBS. el control del ingreso de datos, deberia hacerse desde el backend, ie verificar que el usuario no exista
   //deberia controlarse desde el backend
   enviarDatos(): void {
@@ -56,6 +76,5 @@ export class IndexLoginComponent {
     this.errorMessage = '';
     this.successMessage = '';
   }
-
 
 }

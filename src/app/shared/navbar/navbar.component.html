@@ -43,11 +43,12 @@
         </li>
         <li class="nav-item active"><a class="nav-link" href="">{{'navbar.tutorials'|translate}}</a></li>
       </ul>
-      <div class="buttons">
-          <a *ngIf="(logueadoFunction() == null)  || !logueadoFunction()" (click)="cerrarSesion()" href="login" class="btn buttom_Form btn-dark">{{'navbar.login'|translate}}</a>
-          <a *ngIf="(logueadoFunction() == null) || !logueadoFunction()" (click)="cerrarSesion()" href="signup" class="btn buttom_Form btn-dark">{{'navbar.signup'|translate}}</a>
-          <button *ngIf="(logueadoFunction() !== null) && logueadoFunction()" (click)="cerrarSesion()">Salir</button>
-
+      <div class="buttons" *ngIf="(logueadoFunction() == null) || !logueadoFunction()">
+          <a href="login" class="btn buttom_Form btn-dark">{{'navbar.login'|translate}}</a>
+          <a href="signup" class="btn buttom_Form btn-dark">{{'navbar.signup'|translate}}</a>
+      </div>
+      <div class="exit" *ngIf="(logueadoFunction() !== null) && logueadoFunction()">
+        <a  (click)="showAlert()" class="btn buttom_Form btn-dark">Salir</a>
       </div>
     </div>
   </nav>
