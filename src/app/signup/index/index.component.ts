@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   templateUrl: './index.component.html',
   styleUrls: ['./index.component.css']
 })
-export class IndexSignupComponent {
+export class IndexSignupComponent implements OnInit {
   id: number  = 0;
   full_name: string = "";
   email_address: string = "";
@@ -29,7 +29,6 @@ export class IndexSignupComponent {
    */
   ngOnInit() {
     if (this.logueadoFunction() !== null && this.logueadoFunction()) {
-      // Redireccionar a la ruta deseada si el usuario está logueado
       this.router.navigate(['']);
     }
 

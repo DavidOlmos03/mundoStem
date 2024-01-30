@@ -16,7 +16,12 @@ import { ContentvecComponent } from './vectorgeometry/contentvec/contentvec.comp
 import { HeadermoComponent } from './motivationmath/headermo/headermo.component';
 import { ContentmoComponent } from './motivationmath/contentmo/contentmo.component';
 
-
+/**
+ * Modulos necesarios para crear la página multilenguaje
+ */
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -33,11 +38,23 @@ import { ContentmoComponent } from './motivationmath/contentmo/contentmo.compone
     ContentvecComponent,
     HeadermoComponent,
     ContentmoComponent
-  
+
   ],
   imports: [
     CommonModule,
-    SharedModule
+    SharedModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader:{
+        provide:TranslateLoader,
+        useFactory:HttLoaderFactory,
+        deps:[HttpClient]
+      }
+    })
   ]
 })
 export class MathematicsModule { }
+
+export function HttLoaderFactory(http: HttpClient){
+  return new TranslateHttpLoader(http,'src/assets/languages','.json');
+}
