@@ -1,6 +1,6 @@
 .header{
     /*box-sizing:border-box;*/
-    width: 100%;
+    width: 98%;
     height: 180px;
     /*text-align: center;*/
     position:static;
@@ -22,4 +22,7 @@
     /*font-size:17px;*/
     font-family:cursive;
     position: static;
+  }
+  .header.row{
+    width: 98%;
   }

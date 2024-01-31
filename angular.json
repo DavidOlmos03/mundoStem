@@ -26,7 +26,22 @@
             ],
             "styles": [
               "src/styles.css",
-              "node_modules/bootstrap/dist/css/bootstrap.min.css"
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/primeflex/primeflex.css",
+              "node_modules/primeicons/primeicons.css",
+              "node_modules/primeng/resources/primeng.min.css",
+              {
+                "input": "src/app/theme-lara-ligth-blue.scss",
+                "bundleName": "lara-ligth-blue",
+                "inject": false
+              },
+              {
+                "input": "src/app/theme-lara-dark-blue.scss",
+                "bundleName": "lara-dark-blue",
+                "inject": false
+              }
+              
+
             ],
             "scripts": ["node_modules/@popperjs/core/dist/umd/popper.min.js",
                         "node_modules/bootstrap/dist/js/bootstrap.min.js"]

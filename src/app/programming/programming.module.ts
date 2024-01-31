@@ -13,6 +13,10 @@ import { ContentjavaComponent } from './java/contentjava/contentjava.component';
 import { HeaderproComponent } from './motivationpro/headerpro/headerpro.component';
 import { ContentproComponent } from './motivationpro/contentpro/contentpro.component';
 import { HeaderblogComponent } from './programmerblog/headerblog/headerblog.component';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+
 
 
 
@@ -35,7 +39,19 @@ import { HeaderblogComponent } from './programmerblog/headerblog/headerblog.comp
   ],
   imports: [
     CommonModule,
-    SharedModule
-  ]
+    SharedModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader:{
+        provide:TranslateLoader,
+        useFactory:HttLoaderFactory,
+        deps:[HttpClient]
+      }
+    })
+  ],
 })
 export class ProgrammingModule { }
+
+export function HttLoaderFactory(http: HttpClient){
+  return new TranslateHttpLoader(http,'src/assets/languages','.json');
+}

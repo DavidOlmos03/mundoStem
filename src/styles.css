@@ -2,19 +2,4 @@
 @import '~bootstrap/dist/css/bootstrap.css';
 /* styles.css */
 
-:root {
-    --primary-bg-color: #ffffff; /* Modo claro */
-    --primary-text-color: #000000;
-  }
-  
-  [data-theme='dark'] {
-    --primary-bg-color: #333333; /* Modo oscuro */
-    --primary-text-color: #ffffff;
-  }
-  
-  body {
-    background-color: var(--primary-bg-color);
-    color: var(--primary-text-color);
-  }
 
-  

@@ -6,7 +6,8 @@ import { HeaderComponent } from './header/header.component';
 import { LateralComponent } from './lateral/lateral.component';
 import { ContentComponent } from './content/content.component';
 import { SharedModule } from '../shared/shared.module';
-//import { ContentWrapContainerComponent } from './content-wrap-container/content-wrap-container.component';
+
+
 /**
  * Modulos necesarios para crear la página multilenguaje
  */
@@ -20,7 +21,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     HeaderComponent,
     LateralComponent,
     ContentComponent
-     //ContentWrapContainerComponent
+    
   ],
   imports: [
     CommonModule,
@@ -36,18 +37,10 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     })
   ],
   exports: [
-<<<<<<< HEAD
-    FooterComponent,
-    IndexComponent,
-    HeaderComponent,
-    NavbarComponent,
-    ContentComponent
+ 
 
-=======
-    IndexComponent
->>>>>>> fce7463b9600983e8bb9d4f45adfa4114c5bd941
 
-    //ContentWrapContainerComponent
+  
   ]
 })
 export class HomeModule {

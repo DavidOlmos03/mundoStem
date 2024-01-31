@@ -1,43 +1,234 @@
-/* Estilo para el carrusel */
-.carousel {
-    margin-top: auto; /* Ajusta el margen superior según sea necesario */
-    height: 460px;
-    width: 80%;
-    margin:auto;
-    z-index: 0;
-    background-color:transparent;
-  }
-  
-  
-  /* Estilo para la imagen en el carrusel */
-  .carousel-item img {
-    height: 460px; /* Ajusta el ancho de la imagen al 100% del contenedor */
-    margin:auto;
-  }
-  
-  .carousel-item p{
-    color:rgb(0, 0, 0);
-    font-weight: bold;
-    text-align: justify;
-  }
-  
-  /* Cambiar el color de los botones del carrusel */
-  .carousel-control-prev,
-  .carousel-control-next {
-    background-color: transparent; /* Cambia el color de fondo según tus preferencias */
-    color: #ffffff; /* Cambia el color del texto según tus preferencias */
-    border: none; /* Elimina el borde si lo deseas */
-  }
-  
-  /* Cambiar el color de los botones del carrusel al pasar el ratón */
-  .carousel-control-prev:hover,
-  .carousel-control-next:hover {
-    background-color: #56565643; /* Cambia el color de fondo al pasar el ratón según tus preferencias */
-    color: #ffffff; /* Cambia el color del texto al pasar el ratón según tus preferencias */
-  }
-  
-  .content p {
-    line-height: 1.5; /*Agregar espacios entre lineas*/
-    text-align: justify;
-    font-family: oblique;
-  }
+.gallery {
+  display: flex;
+  gap: 1rem;
+  max-width: 80rem;
+}
+
+.card {
+  flex: 2;
+  cursor: pointer;
+  border-radius: 1rem;
+  overflow: hidden;
+  background-color: var(--background);
+  position: relative;
+  transition: 0.4s ease-in-out;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
+}
+
+.card:hover {
+  flex: 3;
+  font-weight: bold;
+}
+
+.card img {
+  /*position: relative;*/
+  height: 20rem;
+  object-fit: cover;
+}
+
+.card:nth-child(1) img {
+  left: -8rem;
+}
+
+.card:nth-child(2) img {
+  left: -6rem;
+}
+
+.card:nth-child(3) img {
+  left: -14rem;
+  border-radius: 1.2rem;
+}
+
+.card:nth-child(4) img {
+  left: -8rem;
+}
+
+.card:nth-child(1),
+.card:nth-child(2),
+.card:nth-child(3),
+.card:nth-child(4) {
+  width: 6rem;
+}
+section{
+  width: 600px;
+  display: flex;
+  height: 430px;
+}
+section img{
+  width: 0px;
+  flex-grow: 1;
+  object-fit: cover;
+  opacity: .8;
+  transition: .5s ease;
+  border-radius: 1rem;
+}
+section img:hover{
+  width: 300px;
+  opacity: 1;
+  filter: contrast(120%);
+}
+/* Ajustes para el contenido de .topic-card */
+.topic-card {
+  font-size: 18px; /* Tamaño de la fuente para el contenido */
+  font-family: 'Arial', sans-serif; /* Tipo de letra para el contenido */
+  line-height: 1.5; /* Espaciado entre líneas */
+}
+
+.topic-card h3 {
+  font-size: 24px; /* Tamaño de la fuente para el título */
+  color: #0066cc; /* Color del texto del título, puedes ajustar el valor según tu preferencia */
+}
+
+.topic-card p {
+  margin-bottom: 10px; /* Margen inferior para separar párrafos */
+}
+
+/* Otros estilos específicos para imágenes o videos dentro de .topic-card */
+.topic-card img {
+  max-width: 100%; /* Hacer que las imágenes se ajusten al ancho del contenedor */
+  height: auto; /* Mantener la proporción original al ajustar el ancho */
+}
+
+.topic-card iframe {
+  width: 100%; /* Hacer que los videos se ajusten al ancho del contenedor */
+  height: 400px; /* Establecer una altura fija para los videos, ajusta según sea necesario */
+}
+/* Ajustes para el contenido de .col-5 */
+.col-5 {
+  font-size: 18px; /* Tamaño de la fuente para el contenido */
+  font-family: 'Arial', sans-serif; /* Tipo de letra para el contenido */
+  line-height: 1.5; /* Espaciado entre líneas */
+  max-width: 800px; /* Ancho máximo para el contenedor de texto */
+  width: 50%;
+
+}
+
+.col-5 h3 {
+  font-size: 24px; /* Tamaño de la fuente para el título */
+  color: #0066cc; /* Color del texto del título, puedes ajustar el valor según tu preferencia */
+  margin-bottom: 10px; /* Margen inferior para separar el título del párrafo */
+}
+
+.col-5 p {
+  max-height: 300px; /* Límite de altura para el contenedor de texto */
+  overflow: auto; /* Ocultar el exceso de texto que sobrepase la altura máxima */
+  margin-bottom: 10px; /* Margen inferior para separar párrafos */
+}
+
+/* Otros estilos específicos para imágenes o videos dentro de .col-5 */
+.col-5 img {
+  max-width: 100%; /* Hacer que las imágenes se ajusten al ancho del contenedor */
+  height: auto; /* Mantener la proporción original al ajustar el ancho */
+}
+/* Ajustes para el contenido de .important-topics */
+.important-topics {
+  font-size: 18px;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.5;
+}
+
+.important-topics h3 {
+  font-size: 24px;
+  color: #0066cc;
+  margin-bottom: 10px;
+}
+
+.important-topics p,
+.important-topics li {
+  margin-bottom: 10px;
+}
+
+.important-topics ol {
+  padding-left: 20px;
+}
+
+/* Otros estilos específicos para imágenes o videos dentro de .important-topics */
+.important-topics img {
+  max-width: 100%;
+  height: auto;
+}
+/* Estilos para la sección de Matemáticos Importantes en Álgebra */
+.important-mathematicians {
+  margin-top: 20px;
+  text-align: center; /* centrar el contenido */
+}
+
+.important-mathematicians h3 {
+  font-size: 24px;
+  color: #0066cc;
+}
+
+.mathematician-card {
+  margin-bottom: 20px;
+}
+
+.mathematician-card img {
+  width: 150px; /* Hace que la imagen ocupe el ancho completo del contenedor */
+  height: 100px; /* Ajusta la altura según tus necesidades */
+  object-fit: cover; /* Evita que la imagen se deforme al ajustar la altura */
+  border-radius: 5px; /* Añade esquinas redondeadas a las imágenes */
+}
+
+.mathematician-card h4 {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #333333;
+}
+
+.mathematician-card p {
+  font-size: 18px;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.5;
+}
+
+
+/* Estilos para la sección de Videos Educativos */
+
+
+.video-container {
+  /*position: relative;*/
+  /*padding-bottom: 56.25%;*//* Proporción de 16:9 para el contenedor del video */
+  margin: auto;
+  width: 650px;
+  height: 400px;
+  border-radius: 5px;
+
+}
+
+.video-container iframe {
+  width: 650px;
+  height: 390px;
+ /* position: absolute;*/
+ border-radius: 5px;
+
+  border: 0;
+}
+.illustration-gallery {
+  width: 650px;
+  height: 390px;
+  object-fit: cover;
+  border-radius: 5px;
+
+
+ 
+}
+
+.illustration-gallery img {
+  width: 650px;
+  height: 390px;
+  object-fit: cover;
+  border-radius: 5px;
+
+
+}
+
+#switch-language{
+  max-width: 300px;
+  margin-left: 70%;
+  background-color: transparent;
+}
+
+.internal-section{
+  margin-left: 5%;
+  margin-right: 5%;
+}

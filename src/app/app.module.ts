@@ -4,15 +4,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { PhysicsModule } from './physics/physics.module';
 import { AppComponent } from './app.component';
 import { HomeModule } from './home/home.module';
-<<<<<<< HEAD
+
 import { MathematicsModule } from './mathematics/mathematics.module';
-import { AppRoutingModule } from './app-routing.module';
+
 import { ProgrammingModule } from './programming/programming.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
-=======
+
 import { AppRoutingModule } from './app-routing.module';
 import { LoginModule } from './login/login.module';
 import { TranslateService } from '@ngx-translate/core';
@@ -23,7 +23,11 @@ import { SignupModule } from './signup/signup.module';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
->>>>>>> fce7463b9600983e8bb9d4f45adfa4114c5bd941
+
+
+
+
+
 
 @NgModule({
   declarations: [
@@ -40,12 +44,6 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     LoginModule,
     SignupModule,
     PhysicsModule,
-<<<<<<< HEAD
-    HomeModule,
-    MathematicsModule,
-    ProgrammingModule,
-    BrowserAnimationsModule
-=======
     TranslateModule.forRoot({
       loader:{
         provide:TranslateLoader,
@@ -53,7 +51,6 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
         deps:[HttpClient]
       }
     })
->>>>>>> fce7463b9600983e8bb9d4f45adfa4114c5bd941
   ],
   providers: [TranslateService],
   bootstrap: [AppComponent]

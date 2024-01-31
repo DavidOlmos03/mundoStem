@@ -1,10 +1,27 @@
-import { Component } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { Component, ChangeDetectorRef, OnInit, Inject } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent  {
   title = 'mundoStem';
+  themeSelection: boolean = false
+  constructor(@Inject(DOCUMENT) private document: Document){
+    let theme = window.localStorage.getItem("theme")
+    if (theme){
+      this.themeSelection = theme == 'dark' ? true : false
+      this.changeTheme(this.themeSelection)
+    }
+
+  }
+  changeTheme(state:boolean){
+    let theme = state ? 'dark' : 'light'
+    window.localStorage.setItem("theme", theme)
+    let themeLink = this.document.getElementById('app-theme') as HTMLLinkElement
+    themeLink.href = 'lara-'+theme+'blue'+'.css'
+  }
+  
 }

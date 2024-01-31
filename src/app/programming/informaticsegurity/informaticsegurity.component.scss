@@ -7,13 +7,16 @@
   @include box-sizing(border-box);
 }
 .header{
-  width: 100%;
+  width: 98%;
   height: 200px;
   background-color: #3498db;
   text-align: center;
-  position: relative;
+  /*position: relative;*/
   position: fixed;
   top: 0;
+  left: 0; /* Ajusta la posición izquierda a 0 para centrar horizontalmente */
+  right: 0; /* Ajusta la posición derecha a 0 para centrar horizontalmente */
+  margin: 0 1%; /* Centra horizontalmente */
   overflow: hidden;
   @include transition(all .5s ease);
 }

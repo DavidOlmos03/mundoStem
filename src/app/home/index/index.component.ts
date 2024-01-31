@@ -1,12 +1,15 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import * as $ from 'jquery';
 
+
+
 @Component({
   selector: 'app-index',
   templateUrl: './index.component.html',
   styleUrls: ['./index.component.css','./index.component.scss']
 })
 export class IndexComponent implements OnInit, OnDestroy {
+
 
   ngOnInit() {
     $(window).on('scroll', this.handleScroll);
@@ -25,6 +28,9 @@ export class IndexComponent implements OnInit, OnDestroy {
       $('body').removeClass('sticky-header');
     }
   }
+
+
+  
 }
 
 

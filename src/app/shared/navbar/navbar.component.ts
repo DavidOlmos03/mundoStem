@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-navbar',
@@ -13,5 +14,8 @@ export class NavbarComponent {
   cerrarSesion(): void {
     localStorage.removeItem('acceso');
   }
+
+ 
+
 
 }

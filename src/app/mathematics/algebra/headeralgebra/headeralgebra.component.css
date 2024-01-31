@@ -1,6 +1,6 @@
 .header{
     /*box-sizing:border-box;*/
-    width: 100%;
+    width: 100px;
     height: 180px;
     /*text-align: center;*/
     position:static;
@@ -9,6 +9,7 @@
     /*margin-left: 25%;*/
     /*background-image: url("img\pi_gray.jpg");*/
     /*background-size: 60px;*/
+   
   }
   
   #Tittle{
@@ -22,4 +23,9 @@
     /*font-size:17px;*/
     font-family:cursive;
     position: static;
+  }
+   .header.row{
+    width: 98%;
+    background-color: blueviolet;
+
   }
