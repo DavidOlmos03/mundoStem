@@ -28,7 +28,7 @@ export class IndexSignupComponent implements OnInit {
    * Desde que se inicia la página se verifica si el usuario esta logueado o no
    */
   ngOnInit() {
-    if (this.logueadoFunction() !== null && this.logueadoFunction()) {
+    if (this.logueadoFunction() !== null) {
       this.router.navigate(['']);
     }
 
