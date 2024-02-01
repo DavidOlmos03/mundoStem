@@ -52,3 +52,58 @@
   margin-right: 5%;
 }
 
+/*
+  Estilos para el galery
+*/
+.gallery {
+  display: flex;
+  gap: 1rem;
+  max-width: 80rem;
+  margin: 0% 5% 0% 5%;
+}
+
+.card {
+  flex: 2;
+  cursor: pointer;
+  border-radius: 1rem;
+  overflow: hidden;
+  background-color: var(--background);
+  position: relative;
+  transition: 0.4s ease-in-out;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
+}
+
+.card:hover {
+  flex: 3;
+  font-weight: bold;
+}
+
+.card img {
+  /*position: relative;*/
+  height: 20rem;
+  object-fit: cover;
+}
+
+.card:nth-child(1) img {
+  left: -8rem;
+}
+
+.card:nth-child(2) img {
+  left: -6rem;
+}
+
+.card:nth-child(3) img {
+  left: -14rem;
+  border-radius: 1.2rem;
+}
+
+.card:nth-child(4) img {
+  left: -8rem;
+}
+
+.card:nth-child(1),
+.card:nth-child(2),
+.card:nth-child(3),
+.card:nth-child(4) {
+  width: 6rem;
+}
