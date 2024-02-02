@@ -63,8 +63,23 @@
     }
   },
   "physics-module":{
-    "history":"History",
-    "history-text":"Mechanical physics is a branch of physics that focuses on the study of motion and the forces that cause it. Throughout history, numerous scientists have contributed to the development of mechanics,from the first observations to the most advanced theories."
+    "mechanics":{
+      "history":"History",
+      "history-text":"Mechanical physics is a branch of physics that focuses on the study of motion and the forces that cause it. Throughout history, numerous scientists have contributed to the development of mechanics,from the first observations to the most advanced theories.",
+      "Aristotle":{
+        "title":"Aristotle",
+        "text1":"Aristotle (384-322 BC): Aristotle was one of the first philosophers to address the study of movement. He proposed a geocentric theory in which he believed that objects fell at different speeds depending on their weight, an idea that prevailed for centuries.",
+        "subtitle1":"The Classical Elements:",
+        "text2":"The ancient Greeks are often credited with discovering, or at least providing the concept for, the atom. Indeed, one Greek philosopher, Democritus, probably did believe this, or at least provided the theory as a topic for debate. However, the majority of Greeks who gave thought to the subject believed that the smallest unit that anything could be divided into was the element.",
+        "text3":"Aristotle named four elements; fire, air, earth and water. However, for some years after this, philosophers argued which of these four elements was the main one. Thales argued that everything was made of water, while Heraclitus disagreed and claimed that fire was the major element, and Anaximenes refused to believe either and put forward air as the obvious candidate."
+      },
+      "Galileo":{
+        "text1":"Galileo Galilei (1564-1642): Galileo performed pioneering experiments on the movement and fall of objects. He discovered that all objects, regardless of their mass, fall at the same rate in a uniform gravitational field. He also formulated the laws of motion and laid the foundation for the law of inertia."
+      },
+      "Newton":{
+        "text1":"Isaac Newton (1643-1727): Newton consolidated Galileo's ideas and formulated the laws of motion and the law of universal gravitation. His contributions revolutionized physics and astronomy, providing a mathematical framework for understanding and predicting the motion of objects."
+      }
+    }
   },
   "login":{
     "email":"Email",

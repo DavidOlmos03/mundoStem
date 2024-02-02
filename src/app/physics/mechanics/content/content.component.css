@@ -1,4 +1,4 @@
-/* Estilo para el carrusel */
+/** Estilo para el carrusel **/
 .carousel {
   margin-top: auto; /* Ajusta el margen superior según sea necesario */
   height: 460px;
@@ -35,7 +35,7 @@
   background-color: #56565643; /* Cambia el color de fondo al pasar el ratón según tus preferencias */
   color: #ffffff; /* Cambia el color del texto al pasar el ratón según tus preferencias */
 }
-
+/**Estilos generales**/
 .content p {
   line-height: 1.5; /*Agregar espacios entre lineas*/
   text-align: justify;
@@ -51,15 +51,25 @@
   margin-left: 5%;
   margin-right: 5%;
 }
-
-/*
-  Estilos para el galery
-*/
+.one-image{
+  display: flex;
+  justify-content: center;
+  /*padding: 0% 5% 0% 5%;*/
+}
+.one-image img{
+  max-width:500px;
+  border-radius: 1rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+.one-image img:hover{
+  box-shadow: 0 5px 15px rgba(255, 0, 0, 0.3);
+}
+/**Estilos para el carousel tipo 1**/
 .gallery {
   display: flex;
   gap: 1rem;
   max-width: 80rem;
-  margin: 0% 5% 0% 5%;
+  margin: 2% 5% 0% 5%;
 }
 
 .card {
@@ -76,6 +86,7 @@
 .card:hover {
   flex: 3;
   font-weight: bold;
+  box-shadow: 0 5px 15px rgba(255, 0, 0, 0.3);
 }
 
 .card img {
@@ -94,16 +105,43 @@
 
 .card:nth-child(3) img {
   left: -14rem;
-  border-radius: 1.2rem;
+  /*border-radius: 1.2rem;*/
 }
 
 .card:nth-child(4) img {
   left: -8rem;
 }
 
+#fourth-image-Aristotle:hover{
+  flex: 8;
+  font-weight: bold;
+}
+
+
 .card:nth-child(1),
 .card:nth-child(2),
 .card:nth-child(3),
 .card:nth-child(4) {
   width: 6rem;
+}
+
+/**Estilo para el carousel tipo 2*/
+section{
+  width: 600px;
+  display: flex;
+  height: 430px;
+}
+section img{
+  width: 0px;
+  flex-grow: 1;
+  object-fit: cover;
+  opacity: .8;
+  transition: .5s ease;
+  border-radius: 1rem;
+}
+section img:hover{
+  width: 300px;
+  opacity: 1;
+  filter: contrast(120%);
+  box-shadow: 0 5px 15px rgba(255, 0, 0, 0.3);
 }

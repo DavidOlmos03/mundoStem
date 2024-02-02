@@ -1,29 +1,29 @@
-<div id="switch-language">
+<!--<div id="switch-language">
   <app-switch-languages></app-switch-languages>
-</div>
+</div>-->
 <div class="content">
-  <h1>{{"physics-module.history"|translate}}</h1>
+  <h1>{{"physics-module.mechanics.history"|translate}}</h1>
   <br>
   <br>
-  <p>{{'physics-module.history-text'|translate}}</p>
+  <p>{{'physics-module.mechanics.history-text'|translate}}</p>
  <!--
         Aristoteles
       -->
   <div id="Aristoteles">
-    <h3>Aristotle</h3>
-    <p>Aristotle (384-322 BC): Aristotle was one of the first philosophers to address the study of movement. He proposed a geocentric theory in which he believed that objects fell at different speeds depending on their weight, an idea that prevailed for centuries.</p>
+    <h3>{{'physics-module.mechanics.Aristotle.title'|translate}}</h3>
+    <p>{{'physics-module.mechanics.Aristotle.text1'|translate}}</p>
     <div class="row">
       <div class="col-6">
         <p>
-          <b>The Classical Elements:<br></b>
-          The ancient Greeks are often credited with discovering, or at least providing the concept for, the atom. Indeed, one Greek philosopher, Democritus, probably did believe this, or at least provided the theory as a topic for debate. However, the majority of Greeks who gave thought to the subject believed that the smallest unit that anything could be divided into was the element.
+          <b>{{'physics-module.mechanics.Aristotle.subtitle1'|translate}}<br></b>
+          {{'physics-module.mechanics.Aristotle.text2'|translate}}
           <br>
           <br>
-          Aristotle named four elements; fire, air, earth and water. However, for some years after this, philosophers argued which of these four elements was the main one. Thales argued that everything was made of water, while Heraclitus disagreed and claimed that fire was the major element, and Anaximenes refused to believe either and put forward air as the obvious candidate.
+          {{'physics-module.mechanics.Aristotle.text2'|translate}}
         </p>
       </div>
-      <div class="col-6">
-        <img src="../../../../assets/imgs/physics/mechanics/Aristotle/AristotleElements_1.png" style="max-width:500px; padding-left: 50px;">
+      <div class="col-6 one-image">
+        <img src="assets/imgs/physics/mechanics/Aristotle/Aristotle_5.jpg">
       </div>
     </div>
     <div class="gallery">
@@ -36,11 +36,8 @@
       <figure class="card">
         <img src="assets/imgs/physics/mechanics/Aristotle/Aristotle_4.jpg" alt="Imagen">
       </figure>
-      <figure class="card">
+      <figure class="card" id="fourth-image-Aristotle">
         <img src="assets/imgs/physics/mechanics/Aristotle/Aristotle_2.jpg" alt="Imagen">
-      </figure>
-      <figure class="card">
-        <img src="assets/imgs/physics/mechanics/Aristotle/Aristotle_5.jpg" alt="Imagen">
       </figure>
     </div>
 
@@ -51,9 +48,45 @@
   <div id="Galileo">
     <h3>Galileo Galilei</h3>
     <p>
-      Galileo Galilei (1564-1642): Galileo performed pioneering experiments on the movement and fall of objects. He discovered that all objects, regardless of their mass, fall at the same rate in a uniform gravitational field. He also formulated the laws of motion and laid the foundation for the law of inertia.
+      {{'physics-module.mechanics.Galileo.text1'|translate}}
     </p>
-    <div class="gallery">
+    <div class="row">
+      <div class="col-md-6">
+        <section>
+          <img src="assets/imgs/physics/mechanics/Galileo Galilei/Galileo_1.jpg" alt="Imagen">
+          <img src="assets/imgs/physics/mechanics/Galileo Galilei/Galileo_2.jpg" alt="Imagen">
+          <img src="assets/imgs/physics/mechanics/Galileo Galilei/Galileo_3.jpg"alt="Imagen">
+          <img src="assets/imgs/physics/mechanics/Galileo Galilei/Galileo_4.jpg" alt="Imagen">
+        </section>
+      </div>
+      <div class="col-md-6">
+        <div class="row">
+          <p>Galileo Galilei fue un científico italiano del siglo XVI y XVII, considerado uno de los padres de la ciencia moderna. Sus contribuciones revolucionaron la física y la astronomía. Algunos de sus logros más destacados incluyen:</p>
+          <p>1. Leyes del movimiento: Galileo desarrolló la ley de la inercia, que establece que un objeto en movimiento permanecerá en movimiento a menos que se aplique una fuerza externa sobre él. También describió la aceleración uniformemente acelerada de los objetos en caída libre.</p><br>
+          <p>2. Observaciones astronómicas: Galileo fue uno de los primeros en utilizar un telescopio para realizar observaciones astronómicas detalladas. Sus descubrimientos incluyen las fases de Venus, las lunas de Júpiter y las montañas y cráteres de la Luna, lo que apoyó la teoría heliocéntrica de Copérnico.</p><br>
+          <p>3. Ley de la caída de los cuerpos: Galileo demostró que todos los objetos, independientemente de su masa, caen al mismo ritmo bajo la influencia de la gravedad, refutando así la creencia aristotélica de que los objetos más pesados caen más rápido que los objetos más ligeros.</p><br>
+          <p>4. Método científico: Galileo defendió el uso de la experimentación y la observación cuidadosa como medios para comprender el mundo natural, sentando así las bases del método científico moderno.</p>
+        </div>
+      </div>
+    </div>
+    <div class="row internal-section">
+      <div class="row">
+        <h3>Frases: </h3>
+        <p>"No se puede enseñar nada a un hombre; solo se le puede ayudar a encontrar la respuesta dentro de sí mismo."
+          <br>
+          -Galileo Galilei
+        </p>
+      </div>
+      <div class="row">
+        <p>"La filosofía está escrita en este grandísimo libro que continuamente está abierto ante nuestros ojos (me refiero al universo), pero no se puede entender si primero no se aprende a entender la lengua y conocer los caracteres en que está escrito. Está escrito en lenguaje matemático y sus caracteres son triángulos, círculos y otras figuras geométricas, sin las cuales es imposible entender una sola palabra; sin ellos vagamos por un oscuro laberinto."
+          <br>
+          -Galileo Galilei
+        </p>
+      </div>
+    </div>
+
+    <!--
+      <div class="gallery">
       <figure class="card">
         <img src="assets/imgs/physics/mechanics/Galileo Galilei/Galileo_1.jpg" alt="Imagen">
       </figure>
@@ -70,6 +103,8 @@
         <img src="assets/imgs/physics/mechanics/Galileo Galilei/Galileo_5.jpg" alt="Imagen">
       </figure>
     </div>
+    -->
+
 
   <!--
     Isaac Newton
@@ -77,7 +112,7 @@
   <div id="Newton">
     <h3>Isaac Newton</h3>
     <p>
-      Isaac Newton (1643-1727): Newton consolidated Galileo's ideas and formulated the laws of motion and the law of universal gravitation. His contributions revolutionized physics and astronomy, providing a mathematical framework for understanding and predicting the motion of objects.
+      {{'physics-module.mechanics.Newton.text1'|translate}}
     </p>
     <div class="gallery">
       <figure class="card">
@@ -185,7 +220,7 @@
       Quantum mechanics: At the subatomic level, quantum mechanics replaced classical mechanics. Developed in the first half of the 20th century, quantum mechanics describes the behavior of subatomic particles and has led to technologies such as quantum electronics.
     </p>
     <div class="row internal-section">
-      <div class="col-4">
+      <div class="col-4 one-image">
         <img src="../../../../assets/imgs/physics/mechanics/Quantum/Quantum_4.jpg">
       </div>
       <div class="col-8">

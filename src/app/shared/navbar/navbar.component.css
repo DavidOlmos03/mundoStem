@@ -21,8 +21,11 @@
 }*/
 nav {
   position: fixed;
+  height: 100px;
   width: 98%;
-  height: 65px;
+}
+.navbar{
+  width: 60;
 }
 
 .buttons{
@@ -30,4 +33,18 @@ nav {
 }
 .exit{
   margin-left: 50%;
+}
+
+.switch-languages{
+  position: fixed;
+  width: 5%;
+  padding-left: 30%;
+}
+
+li:hover{
+  background-color: #F9423D;
+}
+
+ul .dropdown-item:hover{
+  background-color: #F9423D;
 }
