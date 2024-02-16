@@ -62,7 +62,7 @@
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 .one-image img:hover{
-  box-shadow: 0 5px 15px rgba(255, 0, 0, 0.3);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.439);
 }
 /**Estilos para el carousel tipo 1**/
 .gallery {
@@ -86,7 +86,7 @@
 .card:hover {
   flex: 3;
   font-weight: bold;
-  box-shadow: 0 5px 15px rgba(255, 0, 0, 0.3);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.439);
 }
 
 .card img {
@@ -143,5 +143,21 @@ section img:hover{
   width: 300px;
   opacity: 1;
   filter: contrast(120%);
-  box-shadow: 0 5px 15px rgba(255, 0, 0, 0.3);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.439)
+}
+
+/**Estilo para los videos*/
+
+iframe {
+  width: 500px;
+  height: 315px;
+  border-radius: 1rem;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
+  display: flex;
+}
+
+iframe:hover{
+  width: 490px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.439);
+  transition: 0.4s ease-in-out;
 }

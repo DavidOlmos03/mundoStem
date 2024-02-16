@@ -63,8 +63,8 @@
     }
   },
   "physics-module":{
+    "history":"Historia",
     "mechanics":{
-      "history":"Historia",
       "history-text":"La física mecánica es una rama de la física que se centra en el estudio del movimiento y las fuerzas que lo provocan. A lo largo de la historia, numerosos científicos han contribuido al desarrollo de la mecánica, desde las primeras observaciones hasta las teorías más avanzadas.",
       "Aristotle":{
         "title":"Aristoteles",
@@ -74,10 +74,26 @@
         "text3":"Aristóteles nombró cuatro elementos; fuego, aire, tierra y agua. Sin embargo, durante algunos años después de esto, los filósofos discutieron cuál de estos cuatro elementos era el principal. Tales argumentó que todo estaba hecho de agua, mientras que Heráclito no estaba de acuerdo y afirmaba que el fuego era el elemento principal, y Anaxímenes se negó a creer en ninguno de los dos y propuso el aire como el candidato obvio."
       },
       "Galileo":{
-        "text1":"Galileo Galilei (1564-1642): Galileo realizó experimentos pioneros sobre el movimiento y caída de objetos. Descubrió que todos los objetos, independientemente de su masa, caen al mismo ritmo en un campo gravitacional uniforme. También formuló las leyes del movimiento y sentó las bases de la ley de la inercia."
+        "text1":"Galileo Galilei (1564-1642): Galileo realizó experimentos pioneros sobre el movimiento y caída de objetos. Descubrió que todos los objetos, independientemente de su masa, caen al mismo ritmo en un campo gravitacional uniforme. También formuló las leyes del movimiento y sentó las bases de la ley de la inercia.",
+        "text2":{
+          "part0":"Galileo Galilei fue un científico italiano del siglo XVI y XVII, considerado uno de los padres de la ciencia moderna. Sus contribuciones revolucionaron la física y la astronomía. Algunos de sus logros más destacados incluyen:",
+          "part1":"Leyes del movimiento: Galileo desarrolló la ley de la inercia, que establece que un objeto en movimiento permanecerá en movimiento a menos que se aplique una fuerza externa sobre él. También describió la aceleración uniformemente acelerada de los objetos en caída libre.",
+          "part2":"Observaciones astronómicas: Galileo fue uno de los primeros en utilizar un telescopio para realizar observaciones astronómicas detalladas. Sus descubrimientos incluyen las fases de Venus, las lunas de Júpiter y las montañas y cráteres de la Luna, lo que apoyó la teoría heliocéntrica de Copérnico.",
+          "part3":"Ley de la caída de los cuerpos: Galileo demostró que todos los objetos, independientemente de su masa, caen al mismo ritmo bajo la influencia de la gravedad, refutando así la creencia aristotélica de que los objetos más pesados caen más rápido que los objetos más ligeros.",
+          "part4":"Método científico: Galileo defendió el uso de la experimentación y la observación cuidadosa como medios para comprender el mundo natural, sentando así las bases del método científico moderno."
+        },
+        "quotes":{
+          "title":"Citas:",
+          "quote1":"No se puede enseñar nada a un hombre; solo se le puede ayudar a encontrar la respuesta dentro de sí mismo.",
+          "quote2":"La filosofía está escrita en este grandísimo libro que continuamente está abierto ante nuestros ojos (me refiero al universo), pero no se puede entender si primero no se aprende a entender la lengua y conocer los caracteres en que está escrito. Está escrito en lenguaje matemático y sus caracteres son triángulos, círculos y otras figuras geométricas, sin las cuales es imposible entender una sola palabra; sin ellos vagamos por un oscuro laberinto."
+        }
       },
       "Newton":{
         "text1":"Isaac Newton (1643-1727): Newton consolidó las ideas de Galileo y formuló las leyes del movimiento y la ley de la gravitación universal. Sus contribuciones revolucionaron la física y la astronomía, proporcionando un marco matemático para comprender y predecir el movimiento de los objetos."
+      },
+      "Three-body problem":"Problema de tres cuerpos",
+      "Three-body":{
+
       }
     }
 

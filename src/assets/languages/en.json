@@ -63,8 +63,8 @@
     }
   },
   "physics-module":{
+    "history":"History",
     "mechanics":{
-      "history":"History",
       "history-text":"Mechanical physics is a branch of physics that focuses on the study of motion and the forces that cause it. Throughout history, numerous scientists have contributed to the development of mechanics,from the first observations to the most advanced theories.",
       "Aristotle":{
         "title":"Aristotle",
@@ -74,7 +74,19 @@
         "text3":"Aristotle named four elements; fire, air, earth and water. However, for some years after this, philosophers argued which of these four elements was the main one. Thales argued that everything was made of water, while Heraclitus disagreed and claimed that fire was the major element, and Anaximenes refused to believe either and put forward air as the obvious candidate."
       },
       "Galileo":{
-        "text1":"Galileo Galilei (1564-1642): Galileo performed pioneering experiments on the movement and fall of objects. He discovered that all objects, regardless of their mass, fall at the same rate in a uniform gravitational field. He also formulated the laws of motion and laid the foundation for the law of inertia."
+        "text1":"Galileo Galilei (1564-1642): Galileo performed pioneering experiments on the movement and fall of objects. He discovered that all objects, regardless of their mass, fall at the same rate in a uniform gravitational field. He also formulated the laws of motion and laid the foundation for the law of inertia.",
+        "text2":{
+          "part0":"Galileo Galilei was an Italian scientist of the 16th and 17th centuries, considered one of the fathers of modern science. His contributions revolutionized physics and astronomy. Some of his most notable achievements include:",
+          "part1":"Laws of Motion: Galileo developed the law of inertia, which states that an object in motion will remain in motion unless an external force is applied to it. He also described the uniformly accelerating acceleration of objects in free fall.",
+          "part2":"Astronomical observations: Galileo was one of the first to use a telescope to make detailed astronomical observations. His discoveries included the phases of Venus, the moons of Jupiter, and the mountains and craters of the Moon, which supported Copernicus's heliocentric theory.",
+          "part3":"Law of falling bodies: Galileo demonstrated that all objects, regardless of their mass, fall at the same rate under the influence of gravity, thus refuting the Aristotelian belief that heavier objects fall faster than lighter objects .",
+          "part4":"Scientific method: Galileo advocated the use of experimentation and careful observation as a means of understanding the natural world, thus laying the foundation for the modern scientific method."
+        },
+        "quotes":{
+          "title":"Quotes:",
+          "quote1":"You can't teach a man anything; He can only be helped to find the answer within himself.",
+          "quote2":"Philosophy is written in this great book that is continually open before our eyes (I mean the universe), but it cannot be understood if we do not first learn to understand the language and know the characters in which it is written. It is written in mathematical language and its characters are triangles, circles and other geometric figures, without which it is impossible to understand a single word; Without them we wander through a dark labyrinth."
+        }
       },
       "Newton":{
         "text1":"Isaac Newton (1643-1727): Newton consolidated Galileo's ideas and formulated the laws of motion and the law of universal gravitation. His contributions revolutionized physics and astronomy, providing a mathematical framework for understanding and predicting the motion of objects."
