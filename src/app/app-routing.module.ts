@@ -1,3 +1,4 @@
+import { BooksGridComponent } from './tables/books/books.component';
 
 import { NgModule, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -21,6 +22,9 @@ import { MotivationproComponent } from './programming/motivationpro/motivationpr
 import { IndexLoginComponent } from './login/index/index.component';
 import { IndexSignupComponent } from './signup/index/index.component';
 
+
+
+
 const routes: Routes = [
   { path: '', component: IndexComponent },
   { path: 'mechanics', component: MechanicsComponent },
@@ -36,7 +40,8 @@ const routes: Routes = [
   { path: 'programmerblog', component: ProgrammerblogComponent },
   { path: 'motivationpro', component: MotivationproComponent },
   { path: 'login', component:IndexLoginComponent},
-  { path: 'signup', component:IndexSignupComponent}
+  { path: 'signup', component:IndexSignupComponent},
+  { path: 'books', component:BooksGridComponent}
 
 ];
 

@@ -49,14 +49,23 @@
           </ul>
         </li>
         <li class="nav-item active"><a class="nav-link" href="">{{'navbar.tutorials'|translate}}</a></li>
+
+        <li class="programming nav-item dropdown" *ngIf="logueadoFunction() !== null">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+            aria-expanded="false">Tables</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="books">Books</a></li>
+          </ul>
+        </li>
+
       </ul>
       <div class="buttons" *ngIf="logueadoFunction() == null">
         <a href="login" class="btn buttom_Form btn-dark">{{'navbar.login'|translate}}</a>
         <a href="signup" class="btn buttom_Form btn-dark">{{'navbar.signup'|translate}}</a>
       </div>
-      <!--<div class="exit" *ngIf="logueadoFunction() !== null">
+      <div class="exit" *ngIf="logueadoFunction() !== null">
         <a (click)="showAlertExit()" class="btn buttom_Form btn-dark">{{'navbar.exit'|translate}}</a>
-      </div>-->
+      </div>
     </div>
   </div>
   <div class="row switch-language">

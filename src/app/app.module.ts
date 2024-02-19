@@ -18,15 +18,17 @@ import { SignupModule } from './signup/signup.module';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-
-
+/**
+ * Para ag gred
+ */
+import { AgGridModule } from 'ag-grid-angular';
+import { BooksGridComponent } from './tables/books/books.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-
-
+    BooksGridComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +48,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
         useFactory:HttLoaderFactory,
         deps:[HttpClient]
       }
-    })
+    }),
+    AgGridModule
 
   ],
   providers: [TranslateService],
