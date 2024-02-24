@@ -1,16 +1,13 @@
-
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ColDef, GridOptions } from 'ag-grid-community';
 
-
 @Component({
-  selector: 'app-books-grid',
-  templateUrl: './books.component.html',
-  styleUrls: ['./books.component.css']
+  selector: 'app-table',
+  templateUrl: './table.component.html',
+  styleUrls: ['./table.component.css']
 })
-export class BooksGridComponent {
-
+export class TableComponent {
   gridOptions: GridOptions;
   rowData: any[] = [];
 
@@ -37,14 +34,4 @@ export class BooksGridComponent {
       this.rowData = data;
     });
   }
-
-
-  /**
-   * Para el contenedor lateral
-   */
-  lateralVisible:boolean = true;
-  toggleLateral(): void {
-    this.lateralVisible = !this.lateralVisible;
-  }
-
 }

@@ -1,11 +1,118 @@
-<div class="container" style="margin-top: 5%;">
-  <ag-grid-angular
-		style="width: 100%; height: 500px;"
-		class="ag-theme-quartz-dark"
-		[gridOptions]="gridOptions"
-    [rowData]="rowData">
-	</ag-grid-angular>
+<head>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+</head>
+
+<body>
+  <!--
+<div class="row">
+    <div id="lateral" [ngClass]="{'col-md-2':lateralVisible}" *ngIf="lateralVisible" >
+
+      Tables list
+      <button class="btn btn-dark" href="" (click)="toggleLateral()">
+        <i class="fas fa-less-than"></i>
+      </button>
+    </div>
+
+    <div id="content" [ngClass]="{'col-md-10': lateralVisible, 'col-md-12': !lateralVisible,'lateral-transition':true}" [style.marginLeft]="lateralVisible ? 'auto' : ''">
+      <header>
+        <h1>TABLE NAME</h1>
+      </header>
+      <div id="menu">
+        <h2>Here for the menu</h2>
+      </div>
+      <div>
+        <button class="btn btn-dark" *ngIf="!lateralVisible" (click)="toggleLateral()">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+      <div>
+        <ag-grid-angular class="ag-theme-quartz-dark" [gridOptions]="gridOptions" [rowData]="rowData">
+        </ag-grid-angular>
+      </div>
+    </div>
+  </div>
+  -->
+  <div class="offcanvas offcanvas-start w-25" tabindex="-1" id="offcanvas" data-bs-keyboard="false" data-bs-backdrop="false">
+    <div class="offcanvas-header">
+        <h6 class="offcanvas-title d-none d-sm-block" id="offcanvas">Menu</h6>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body px-0 bg-dark">
+        <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-start" id="menu">
+            <li class="nav-item">
+                <a href="#" class="nav-link text-truncate">
+                  <i class="fa-solid fa-house"></i><span class="ms-1 d-none d-sm-inline">Home</span>
+                </a>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="nav-link dropdown-toggle  text-truncate" id="dropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="fa-solid fa-subscript"></i><span class="ms-1 d-none d-sm-inline">Mathematics</span>
+                </a>
+                <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdown">
+                    <li><a class="dropdown-item" href="#">Calculus</a></li>
+                    <li><a class="dropdown-item" href="#">Algebra</a></li>
+                    <li><a class="dropdown-item" href="#">Vector Geometry</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#">Motivation</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="nav-link dropdown-toggle  text-truncate" id="dropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fa-solid fa-atom"></i><span class="ms-1 d-none d-sm-inline">Physics</span>
+              </a>
+              <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdown">
+                  <li><a class="dropdown-item" href="#">Mechanics</a></li>
+                  <li><a class="dropdown-item" href="#">Electromagnetism</a></li>
+                  <li><a class="dropdown-item" href="#">Computational physics</a></li>
+                  <li>
+                      <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="#">Motivation</a></li>
+              </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="nav-link dropdown-toggle  text-truncate" id="dropdown" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fa-solid fa-laptop-code"></i><span class="ms-1 d-none d-sm-inline">Programming</span>
+            </a>
+            <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdown">
+                <li><a class="dropdown-item" href="#">Calculus</a></li>
+                <li><a class="dropdown-item" href="#">Algebra</a></li>
+                <li><a class="dropdown-item" href="#">Vector Geometry</a></li>
+                <li>
+                    <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Motivation</a></li>
+            </ul>
+        </li>
+
+        </ul>
+    </div>
 </div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col min-vh-100 py-3">
+          <!-- toggler -->
+          <button class="btn float-end" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" role="button">
+            <i class="bi fa-solid fa-arrow-right fs-3" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"></i>
+          </button>
+            <header>
+            <h1>TABLE NAME</h1>
+            </header>
+            <div id="menu" class="row">
+              <app-navbar></app-navbar>
+            </div>
+            <div id="table">
+              <app-table></app-table>
+            </div>
+
+        </div>
+    </div>
+</div>
+</body>
+
 
 
 

@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="es">
-    <header>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=divice-width,initial-scale=1"/>
-    </header>
+<header>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=divice-width,initial-scale=1" />
+</header>
 
-    <body class="container">
-        <!--División para el contenido de la página-->
-              <div class="header row">
-                    <app-headerComputational></app-headerComputational>
-                </div>
-              <div class="navbar row">
+<body>
+  <!--División para el contenido de la página-->
+  <div class="header row">
+    <app-headerComputational></app-headerComputational>
+  </div>
+  <!--<div class="navbar row">
                     <app-navbar></app-navbar>
-              </div>
-            <!--<div class="page-container">-->
-                <!--División para el contenido medio de la página-->
-                <!--<div class="row">
+              </div>-->
+  <!--<div class="page-container">-->
+  <!--División para el contenido medio de la página-->
+  <!--<div class="row">
                     <div class="curious-box col-lg-3">
                       <app-lateral></app-lateral>
                     </div>
@@ -24,14 +24,16 @@
                         <app-content></app-content>
                     </div>
                 </div>-->
+  <div class="content text-justify row">
+    <app-contentComputational></app-contentComputational>
+  </div>
+
+  <!--División para el footer de la página-->
+  <div class="footer-container row">
+    <app-footer></app-footer>
+  </div>
 
 
-                <!--División para el footer de la página-->
-                <div class="footer-container row">
-                    <app-footer></app-footer>
-                </div>
-
-
-    </body>
+</body>
 
 </html>

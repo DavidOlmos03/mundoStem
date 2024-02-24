@@ -1,0 +1,163 @@
+/** Estilo para el carrusel **/
+.carousel {
+  margin-top: auto; /* Ajusta el margen superior según sea necesario */
+  height: 460px;
+  width: 80%;
+  margin:auto;
+  z-index: 0;
+  background-color:transparent;
+}
+
+
+/* Estilo para la imagen en el carrusel */
+.carousel-item img {
+  height: 460px; /* Ajusta el ancho de la imagen al 100% del contenedor */
+  margin:auto;
+}
+
+.carousel-item p{
+  color:rgb(0, 0, 0);
+  font-weight: bold;
+  text-align: justify;
+}
+
+/* Cambiar el color de los botones del carrusel */
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: transparent; /* Cambia el color de fondo según tus preferencias */
+  color: #ffffff; /* Cambia el color del texto según tus preferencias */
+  border: none; /* Elimina el borde si lo deseas */
+}
+
+/* Cambiar el color de los botones del carrusel al pasar el ratón */
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background-color: #56565643; /* Cambia el color de fondo al pasar el ratón según tus preferencias */
+  color: #ffffff; /* Cambia el color del texto al pasar el ratón según tus preferencias */
+}
+/**Estilos generales**/
+.content p {
+  line-height: 1.5; /*Agregar espacios entre lineas*/
+  text-align: justify;
+  font-family: oblique;
+}
+#switch-language{
+  max-width: 300px;
+  margin-left: 70%;
+  background-color: transparent;
+}
+
+.internal-section{
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.one-image{
+  display: flex;
+  justify-content: center;
+  /*padding: 0% 5% 0% 5%;*/
+}
+.one-image img{
+  max-width:500px;
+  border-radius: 1rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+.one-image img:hover{
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.439);
+}
+/**Estilos para el carousel tipo 1**/
+.gallery {
+  display: flex;
+  gap: 1rem;
+  max-width: 80rem;
+  margin: 2% 5% 0% 5%;
+}
+
+.card {
+  flex: 2;
+  cursor: pointer;
+  border-radius: 1rem;
+  overflow: hidden;
+  background-color: var(--background);
+  position: relative;
+  transition: 0.4s ease-in-out;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
+}
+
+.card:hover {
+  flex: 3;
+  font-weight: bold;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.439);
+}
+
+.card img {
+  /*position: relative;*/
+  height: 20rem;
+  object-fit: cover;
+}
+
+.card:nth-child(1) img {
+  left: -8rem;
+}
+
+.card:nth-child(2) img {
+  left: -6rem;
+}
+
+.card:nth-child(3) img {
+  left: -14rem;
+  /*border-radius: 1.2rem;*/
+}
+
+.card:nth-child(4) img {
+  left: -8rem;
+}
+
+#fourth-image-Aristotle:hover{
+  flex: 8;
+  font-weight: bold;
+}
+
+
+.card:nth-child(1),
+.card:nth-child(2),
+.card:nth-child(3),
+.card:nth-child(4) {
+  width: 6rem;
+}
+
+/**Estilo para el carousel tipo 2*/
+section{
+  width: 600px;
+  display: flex;
+  height: 430px;
+}
+section img{
+  width: 0px;
+  flex-grow: 1;
+  object-fit: cover;
+  opacity: .8;
+  transition: .5s ease;
+  border-radius: 1rem;
+}
+section img:hover{
+  width: 300px;
+  opacity: 1;
+  filter: contrast(120%);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.439)
+}
+
+/**Estilo para los videos*/
+
+iframe {
+  width: 500px;
+  height: 315px;
+  border-radius: 1rem;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
+  display: flex;
+}
+
+iframe:hover{
+  width: 490px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.439);
+  transition: 0.4s ease-in-out;
+}

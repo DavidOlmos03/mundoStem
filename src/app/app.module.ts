@@ -22,13 +22,12 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
  * Para ag gred
  */
 import { AgGridModule } from 'ag-grid-angular';
-import { BooksGridComponent } from './tables/books/books.component';
 
+import { TablesModule } from './tables/tables.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    BooksGridComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -49,7 +48,8 @@ import { BooksGridComponent } from './tables/books/books.component';
         deps:[HttpClient]
       }
     }),
-    AgGridModule
+    AgGridModule,
+    TablesModule
 
   ],
   providers: [TranslateService],

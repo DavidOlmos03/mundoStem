@@ -18,6 +18,7 @@ import { ContentElectromagnetismComponent } from './electromagnetism/content/con
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { ContentComputationalComponent } from './computational/content/content.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     HeaderComputationalComponent,
     HeaderMotivationComponent,
     ContentMechanicsComponent,
-    ContentElectromagnetismComponent
+    ContentElectromagnetismComponent,
+    ContentComputationalComponent
 
   ],
   imports: [
