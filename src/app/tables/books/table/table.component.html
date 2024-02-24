@@ -1,15 +1,25 @@
-<div id="content">
-  <div>
+<head>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+  <div id="content">
+    <div>
 
-    <!--
-      <button class="btn btn-dark" *ngIf="!lateralVisible" (click)="toggleLateral()">
-      <i class="fas fa-bars"></i>
-    </button>
-    -->
+      <!--
+        <button class="btn btn-dark" *ngIf="!lateralVisible" (click)="toggleLateral()">
+        <i class="fas fa-bars"></i>
+      </button>
+      -->
 
+    </div>
+    <div>
+      <ag-grid-angular class="ag-theme-quartz-dark" [gridOptions]="gridOptions" [rowData]="rowData"
+      [pagination]="true"
+      [paginationPageSize]="paginationPageSize"
+      [paginationPageSizeSelector]="paginationPageSizeSelector">
+
+      </ag-grid-angular>
+    </div>
   </div>
-  <div>
-    <ag-grid-angular class="ag-theme-quartz-dark" [gridOptions]="gridOptions" [rowData]="rowData">
-    </ag-grid-angular>
-  </div>
-</div>
+</body>
+
