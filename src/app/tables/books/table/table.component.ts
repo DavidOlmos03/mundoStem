@@ -1,19 +1,11 @@
 /**
- * Para el primer component que maneja caracteristicas de la tabla como los botones
+ * El primer component que maneja caracteristicas de la tabla como los botones
  */
 import { AgGridAngular, ICellRendererAngularComp } from 'ag-grid-angular';
 import {
   ICellRendererParams,
   ValueGetterParams,
 } from 'ag-grid-community';
-
-/***
- * Para el segundo component que se encarga de la estructura de la tabla
- */
-import { Component } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { ColDef, GridOptions } from 'ag-grid-community';
-
 
 @Component({
   selector: 'app-custom-button',
@@ -33,17 +25,26 @@ export class CustomButtonComponent implements ICellRendererAngularComp {
 }
 
 
+/***
+ * El segundo component que se encarga de la estructura de la tabla
+ */
+import { Component, Input, OnChanges, SimpleChanges} from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { ColDef, GridOptions } from 'ag-grid-community';
+
 @Component({
   selector: 'app-table',
   templateUrl: './table.component.html',
   styleUrls: ['./table.component.css'],
 })
-export class TableComponent {
+export class TableComponent implements OnChanges{
+  /**
+   * Se maneja la tabla con ag grid
+   */
   gridOptions: GridOptions;
   rowData: any[] = [];
   public paginationPageSize = 10;
   public paginationPageSizeSelector: number[] | boolean = [10, 20, 50];
-
   constructor(private http: HttpClient) {
     this.gridOptions = {
       columnDefs: [
@@ -63,9 +64,26 @@ export class TableComponent {
     this.loadData();
   }
 
+  /**
+   * Para manejar el cargue dinamico de la tabla
+   */
+  @Input() tableName: string = 'mechanics_books'
+  tableToShow:string = this.tableName
+
+  ngOnChanges(changes: SimpleChanges) {
+    if ('tableName' in changes) {
+      this.tableToShow = changes['tableName'].currentValue;
+      this.loadData();
+    }
+  }
+  /**
+   * Función para hacer la consulta a la API
+   */
   loadData() {
-    this.http.get<any[]>('http://localhost:8000/api/books').subscribe(data => {
+
+    this.http.get<any[]>('http://localhost:8000/books/'+this.tableToShow).subscribe(data => {
       this.rowData = data;
     });
   }
+
 }

@@ -64,8 +64,9 @@
                 <i class="fa-solid fa-atom"></i><span class="ms-1 d-none d-sm-inline">Physics</span>
               </a>
               <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdown">
-                  <li><a class="dropdown-item" href="#">Mechanics</a></li>
-                  <li><a class="dropdown-item" href="#">Electromagnetism</a></li>
+                <!---Estoy probando el funcionamiento de esta función para cambiar el nombre de tableName-->
+                  <li><a class="dropdown-item" (click)="enterTableName('mechanics_books')">Mechanics</a></li>
+                  <li><a class="dropdown-item" (click)="enterTableName('electromagnetism_books')">Electromagnetism</a></li>
                   <li><a class="dropdown-item" href="#">Computational physics</a></li>
                   <li>
                       <hr class="dropdown-divider">
@@ -99,13 +100,14 @@
             <i class="bi fa-solid fa-arrow-right fs-3" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"></i>
           </button>
             <header>
-            <h1>TABLE NAME</h1>
+
+            <h1>{{tableNameTitle}}</h1>
             </header>
             <div id="menu" class="row">
               <app-navbar></app-navbar>
             </div>
             <div id="table">
-              <app-table></app-table>
+              <app-table [tableName]="tableName"></app-table>
             </div>
 
         </div>
