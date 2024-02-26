@@ -4,35 +4,6 @@
 </head>
 
 <body>
-  <!--
-<div class="row">
-    <div id="lateral" [ngClass]="{'col-md-2':lateralVisible}" *ngIf="lateralVisible" >
-
-      Tables list
-      <button class="btn btn-dark" href="" (click)="toggleLateral()">
-        <i class="fas fa-less-than"></i>
-      </button>
-    </div>
-
-    <div id="content" [ngClass]="{'col-md-10': lateralVisible, 'col-md-12': !lateralVisible,'lateral-transition':true}" [style.marginLeft]="lateralVisible ? 'auto' : ''">
-      <header>
-        <h1>TABLE NAME</h1>
-      </header>
-      <div id="menu">
-        <h2>Here for the menu</h2>
-      </div>
-      <div>
-        <button class="btn btn-dark" *ngIf="!lateralVisible" (click)="toggleLateral()">
-          <i class="fas fa-bars"></i>
-        </button>
-      </div>
-      <div>
-        <ag-grid-angular class="ag-theme-quartz-dark" [gridOptions]="gridOptions" [rowData]="rowData">
-        </ag-grid-angular>
-      </div>
-    </div>
-  </div>
-  -->
   <div class="offcanvas offcanvas-start w-25" tabindex="-1" id="offcanvas" data-bs-keyboard="false" data-bs-backdrop="false">
     <div class="offcanvas-header">
         <h6 class="offcanvas-title d-none d-sm-block" id="offcanvas">Menu</h6>
@@ -93,25 +64,30 @@
     </div>
 </div>
 <div class="container-fluid">
-    <div class="row">
-        <div class="col min-vh-100 py-3">
-          <!-- toggler -->
-          <button class="btn float-end" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" role="button">
-            <i class="bi fa-solid fa-arrow-right fs-3" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"></i>
-          </button>
-            <header>
+  <div class="row">
+    <div class="col min-vh-100 py-3">
+      <header>
+        <h1 class="display-4">
+          <div class="text-center" id="Tittle">
+            {{tableNameTitle}}
+          </div>
+        </h1>
+        <nav class="navbar">
+          <app-navbar></app-navbar>
+        </nav>
+      </header>
 
-            <h1>{{tableNameTitle}}</h1>
-            </header>
-            <div id="menu" class="row">
-              <app-navbar></app-navbar>
-            </div>
-            <div id="table">
-              <app-table [tableName]="tableName"></app-table>
-            </div>
 
-        </div>
+      <div id="table">
+        <!-- toggler -->
+        <button class="btn float-end" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" role="button">
+          <i class="bi fa-solid fa-arrow-right fs-3" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"></i>
+        </button>
+        <app-table [tableName]="tableName"></app-table>
+      </div>
+
     </div>
+  </div>
 </div>
 </body>
 
