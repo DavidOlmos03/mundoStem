@@ -13,6 +13,7 @@ export class NavbarComponent {
   }
   cerrarSesion(): void {
     localStorage.removeItem('acceso');
+    window.location.reload();
   }
 
   showAlertExit() {
