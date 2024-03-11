@@ -95,6 +95,23 @@
       "Three-body":{
 
       }
+    },
+    "electromagnetism":{
+      "historyText":"La historia del electromagnetismo es una narrativa fascinante que abarca varios siglos y ha involucrado a numerosos científicos e investigadores clave. Esta historia se puede dividir en varias secciones destacadas:",
+      "discovery":{
+        "title1":"Descubrimiento de la Electricidad (Siglo XVII-XVIII)",
+        "text1":"El descubrimiento y comprensión de la electricidad se desarrolló a lo largo de los siglos XVII y XVIII, con contribuciones clave de varios científicos que realizaron experimentos y observaciones fundamentales. A continuación, se presentan algunos hitos importantes en la historia del descubrimiento de la electricidad durante ese período:",
+        "text2":"Realizó experimentos con electricidad estática, observando la atracción y repulsión de objetos electrificados.",
+        "text3":"Distinguió entre conductores y aislantes. Descubrió que algunos materiales podían transportar la electricidad.",
+        "text4":"Propuso la existencia de dos tipos de electricidad, a la que llamó 'vítreo' (positiva) y 'resinoso' (negativa).",
+        "text5_1":"* Contribuyó significativamente a la comprensión de la electricidad.",
+        "text5_2":"* Realizó experimentos con cometas para demostrar la naturaleza eléctrica de los rayos.",
+        "text5_3":"* Propuso el modelo de un fluido eléctrico y desarrolló la teoría de la electricidad de un solo fluido.",
+        "text6":"Inventó el condensador, también conocido como la botella de Leyden, un dispositivo para almacenar carga eléctrica.",
+        "text7":"También contribuyó al desarrollo del condensador de Leyden al mismo tiempo que Musschenbroek.",
+        "text8":"Descubrió que ciertos conductores podrían descargar la electricidad de un condensador.",
+        "text9":"Desarrolló la teoría de que la electricidad es un fluido compuesto por partículas eléctricas individuales."
+      }
     }
 
 

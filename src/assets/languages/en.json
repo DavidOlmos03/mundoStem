@@ -90,6 +90,30 @@
       },
       "Newton":{
         "text1":"Isaac Newton (1643-1727): Newton consolidated Galileo's ideas and formulated the laws of motion and the law of universal gravitation. His contributions revolutionized physics and astronomy, providing a mathematical framework for understanding and predicting the motion of objects."
+      },
+      "threeBody":{
+        "threeBodyProblem":"Three-body problem",
+        "text1":"Three-body problem: The gravitational interaction between three celestial bodies is a classic problem in celestial mechanics that still has no general analytical solution. The complexity of this problem has led to the development of numerical methods and the study of chaotic systems."
+      },
+      "doublePendulum":{
+        "doublePendulum":"Double pendulum problem"
+      }
+    },
+    "electromagnetism":{
+      "historyText":"The history of electromagnetism is a fascinating narrative that spans several centuries and has involved numerous key scientists and researchers. This story can be divided into several notable sections:",
+      "discovery":{
+        "title1":"Discovery of Electricity (17th-18th Century)",
+        "text1":"The discovery and understanding of electricity developed throughout the 17th and 18th centuries, with key contributions from several scientists who performed fundamental experiments and observations. Below are some important milestones in the history of the discovery of electricity during that period:",
+        "text2":"He conducted experiments with static electricity, observing the attraction and repulsion of electrified objects.",
+        "text3":"He distinguished between conductors and insulators. He discovered that some materials could transport electricity.",
+        "text4":"He proposed the existence of two types of electricity, which he called 'vitreous' (positive) and 'resinous' (negative).",
+        "text5_1":"* He contributed significantly to the understanding of electricity.",
+        "text5_2":"* He conducted experiments with comets to demonstrate the electrical nature of lightning.",
+        "text5_3":"* Proposed the electric fluid model and developed the single fluid theory of electricity.",
+        "text6":"Invented the capacitor, also known as the Leyden jar, a device for storing electrical charge.",
+        "text7":"He also contributed to the development of the Leyden condenser at the same time as Musschenbroek.",
+        "text8":"He discovered that certain conductors could discharge electricity from a capacitor.",
+        "text9":"He developed the theory that electricity is a fluid composed of individual electrical particles."
       }
     }
   },
