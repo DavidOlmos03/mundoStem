@@ -8,6 +8,7 @@ import { Component} from '@angular/core';
 })
 export class ContentMechanicsComponent{
   mostrarTextoCompleto = false;
+  selectedPart:string = "Aristotle";
   toggleTextoCompleto() {
     this.mostrarTextoCompleto = !this.mostrarTextoCompleto;
   }

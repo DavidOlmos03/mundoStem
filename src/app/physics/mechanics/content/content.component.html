@@ -4,12 +4,22 @@
 <div class="content">
   <h1>{{"physics-module.history"|translate}}</h1>
   <br>
+  <ul id="indice">
+    <li><a (click)="selectedPart='Aristotle'">{{'physics-module.mechanics.Aristotle.title'|translate}}</a></li>
+    <li><a (click)="selectedPart='Galileo'">Galileo Galilei</a></li>
+    <li><a (click)="selectedPart='Newton'">Isaac Newton</a></li>
+    <li><a (click)="selectedPart='three-body'">Three-body problem</a></li>
+    <li><a (click)="selectedPart='double-pendulum'">Double pendulum problem</a></li>
+    <li><a (click)="selectedPart='rigid-body'">Rigid body problem</a></li>
+    <li><a (click)="selectedPart='Einsteins-theory'">Einstein's theory of relativity</a></li>
+    <li><a (click)="selectedPart='Quantum'">Quantum mechanics</a></li>
+  </ul>
   <br>
   <p>{{'physics-module.mechanics.history-text'|translate}}</p>
- <!--
+  <!--
         Aristoteles
       -->
-  <div id="Aristoteles">
+  <div id="Aristotle" *ngIf="selectedPart == 'Aristotle'">
     <h3>{{'physics-module.mechanics.Aristotle.title'|translate}}</h3>
     <p>{{'physics-module.mechanics.Aristotle.text1'|translate}}</p>
     <div class="row">
@@ -41,12 +51,12 @@
         <img src="assets/imgs/physics/mechanics/Aristotle/Aristotle_2.jpg" alt="Imagen">
       </figure>
     </div>
-
+  </div>
 
   <!--
     Galileo Galilei
       -->
-  <div id="Galileo">
+  <div id="Galileo" *ngIf="selectedPart == 'Galileo'">
     <h3>Galileo Galilei</h3>
     <p>
       {{'physics-module.mechanics.Galileo.text1'|translate}}
@@ -57,7 +67,7 @@
         <section>
           <img src="assets/imgs/physics/mechanics/Galileo Galilei/Galileo_1.jpg" alt="Imagen">
           <img src="assets/imgs/physics/mechanics/Galileo Galilei/Galileo_2.jpg" alt="Imagen">
-          <img src="assets/imgs/physics/mechanics/Galileo Galilei/Galileo_3.jpg"alt="Imagen">
+          <img src="assets/imgs/physics/mechanics/Galileo Galilei/Galileo_3.jpg" alt="Imagen">
           <img src="assets/imgs/physics/mechanics/Galileo Galilei/Galileo_4.jpg" alt="Imagen">
         </section>
       </div>
@@ -86,32 +96,12 @@
         </p>
       </div>
     </div>
-
-    <!--
-      <div class="gallery">
-      <figure class="card">
-        <img src="assets/imgs/physics/mechanics/Galileo Galilei/Galileo_1.jpg" alt="Imagen">
-      </figure>
-      <figure class="card">
-        <img src="assets/imgs/physics/mechanics/Galileo Galilei/Galileo_2.jpg" alt="Imagen">
-      </figure>
-      <figure class="card">
-        <img src="assets/imgs/physics/mechanics/Galileo Galilei/Galileo_3.jpg" alt="Imagen">
-      </figure>
-      <figure class="card">
-        <img src="assets/imgs/physics/mechanics/Galileo Galilei/Galileo_4.jpg" alt="Imagen">
-      </figure>
-      <figure class="card">
-        <img src="assets/imgs/physics/mechanics/Galileo Galilei/Galileo_5.jpg" alt="Imagen">
-      </figure>
-    </div>
-    -->
-
+  </div>
 
   <!--
     Isaac Newton
   -->
-  <div id="Newton">
+  <div id="Newton" *ngIf="selectedPart == 'Newton'">
     <h3>Isaac Newton</h3>
     <p>
       {{'physics-module.mechanics.Newton.text1'|translate}}
@@ -138,10 +128,12 @@
   <!--
     Three body problem
   -->
-  <div id="three-body">
+  <div id="three-body" *ngIf="selectedPart == 'three-body'">
     <h3>Three-body problem</h3>
     <p>
-      Three-body problem: The gravitational interaction between three celestial bodies is a classic problem in celestial mechanics that still has no general analytical solution. The complexity of this problem has led to the development of numerical methods and the study of chaotic systems.
+      Three-body problem: The gravitational interaction between three celestial bodies is a classic problem in celestial
+      mechanics that still has no general analytical solution. The complexity of this problem has led to the development
+      of numerical methods and the study of chaotic systems.
     </p>
     <div class="row internal-section">
       <div class="col-6">
@@ -154,43 +146,47 @@
         <iframe src="https://www.youtube.com/embed/D89ngRr4uZg" allowfullscreen></iframe>
       </div>
     </div>
-
   </div>
   <!--
     Double pendulum problem
   -->
-  <div id="double-pendulum">
-    <h3>Double pendulum problem</h3>
+  <div id="double-pendulum" *ngIf="selectedPart == 'double-pendulum'">
+      <h3>Double pendulum problem</h3>
     <p>
-      Double pendulum problem: A classic problem in mechanics is the study of the double pendulum, which presents chaotic behaviors and is an example of nonlinear dynamic systems.
+      Double pendulum problem: A classic problem in mechanics is the study of the double pendulum, which presents
+      chaotic behaviors and is an example of nonlinear dynamic systems.
     </p>
     <div class="row internal-sectiom">
       <div class="col-7">
-        <p>El péndulo doble es un sistema dinámico en la física que consta de dos péndulos simples conectados entre sí. Este sistema es de interés en la física debido a su comportamiento caótico y a la riqueza de fenómenos dinámicos que exhibe. La relación entre el péndulo doble y la física se puede explorar en varios aspectos:</p>
+        <p>El péndulo doble es un sistema dinámico en la física que consta de dos péndulos simples conectados entre sí.
+          Este sistema es de interés en la física debido a su comportamiento caótico y a la riqueza de fenómenos
+          dinámicos que exhibe. La relación entre el péndulo doble y la física se puede explorar en varios aspectos:</p>
       </div>
       <div class="col-5">
         <iframe src="https://www.youtube.com/embed/HcKJT2pGlUE" frameborder="0" allowfullscreen></iframe>
         <p>(video en español)</p>
       </div>
-
     </div>
   </div>
   <!--
     Rigid body problem
   -->
-  <div id="rigid-body">
+  <div id="rigid-body" *ngIf="selectedPart == 'rigid-body'">
     <h3>Rigid body problem</h3>
     <p>
-      Rigid body problem: The study of rotating rigid bodies has led to the development of rigid mechanics and has found applications in engineering and vehicle dynamics.
+      Rigid body problem: The study of rotating rigid bodies has led to the development of rigid mechanics and has found
+      applications in engineering and vehicle dynamics.
     </p>
   </div>
   <!--
     Einstein's theory of relativity
   -->
-  <div id="Einstein's-theory">
+  <div id="Einstein's-theory" *ngIf="selectedPart == 'Einsteins-theory'">
     <h3>Einstein's theory of relativity</h3>
     <p>
-      Einstein's theory of relativity: In the early 20th century, Albert Einstein proposed the theory of relativity, which transformed the understanding of gravity. The theory of general relativity describes gravity as a curvature of space-time caused by the presence of mass and energy.
+      Einstein's theory of relativity: In the early 20th century, Albert Einstein proposed the theory of relativity,
+      which transformed the understanding of gravity. The theory of general relativity describes gravity as a curvature
+      of space-time caused by the presence of mass and energy.
     </p>
     <div class="gallery">
       <figure class="card">
@@ -210,51 +206,58 @@
       </figure>
     </div>
   </div>
-</div>
-
-
   <!--
      Quantum mechanics
   -->
-  <div id="Quantum">
-    <h3> Quantum mechanics</h3>
-    <p>
-      Quantum mechanics: At the subatomic level, quantum mechanics replaced classical mechanics. Developed in the first half of the 20th century, quantum mechanics describes the behavior of subatomic particles and has led to technologies such as quantum electronics.
-    </p>
-    <div class="row internal-section">
-      <div class="col-4 one-image">
-        <img src="../../../../assets/imgs/physics/mechanics/Quantum/Quantum_4.jpg">
-      </div>
-      <div class="col-8">
-        <h5>Double-slit experiment</h5>
-        <br>
-        <p>
-          In modern physics, the double-slit experiment demonstrates that light and matter can satisfy the seemingly incongruous classical definitions for both waves and particles, which is considered evidence for the fundamentally probabilistic nature of quantum mechanics.
-          This type of experiment was first performed by Thomas Young in 1801, as a demonstration of the wave behavior of visible light. At that time it was thought that light consisted of either waves or particles. With the beginning of modern physics, about a hundred years later,
-          it was realized that light could in fact show both wave and particle characteristics. In 1927, Davisson and Germer and, independently George Paget Thomson and his research student Alexander Reid demonstrated that electrons show the same behavior, which was later extended to atoms and molecules.
-          Thomas Young's experiment with light was part of classical physics long before the development of quantum mechanics and the concept of wave–particle duality. He believed it demonstrated that Christiaan Huygens' wave theory of light was correct, and his experiment is sometimes referred to as Young's experiment or Young's slits.
-        </p>
-      </div>
+  <div id="Quantum" *ngIf="selectedPart == 'Quantum'">
+  <h3>Quantum mechanics</h3>
+  <p>
+    Quantum mechanics: At the subatomic level, quantum mechanics replaced classical mechanics. Developed in the first
+    half of the 20th century, quantum mechanics describes the behavior of subatomic particles and has led to
+    technologies such as quantum electronics.
+  </p>
+  <div class="row internal-section">
+    <div class="col-4 one-image">
+      <img src="../../../../assets/imgs/physics/mechanics/Quantum/Quantum_4.jpg">
     </div>
-    <br>
-    <div class="gallery">
-      <figure class="card">
-        <img src="assets/imgs/physics/mechanics/Quantum/Quantum_1.jpg" alt="Imagen">
-      </figure>
-      <figure class="card">
-        <img src="assets/imgs/physics/mechanics/Quantum/Quantum_2.jpg" alt="Imagen">
-      </figure>
-      <figure class="card">
-        <img src="assets/imgs/physics/mechanics/Quantum/Quantum_3.jpg" alt="Imagen">
-      </figure>
-      <figure class="card">
-        <img src="assets/imgs/physics/mechanics/Quantum/Quantum_5.jpg" alt="Imagen">
-      </figure>
-      <figure class="card">
-        <img src="assets/imgs/physics/mechanics/Quantum/Quantum_6.jpg" alt="Imagen">
-      </figure>
+    <div class="col-8">
+      <h5>Double-slit experiment</h5>
+      <br>
+      <p>
+        In modern physics, the double-slit experiment demonstrates that light and matter can satisfy the seemingly
+        incongruous classical definitions for both waves and particles, which is considered evidence for the
+        fundamentally probabilistic nature of quantum mechanics.
+        This type of experiment was first performed by Thomas Young in 1801, as a demonstration of the wave behavior of
+        visible light. At that time it was thought that light consisted of either waves or particles. With the beginning
+        of modern physics, about a hundred years later,
+        it was realized that light could in fact show both wave and particle characteristics. In 1927, Davisson and
+        Germer and, independently George Paget Thomson and his research student Alexander Reid demonstrated that
+        electrons show the same behavior, which was later extended to atoms and molecules.
+        Thomas Young's experiment with light was part of classical physics long before the development of quantum
+        mechanics and the concept of wave–particle duality. He believed it demonstrated that Christiaan Huygens' wave
+        theory of light was correct, and his experiment is sometimes referred to as Young's experiment or Young's slits.
+      </p>
     </div>
-    <!--
+  </div>
+  <br>
+  <div class="gallery">
+    <figure class="card">
+      <img src="assets/imgs/physics/mechanics/Quantum/Quantum_1.jpg" alt="Imagen">
+    </figure>
+    <figure class="card">
+      <img src="assets/imgs/physics/mechanics/Quantum/Quantum_2.jpg" alt="Imagen">
+    </figure>
+    <figure class="card">
+      <img src="assets/imgs/physics/mechanics/Quantum/Quantum_3.jpg" alt="Imagen">
+    </figure>
+    <figure class="card">
+      <img src="assets/imgs/physics/mechanics/Quantum/Quantum_5.jpg" alt="Imagen">
+    </figure>
+    <figure class="card">
+      <img src="assets/imgs/physics/mechanics/Quantum/Quantum_6.jpg" alt="Imagen">
+    </figure>
+  </div>
+  <!--
       <div id="carouselPhysicsQuantum" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-indicators">
         <button type="button" data-bs-target="#carouselPhysicsQuantum" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 0"></button>
@@ -305,6 +308,8 @@
 
 
   </div>
-  <br>
-
 </div>
+
+
+
+<br>
