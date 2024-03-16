@@ -5,6 +5,9 @@ import { CommonModule } from '@angular/common';
 import { HomeModule } from './home/home.module';
 import { IndexComponent } from './home/index/index.component';
 import { RouterModule, Routes } from '@angular/router';
+/**
+ * Componenetes de física
+*/
 import { MechanicsComponent } from './physics/mechanics/mechanics.component';
 import { ElectromagnetismComponent } from './physics/electromagnetism/electromagnetism.component';
 import { ComputationalComponent } from './physics/computational/computational.component';
@@ -30,7 +33,7 @@ const routes: Routes = [
   { path: 'mechanics', component: MechanicsComponent },
   { path: 'electromagnetism', component: ElectromagnetismComponent },
   { path: 'computational', component: ComputationalComponent },
-  { path: 'physics_motivation', component: MotivationComponent },
+  { path: 'physicsMotivation', component: MotivationComponent },
   { path: 'vectorgeometry', component: VectorgeometryComponent },
   { path: 'calculus', component: CalculusComponent },
   { path: 'algebra', component: AlgebraComponent },

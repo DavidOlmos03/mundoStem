@@ -1,69 +1,20 @@
-/** Estilo para el carrusel **/
-.carousel {
-  margin-top: auto; /* Ajusta el margen superior según sea necesario */
-  height: 460px;
-  width: 80%;
-  margin:auto;
-  z-index: 0;
-  background-color:transparent;
+/** Estilo para el indice**/
+#indice{
+  display: flex; /*Se aplica el estilo para que sepuedan ordenar en una sola fila*/
+  flex-direction: row;
+  list-style-type: none;
+  background-color: rgba(194, 63, 63, 0.294);
+}
+#indice li{
+  padding: 0px 10px 0px 10px;
+}
+#indice a{
+  cursor: pointer;
+}
+#indice li:hover{
+  background-color: #F9423D;
 }
 
-
-/* Estilo para la imagen en el carrusel */
-.carousel-item img {
-  height: 460px; /* Ajusta el ancho de la imagen al 100% del contenedor */
-  margin:auto;
-}
-
-.carousel-item p{
-  color:rgb(0, 0, 0);
-  font-weight: bold;
-  text-align: justify;
-}
-
-/* Cambiar el color de los botones del carrusel */
-.carousel-control-prev,
-.carousel-control-next {
-  background-color: transparent; /* Cambia el color de fondo según tus preferencias */
-  color: #ffffff; /* Cambia el color del texto según tus preferencias */
-  border: none; /* Elimina el borde si lo deseas */
-}
-
-/* Cambiar el color de los botones del carrusel al pasar el ratón */
-.carousel-control-prev:hover,
-.carousel-control-next:hover {
-  background-color: #56565643; /* Cambia el color de fondo al pasar el ratón según tus preferencias */
-  color: #ffffff; /* Cambia el color del texto al pasar el ratón según tus preferencias */
-}
-/**Estilos generales**/
-.content p {
-  line-height: 1.5; /*Agregar espacios entre lineas*/
-  text-align: justify;
-  font-family: oblique;
-}
-#switch-language{
-  max-width: 300px;
-  margin-left: 70%;
-  background-color: transparent;
-}
-
-.internal-section{
-  margin-left: 5%;
-  margin-right: 5%;
-}
-.one-image{
-  display: flex;
-  justify-content: center;
-  /*padding: 0% 5% 0% 5%;*/
-}
-.one-image img{
-  max-width:500px;
-  border-radius: 1rem;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-}
-.one-image img:hover{
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.439);
-}
 /**Estilos para el carousel tipo 1**/
 .gallery {
   display: flex;
@@ -144,6 +95,37 @@ section img:hover{
   opacity: 1;
   filter: contrast(120%);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.439)
+}
+
+
+/**Estilos generales**/
+.content p {
+  line-height: 1.5; /*Agregar espacios entre lineas*/
+  text-align: justify;
+  font-family: oblique;
+}
+#switch-language{
+  max-width: 300px;
+  margin-left: 70%;
+  background-color: transparent;
+}
+
+.internal-section{
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.one-image{
+  display: flex;
+  justify-content: center;
+  /*padding: 0% 5% 0% 5%;*/
+}
+.one-image img{
+  max-width:500px;
+  border-radius: 1rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+.one-image img:hover{
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.439);
 }
 
 /**Estilo para los videos*/

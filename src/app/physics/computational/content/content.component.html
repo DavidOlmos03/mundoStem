@@ -4,12 +4,20 @@
 <div class="content">
   <h1>{{"physics-module.history"|translate}}</h1>
   <br>
+  <ul id="indice">
+    <li><a (click)="selectedPart='1940-1950'">Década de 1940-1950</a></li>
+    <li><a (click)="selectedPart='simulation'">Simulación de sistemas físicos</a></li>
+    <li><a (click)="selectedPart='1980-1990'">Década 1980-1990</a></li>
+    <li><a (click)="selectedPart='XXI'">Modelización y predicción</a></li>
+    <li><a (click)="selectedPart='materialDesing'">Diseño de materiales</a></li>
+    <li><a (click)="selectedPart='dataAnalisis'">Análisis de datos</a></li>
+  </ul>
   <br>
   <p>La historia de la física computacional está estrechamente ligada al desarrollo de la computación y la física teórica y experimental. Aquí hay algunos hitos importantes:</p>
- <!--
-        Aristoteles
-      -->
-  <div id="Aristoteles">
+  <!--
+    Década de 1940-1950
+  -->
+  <div id="1940-1950" *ngIf="selectedPart == '1940-1950'">
     <h3>Década de 1940-1950:</h3>
     <p>
       La década de 1940-1950 fue un período crucial para el desarrollo de la física computacional, marcado por avances significativos que sentaron las bases para la utilización de computadoras en la resolución de problemas físicos y científicos. Aquí hay una descripción y algunos hechos importantes de este período:</p>
@@ -70,13 +78,14 @@
         </p>
       </div>
     </div>
+  </div>
   <!--
-    Galileo Galilei
-      -->
-  <div id="Galileo">
-    <h3>Galileo Galilei</h3>
+    Década de 1960
+  -->
+  <div id="simulation" *ngIf="selectedPart == 'simulation'">
+    <h3>Simulación de sistemas físicos:</h3>
     <p>
-      {{'physics-module.mechanics.Galileo.text1'|translate}}
+      Durante los años 1960 y 1970, los avances en la simulación de sistemas físicos fueron significativos. Los físicos y científicos computacionales desarrollaron métodos numéricos más precisos y eficientes, lo que permitió modelar una amplia gama de fenómenos físicos con mayor fidelidad y detalle. Desde la dinámica molecular hasta la mecánica de fluidos computacional, estas décadas fueron testigos de un crecimiento considerable en la capacidad de simular y comprender los sistemas físicos a través de la computación.
     </p>
     <div class="row">
       <div class="col-md-6">
@@ -90,58 +99,86 @@
       </div>
       <div class="col-md-6">
         <div class="row">
-          <p>{{'physics-module.mechanics.Galileo.text2.part0'|translate}}</p>
-          <p>1. {{'physics-module.mechanics.Galileo.text2.part1'|translate}} </p><br>
-          <p>2. {{'physics-module.mechanics.Galileo.text2.part2'|translate}} </p><br>
-          <p>3. {{'physics-module.mechanics.Galileo.text2.part3'|translate}} </p><br>
-          <p>4. {{'physics-module.mechanics.Galileo.text2.part4'|translate}} </p>
+          <p>1. Desarrollo de métodos numéricos avanzados: </p>
+          <p>Durante estos años, se introdujeron y perfeccionaron diversos métodos numéricos para resolver ecuaciones diferenciales, integración numérica y simulación de sistemas físicos. Estos incluyen métodos como el método de elementos finitos, el método de diferencias finitas y el método de Monte Carlo.
+          </p><br>
+          <p>2. Dinámica molecular:</p><br>
+          <p>La simulación de la dinámica molecular experimentó un importante avance durante este período. Los físicos comenzaron a simular sistemas atómicos y moleculares a nivel microscópico, lo que permitió estudiar las propiedades de los materiales a una escala molecular y entender fenómenos como la difusión molecular, la formación de cristales y las transiciones de fase.</p><br>
+          <p>3. Mecánica de fluidos computacional (CFD):</p><br>
+          <p>La CFD se desarrolló como un campo importante de la física computacional en este período. Los físicos comenzaron a utilizar métodos numéricos para resolver las ecuaciones de Navier-Stokes, permitiendo la simulación de flujos de fluidos complejos, como la aerodinámica, la hidrodinámica y los flujos turbulentos.</p><br>
         </div>
       </div>
+      <p>4. Simulación de sistemas astrofísicos:</p><br>
+      <p>La capacidad de simular sistemas astrofísicos también mejoró durante estas décadas. Se desarrollaron modelos numéricos para estudiar la formación de estrellas y galaxias, la evolución de los sistemas planetarios y la dinámica de los agujeros negros, lo que permitió avanzar en nuestra comprensión del universo a escalas cósmicas.</p><br>
+      <p>En resumen, los años 1960 y 1970 fueron testigos de avances significativos en la simulación de sistemas físicos, gracias al desarrollo de métodos numéricos más avanzados y al aumento en la capacidad de procesamiento computacional. Estos avances sentaron las bases para el crecimiento posterior de la física computacional y su aplicación en una amplia variedad de disciplinas científicas.</p><br>
+    </div>
+  </div>
+  <!--
+    Década de 1980-1990
+  -->
+  <div id="1980-1990" *ngIf="selectedPart == '1980-1990'">
+    <h3>Década de 1980-1990:</h3>
+    <p>Durante la década de 1980 y 1990, la física computacional maduró como un campo establecido e influyente en la investigación científica. La disponibilidad de supercomputadoras y el desarrollo de algoritmos más eficientes permitieron la simulación de sistemas físicos a escalas cada vez mayores y con una precisión sin precedentes. Desde la dinámica molecular hasta la cosmología computacional, esta década fue testigo de avances significativos en nuestra capacidad para modelar y comprender una amplia gama de fenómenos físicos a través de la computación.</p>
+    <div class="row" id="col-md-6">
+      <p><b>1. Avances en la simulación de materiales:</b></p>
+      <p>Durante la década de 1980 y 1990, se realizaron progresos significativos en la simulación de materiales, permitiendo el diseño y la optimización de materiales con propiedades específicas. Esto incluye materiales superconductores, materiales para electrónica y materiales compuestos, entre otros.</p>
+      <p><b>2.Expansión de la mecánica de fluidos computacional (CFD):</b></p>
+      <p>La CFD experimentó un crecimiento notable durante este período, con aplicaciones en una amplia gama de industrias, desde la aerodinámica hasta la ingeniería de procesos. Se desarrollaron algoritmos más eficientes y se mejoraron los modelos para simular flujos turbulentos y multifásicos.</p>
+      <p><b>3. Simulación de sistemas astrofísicos a gran escala:</b></p>
+      <p>La década de 1980 y 1990 vio un aumento en la capacidad de simular sistemas astrofísicos a gran escala, como la formación de galaxias, la evolución estelar y la cosmología computacional. Se utilizaron supercomputadoras para realizar simulaciones detalladas de la estructura y evolución del universo.</p>
+      <p><b>4. Aplicaciones en la física de partículas:</b></p>
+      <p>La física computacional desempeñó un papel importante en la simulación y el análisis de datos de experimentos de física de partículas, como los realizados en aceleradores de partículas como el CERN. Se utilizaron técnicas de simulación para estudiar la física de partículas elementales y para predecir los resultados de experimentos de alta energía.</p>
+      <p><b>5. Desarrollo de métodos numéricos avanzados:</b></p>
+      <p>Durante esta década, se desarrollaron y refinaron métodos numéricos avanzados para resolver una amplia variedad de problemas físicos. Esto incluye métodos de integración numérica, métodos de elementos finitos y técnicas de optimización, entre otros.</p>
+      <p>En resumen, la década de 1980 y 1990 fue un período de avance significativo en la física computacional, con progresos notables en la simulación de sistemas físicos a escalas diversas y con una precisión cada vez mayor. Estos avances sentaron las bases para el continuo crecimiento y desarrollo del campo en el siglo XXI.</p>
     </div>
     <div class="row internal-section">
-      <div class="row">
-        <h3> {{'physics-module.mechanics.Galileo.quotes.title'|translate}} </h3>
-        <p>"{{'physics-module.mechanics.Galileo.quotes.quote1'|translate}}"
-          <br>
-          -Galileo Galilei
-        </p>
+      <div class="col-6">
+        <h4>Video en español</h4>
+        <iframe src="https://www.youtube.com/embed/uailf0LCkPk" allowfullscreen></iframe>
+
       </div>
-      <div class="row">
-        <p>"{{'physics-module.mechanics.Galileo.quotes.quote2'|translate}}"
-          <br>
-          -Galileo Galilei
-        </p>
+      <div class="col-6">
+        <h4>Video en inglés</h4>
+        <iframe src="https://www.youtube.com/embed/D89ngRr4uZg" allowfullscreen></iframe>
       </div>
     </div>
 
-    <!--
-      <div class="gallery">
-      <figure class="card">
-        <img src="assets/imgs/physics/mechanics/Galileo Galilei/Galileo_1.jpg" alt="Imagen">
-      </figure>
-      <figure class="card">
-        <img src="assets/imgs/physics/mechanics/Galileo Galilei/Galileo_2.jpg" alt="Imagen">
-      </figure>
-      <figure class="card">
-        <img src="assets/imgs/physics/mechanics/Galileo Galilei/Galileo_3.jpg" alt="Imagen">
-      </figure>
-      <figure class="card">
-        <img src="assets/imgs/physics/mechanics/Galileo Galilei/Galileo_4.jpg" alt="Imagen">
-      </figure>
-      <figure class="card">
-        <img src="assets/imgs/physics/mechanics/Galileo Galilei/Galileo_5.jpg" alt="Imagen">
-      </figure>
-    </div>
-    -->
-
-
+  </div>
   <!--
-    Isaac Newton
+    Siglo XXI
   -->
-  <div id="Newton">
-    <h3>Isaac Newton</h3>
+  <div id="XXI" *ngIf="selectedPart == 'XXI'">
+    <h3>Modelización y predicción:</h3>
+    <p>En el siglo XXI, la física computacional se ha convertido en una herramienta fundamental para la modelización y predicción de una amplia gama de fenómenos físicos. Gracias al aumento exponencial en la potencia de cálculo y al desarrollo de algoritmos más sofisticados, los científicos pueden simular sistemas físicos con una precisión y detalle sin precedentes. Desde la predicción del cambio climático hasta la evolución de las estrellas en el universo, la física computacional ha permitido a los investigadores entender y prever el comportamiento de la naturaleza a escalas que antes eran inimaginables.</p>
+    <p><b>Predicción del cambio climático:</b></p>
+    <p>La física computacional ha desempeñado un papel crucial en la modelización del clima y la predicción del cambio climático. Los modelos climáticos globales, alimentados por datos observacionales y simulaciones numéricas, permiten a los científicos entender cómo los factores naturales y humanos afectan el clima y realizar predicciones sobre futuros escenarios climáticos.</p>
+    <p><b>Modelización de sistemas biológicos:</b></p>
+    <p>La física computacional también se utiliza en la modelización de sistemas biológicos, desde la dinámica de proteínas y moléculas hasta la simulación de redes genéticas. Estos modelos ayudan a los investigadores a comprender procesos biológicos complejos y a diseñar nuevas terapias y tratamientos médicos.</p>
+    <p><b>Predicción de desastres naturales: </b></p>
+    <p>Mediante la simulación de fenómenos naturales como terremotos, tsunamis y huracanes, la física computacional contribuye a la predicción y mitigación de desastres naturales. Los modelos numéricos permiten a los científicos evaluar el riesgo de eventos catastróficos y tomar medidas preventivas para proteger vidas y propiedades.</p>
+    <p><b>Simulación de la evolución estelar y galáctica:</b></p>
+    <p>En la astrofísica, la física computacional se utiliza para simular la evolución de estrellas y galaxias a lo largo del tiempo cósmico. Estas simulaciones proporcionan información invaluable sobre la formación y evolución del universo, así como sobre la distribución de la materia y la energía en el cosmos.</p>
+    <p><b>Modelización de sistemas socioeconómicos: </b></p>
+    <p>Además, la física computacional se aplica en la modelización de sistemas socioeconómicos, como la propagación de enfermedades, la dinámica de mercados financieros y la planificación urbana. Estos modelos ayudan a los responsables políticos y planificadores a tomar decisiones informadas y a anticipar posibles consecuencias de políticas y acciones.</p>
+    <div class="row internal-sectiom">
+      <div class="col-7">
+        <p>En resumen, en el siglo XXI, la física computacional ha permitido avances significativos en la modelización y predicción de fenómenos físicos en una amplia variedad de campos, desde el clima y la biología hasta la astrofísica y la economía. Estos avances han transformado nuestra comprensión del mundo natural y han abierto nuevas oportunidades para abordar algunos de los desafíos más apremiantes de nuestro tiempo.</p>
+      </div>
+      <div class="col-5">
+        <iframe src="https://www.youtube.com/embed/HcKJT2pGlUE" frameborder="0" allowfullscreen></iframe>
+        <p>(video en español)</p>
+      </div>
+
+    </div>
+  </div>
+    <!--
+    Diseño de materiales
+  -->
+  <div id="materialDesing" *ngIf="selectedPart == 'materialDesing'">
+    <h3>Diseño de materiales:</h3>
     <p>
-      {{'physics-module.mechanics.Newton.text1'|translate}}
+      En el campo del diseño de materiales, la física computacional ha revolucionado la forma en que se investigan, desarrollan y optimizan nuevos materiales con propiedades específicas. Mediante el uso de métodos numéricos avanzados y técnicas de simulación, los científicos pueden explorar una amplia gama de estructuras y composiciones materiales en condiciones controladas, acelerando el proceso de descubrimiento y desarrollo de materiales innovadores para aplicaciones diversas.
     </p>
     <!--carousel tipo1-->
     <div class="gallery">
@@ -161,179 +198,77 @@
         <img src="assets/imgs/physics/mechanics/Newton/Newton_5.jpg" alt="Imagen">
       </figure>
     </div>
+    <p><b>Simulación de estructuras y propiedades: </b>La física computacional permite simular la estructura atómica y molecular de los materiales, así como predecir sus propiedades mecánicas, térmicas, eléctricas y ópticas. Esto ha permitido el diseño de materiales con características específicas, como materiales superconductores, materiales para celdas solares de alta eficiencia y materiales para dispositivos electrónicos avanzados.</p>
+    <p><b>Optimización de procesos de fabricación: </b>La física computacional también se utiliza para optimizar los procesos de fabricación de materiales, como la deposición de películas delgadas, la cristalización y la fabricación aditiva. La simulación numérica de estos procesos permite a los ingenieros mejorar la eficiencia y la calidad de los materiales producidos, reduciendo los costos y el tiempo de desarrollo.</p>
+    <p><b>Descubrimiento de materiales mediante la simulación de alto rendimiento: </b>Los enfoques de simulación de alto rendimiento, combinados con técnicas de inteligencia artificial y aprendizaje automático, han facilitado el descubrimiento de nuevos materiales con propiedades excepcionales. Los científicos pueden explorar grandes bibliotecas de materiales virtuales y identificar candidatos prometedores para síntesis y caracterización experimental.</p>
+    <p><b>Diseño de materiales a nivel nanoscópico: </b>La física computacional también ha permitido el diseño de materiales a escala nanométrica, donde las propiedades emergentes pueden ser muy diferentes de las observadas a escalas macroscópicas. Esto incluye el desarrollo de nanomateriales para aplicaciones en electrónica, catálisis, medicina y energía.</p>
+    <p><b>Colaboración interdisciplinaria: </b>El diseño de materiales mediante física computacional a menudo involucra colaboraciones interdisciplinarias entre físicos, químicos, ingenieros y científicos de materiales. Esta sinergia permite abordar desafíos complejos desde múltiples perspectivas y acelerar el desarrollo de materiales innovadores con aplicaciones prácticas.</p>
+    <p>En resumen, la física computacional ha transformado el campo del diseño de materiales, proporcionando herramientas poderosas para simular, optimizar y descubrir materiales con propiedades personalizadas para una amplia gama de aplicaciones tecnológicas y científicas. Estos avances son fundamentales para impulsar la innovación en sectores clave como la electrónica, la energía, la medicina y la industria.</p>
   </div>
-
   <!--
-    Three body problem
+    Análisis de datos
   -->
-  <div id="three-body">
-    <h3>Three-body problem</h3>
+  <div id="dataAnalisis" *ngIf="selectedPart == 'dataAnalisis'">
+    <h3>Análisis de datos:</h3>
     <p>
-      Three-body problem: The gravitational interaction between three celestial bodies is a classic problem in celestial mechanics that still has no general analytical solution. The complexity of this problem has led to the development of numerical methods and the study of chaotic systems.
+      En el análisis de datos, la física computacional proporciona herramientas y técnicas para procesar, visualizar e interpretar grandes volúmenes de datos generados por experimentos científicos, observaciones astronómicas, simulaciones numéricas y otras fuentes. Mediante el uso de algoritmos avanzados y métodos estadísticos, los científicos pueden identificar patrones, tendencias y correlaciones en los datos, así como realizar inferencias y tomar decisiones informadas basadas en evidencia cuantitativa.
     </p>
+    <div class="row">
+      <div class="col-md-6">
+        <!--Carousel tipo 2-->
+        <section>
+          <img src="assets/imgs/physics/mechanics/Galileo Galilei/Galileo_1.jpg" alt="Imagen">
+          <img src="assets/imgs/physics/mechanics/Galileo Galilei/Galileo_2.jpg" alt="Imagen">
+          <img src="assets/imgs/physics/mechanics/Galileo Galilei/Galileo_3.jpg"alt="Imagen">
+          <img src="assets/imgs/physics/mechanics/Galileo Galilei/Galileo_4.jpg" alt="Imagen">
+        </section>
+      </div>
+      <div class="col-md-6">
+        <div class="row">
+          <p><b>Procesamiento y filtrado de datos: </b>La física computacional ofrece herramientas para el preprocesamiento y filtrado de datos brutos, incluyendo corrección de ruido, eliminación de artefactos y interpolación de datos faltantes. Esto es crucial para garantizar la calidad y la confiabilidad de los datos antes de su análisis.</p>
+          <p><b>Visualización de datos: </b>La visualización de datos es una parte integral del análisis de datos en física computacional. Se utilizan técnicas de visualización avanzadas, como gráficos tridimensionales, mapas de calor y visualización interactiva, para representar datos de manera efectiva y revelar patrones o estructuras ocultas en los datos.</p><br>
+          <p><b>Análisis estadístico y minería de datos: </b>La física computacional emplea una amplia gama de técnicas estadísticas y de minería de datos para extraer información significativa de los datos, incluyendo análisis de regresión, clasificación de datos, clustering y análisis de series temporales.</p><br>
+          <p><b>Aprendizaje automático y análisis predictivo: </b>Los métodos de aprendizaje automático se utilizan cada vez más en la física computacional para realizar análisis predictivo y modelado de datos complejos. Esto incluye algoritmos de regresión, redes neuronales, máquinas de vectores de soporte y árboles de decisión, entre otros.</p><br>
+          <p><b>Aplicaciones en diversas áreas: </b>El análisis de datos en física computacional tiene aplicaciones en una amplia gama de áreas, como la astrofísica, la física de partículas, la biología computacional, la ingeniería de materiales y la climatología, entre otros. Se utiliza para analizar observaciones astronómicas, datos de aceleradores de partículas, secuencias genéticas, simulaciones climáticas y más.</p>
+        </div>
+      </div>
+    </div>
+    <!--Buscar frases en libros sobre el avance del análisis de datos en la física computacional!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
     <div class="row internal-section">
-      <div class="col-6">
-        <h4>Video en español</h4>
-        <iframe src="https://www.youtube.com/embed/uailf0LCkPk" allowfullscreen></iframe>
-
+      <div class="row">
+        <h3> {{'physics-module.mechanics.Galileo.quotes.title'|translate}} </h3>
+        <p>"{{'physics-module.mechanics.Galileo.quotes.quote1'|translate}}"
+          <br>
+          -Galileo Galilei
+        </p>
       </div>
-      <div class="col-6">
-        <h4>Video en inglés</h4>
-        <iframe src="https://www.youtube.com/embed/D89ngRr4uZg" allowfullscreen></iframe>
-      </div>
-    </div>
-
-  </div>
-  <!--
-    Double pendulum problem
-  -->
-  <div id="double-pendulum">
-    <h3>Double pendulum problem</h3>
-    <p>
-      Double pendulum problem: A classic problem in mechanics is the study of the double pendulum, which presents chaotic behaviors and is an example of nonlinear dynamic systems.
-    </p>
-    <div class="row internal-sectiom">
-      <div class="col-7">
-        <p>El péndulo doble es un sistema dinámico en la física que consta de dos péndulos simples conectados entre sí. Este sistema es de interés en la física debido a su comportamiento caótico y a la riqueza de fenómenos dinámicos que exhibe. La relación entre el péndulo doble y la física se puede explorar en varios aspectos:</p>
-      </div>
-      <div class="col-5">
-        <iframe src="https://www.youtube.com/embed/HcKJT2pGlUE" frameborder="0" allowfullscreen></iframe>
-        <p>(video en español)</p>
-      </div>
-
-    </div>
-  </div>
-  <!--
-    Rigid body problem
-  -->
-  <div id="rigid-body">
-    <h3>Rigid body problem</h3>
-    <p>
-      Rigid body problem: The study of rotating rigid bodies has led to the development of rigid mechanics and has found applications in engineering and vehicle dynamics.
-    </p>
-  </div>
-  <!--
-    Einstein's theory of relativity
-  -->
-  <div id="Einstein's-theory">
-    <h3>Einstein's theory of relativity</h3>
-    <p>
-      Einstein's theory of relativity: In the early 20th century, Albert Einstein proposed the theory of relativity, which transformed the understanding of gravity. The theory of general relativity describes gravity as a curvature of space-time caused by the presence of mass and energy.
-    </p>
-    <div class="gallery">
-      <figure class="card">
-        <img src="assets/imgs/physics/mechanics/Einstein/Einstein_1.jpg" alt="Imagen">
-      </figure>
-      <figure class="card">
-        <img src="assets/imgs/physics/mechanics/Einstein/Einstein_7.avif" alt="Imagen">
-      </figure>
-      <figure class="card">
-        <img src="assets/imgs/physics/mechanics/Einstein/Einstein_3.jpg" alt="Imagen">
-      </figure>
-      <figure class="card">
-        <img src="assets/imgs/physics/mechanics/Einstein/Einstein_4.jpg" alt="Imagen">
-      </figure>
-      <figure class="card">
-        <img src="assets/imgs/physics/mechanics/Einstein/Einstein_5.jpg" alt="Imagen">
-      </figure>
-    </div>
-  </div>
-</div>
-
-
-  <!--
-     Quantum mechanics
-  -->
-  <div id="Quantum">
-    <h3> Quantum mechanics</h3>
-    <p>
-      Quantum mechanics: At the subatomic level, quantum mechanics replaced classical mechanics. Developed in the first half of the 20th century, quantum mechanics describes the behavior of subatomic particles and has led to technologies such as quantum electronics.
-    </p>
-    <div class="row internal-section">
-      <div class="col-4 one-image">
-        <img src="../../../../assets/imgs/physics/mechanics/Quantum/Quantum_4.jpg">
-      </div>
-      <div class="col-8">
-        <h5>Double-slit experiment</h5>
-        <br>
-        <p>
-          In modern physics, the double-slit experiment demonstrates that light and matter can satisfy the seemingly incongruous classical definitions for both waves and particles, which is considered evidence for the fundamentally probabilistic nature of quantum mechanics.
-          This type of experiment was first performed by Thomas Young in 1801, as a demonstration of the wave behavior of visible light. At that time it was thought that light consisted of either waves or particles. With the beginning of modern physics, about a hundred years later,
-          it was realized that light could in fact show both wave and particle characteristics. In 1927, Davisson and Germer and, independently George Paget Thomson and his research student Alexander Reid demonstrated that electrons show the same behavior, which was later extended to atoms and molecules.
-          Thomas Young's experiment with light was part of classical physics long before the development of quantum mechanics and the concept of wave–particle duality. He believed it demonstrated that Christiaan Huygens' wave theory of light was correct, and his experiment is sometimes referred to as Young's experiment or Young's slits.
+      <div class="row">
+        <p>"{{'physics-module.mechanics.Galileo.quotes.quote2'|translate}}"
+          <br>
+          -Galileo Galilei
         </p>
       </div>
     </div>
-    <br>
-    <div class="gallery">
-      <figure class="card">
-        <img src="assets/imgs/physics/mechanics/Quantum/Quantum_1.jpg" alt="Imagen">
-      </figure>
-      <figure class="card">
-        <img src="assets/imgs/physics/mechanics/Quantum/Quantum_2.jpg" alt="Imagen">
-      </figure>
-      <figure class="card">
-        <img src="assets/imgs/physics/mechanics/Quantum/Quantum_3.jpg" alt="Imagen">
-      </figure>
-      <figure class="card">
-        <img src="assets/imgs/physics/mechanics/Quantum/Quantum_5.jpg" alt="Imagen">
-      </figure>
-      <figure class="card">
-        <img src="assets/imgs/physics/mechanics/Quantum/Quantum_6.jpg" alt="Imagen">
-      </figure>
-    </div>
-    <!--
-      <div id="carouselPhysicsQuantum" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselPhysicsQuantum" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 0"></button>
-        <button type="button" data-bs-target="#carouselPhysicsQuantum" data-bs-slide-to="1" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselPhysicsQuantum" data-bs-slide-to="2" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselPhysicsQuantum" data-bs-slide-to="3" aria-label="Slide 3"></button>
-        <button type="button" data-bs-target="#carouselPhysicsQuantum" data-bs-slide-to="4" aria-label="Slide 4"></button>
-      </div>
-
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <div class="container">
-            <img src="../../../../assets/imgs/physics/mechanics/Quantum/Quantum_1.jpg" class="img-fluid d-block w-100" alt="Imagen"><br>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="container">
-            <img src="../../../../assets/imgs/physics/mechanics/Quantum/Quantum_2.jpg" class="img-fluid d-block w-100" alt="Imagen"><br>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="container">
-            <img src="../../../../assets/imgs/physics/mechanics/Quantum/Quantum_3.jpg" class="img-fluid d-block w-100" alt="Imagen"><br>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="container">
-            <img src="../../../../assets/imgs/physics/mechanics/Quantum/Quantum_5.jpg" class="img-fluid d-block w-100" alt="Imagen"><br>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="container">
-            <img src="../../../../assets/imgs/physics/mechanics/Quantum/Quantum_6.jpg" class="img-fluid d-block w-100" alt="Imagen"><br>
-          </div>
-        </div>
-      </div>
-
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselPhysicsQuantum" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselPhysicsQuantum" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-     </div>
-    -->
-
-
   </div>
-  <br>
-
 </div>
+<br>
+
+ <!--
+    <div class="row internal-section">
+      <div class="row">
+        <h3> {{'physics-module.mechanics.Galileo.quotes.title'|translate}} </h3>
+        <p>"{{'physics-module.mechanics.Galileo.quotes.quote1'|translate}}"
+          <br>
+          -Galileo Galilei
+        </p>
+      </div>
+      <div class="row">
+        <p>"{{'physics-module.mechanics.Galileo.quotes.quote2'|translate}}"
+          <br>
+          -Galileo Galilei
+        </p>
+      </div>
+    </div>
+  -->
+
 

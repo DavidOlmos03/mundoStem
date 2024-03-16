@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';
 
 @Component({
   selector: 'app-contentElectromagnetism',
@@ -13,4 +13,5 @@ export class ContentElectromagnetismComponent {
   toggleOcultarTexto(){
     this.mostrarTextoCompleto = false;
   }
+
 }

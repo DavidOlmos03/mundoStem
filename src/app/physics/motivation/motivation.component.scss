@@ -1,13 +1,13 @@
 @import "node_modules/compass-mixins/lib/compass";
 
-
 *{
   @include box-sizing(border-box);
 }
 .header{
   width: 100%;
   height: 200px;
-  background-color: #3498db;
+  //background-color: #3498db;
+  background-image: url(../../../assets/imgs/headerImage_2.jpg);
   text-align: center;
   position: relative;
   position: fixed;
@@ -36,3 +36,4 @@ body.sticky-header{
     background-color: rgba(0, 0, 0, 0.9);
   }
 }
+

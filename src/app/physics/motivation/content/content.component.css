@@ -15,6 +15,35 @@
   background-color: #F9423D;
 }
 
+/**Estilos generales**/
+.content p {
+  line-height: 1.5; /*Agregar espacios entre lineas*/
+  text-align: justify;
+  font-family: oblique;
+}
+#switch-language{
+  max-width: 300px;
+  margin-left: 70%;
+  background-color: transparent;
+}
+
+.internal-section{
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.one-image{
+  display: flex;
+  justify-content: center;
+  /*padding: 0% 5% 0% 5%;*/
+}
+.one-image img{
+  max-width:500px;
+  border-radius: 1rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+.one-image img:hover{
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.439);
+}
 /**Estilos para el carousel tipo 1**/
 .gallery {
   display: flex;
@@ -94,7 +123,7 @@ section img:hover{
   width: 300px;
   opacity: 1;
   filter: contrast(120%);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.439);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.439)
 }
 
 /**Estilo para los videos*/
@@ -111,21 +140,4 @@ iframe:hover{
   width: 490px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.439);
   transition: 0.4s ease-in-out;
-}
-
-/**Otros estilos**/
-.content p {
-  line-height: 1.5; /*Agregar espacios entre lineas*/
-  text-align: justify;
-  font-family: oblique;
-}
-#switch-language{
-  max-width: 300px;
-  margin-left: 70%;
-  background-color: transparent;
-}
-
-.internal-section{
-  margin-left: 5%;
-  margin-right: 5%;
 }

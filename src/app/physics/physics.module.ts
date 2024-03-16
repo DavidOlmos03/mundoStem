@@ -8,10 +8,12 @@ import { MotivationComponent } from './motivation/motivation.component';
 import { HeaderMechanicsComponent } from './mechanics/header/header.component';
 import { SharedModule } from '../shared/shared.module';
 import { HeaderComputationalComponent } from './computational/header/header.component';
-import { HeaderMotivationComponent } from './motivation/header/header.component';
+
 import { ContentMechanicsComponent } from './mechanics/content/content.component';
 import { YouTubePlayerModule } from '@angular/youtube-player';
 import { ContentElectromagnetismComponent } from './electromagnetism/content/content.component';
+import { HeaderMotivationComponent } from './motivation/header/header.component';
+import { ContentMotivationComponent } from './motivation/content/content.component';
 /**
  * Modulos necesarios para crear la página multilenguaje
  */
@@ -32,8 +34,8 @@ import { ContentComputationalComponent } from './computational/content/content.c
     HeaderMotivationComponent,
     ContentMechanicsComponent,
     ContentElectromagnetismComponent,
-    ContentComputationalComponent
-
+    ContentComputationalComponent,
+    ContentMotivationComponent
   ],
   imports: [
     CommonModule,
