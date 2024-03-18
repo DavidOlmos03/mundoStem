@@ -15,4 +15,7 @@ export class ContentMechanicsComponent{
   toggleOcultarTexto(){
     this.mostrarTextoCompleto = false;
   }
+  scrollToTop() {
+    window.scrollTo(0, 0);
+  }
 }

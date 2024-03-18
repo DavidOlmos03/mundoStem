@@ -1,10 +1,13 @@
 <!--<div id="switch-language">
   <app-switch-languages></app-switch-languages>
 </div>-->
+<head>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
 <div class="content">
   <h1>{{"physics-module.history"|translate}}</h1>
   <br>
-  <ul id="indice">
+  <ul id="indice_1">
     <li><a (click)="selectedPart='Aristotle'">{{'physics-module.mechanics.Aristotle.title'|translate}}</a></li>
     <li><a (click)="selectedPart='Galileo'">Galileo Galilei</a></li>
     <li><a (click)="selectedPart='Newton'">Isaac Newton</a></li>
@@ -14,7 +17,13 @@
     <li><a (click)="selectedPart='Einsteins-theory'">Einstein's theory of relativity</a></li>
     <li><a (click)="selectedPart='Quantum'">Quantum mechanics</a></li>
   </ul>
+  <ul id="indice_2">
+    <li><a (click)="selectedPart='celestial-mechanics'">Mecánica celeste</a></li>
+  </ul>
+  <hr>
   <br>
+  <!-- Botón para ir al inicio de la página -->
+  <button id="scrollToTopButton" (click)="scrollToTop()"><i class="fa-solid fa-chevron-up"></i></button>
   <p>{{'physics-module.mechanics.history-text'|translate}}</p>
   <!--
         Aristoteles
@@ -257,8 +266,67 @@
     </figure>
   </div>
   </div>
+  <!--
+     Celestial Mechanics
+  -->
+  <div id="celestial-mechanics" *ngIf="selectedPart == 'celestial-mechanics'">
+    <h3>Mecánica celeste</h3>
+    <p>
+      La historia de la mecánica celeste tiene sus raíces en las civilizaciones antiguas que observaban el movimiento de los cuerpos celestes y desarrollaban teorías para explicarlo. Sin embargo, uno de los hitos más importantes en el desarrollo de la mecánica celeste fue la formulación de las leyes del movimiento planetario por parte de Johannes Kepler en el siglo XVII. Kepler descubrió que los planetas se mueven en órbitas elípticas alrededor del Sol, y estableció tres leyes empíricas que describen estos movimientos.
+      <br>
+      Posteriormente, Isaac Newton revolucionó nuestra comprensión de la mecánica celeste con su obra principal, "Principia Mathematica", publicada en 1687. En este trabajo, Newton formuló la ley de la gravitación universal, que establece que la fuerza de atracción entre dos cuerpos es directamente proporcional al producto de sus masas e inversamente proporcional al cuadrado de la distancia entre ellos. Esta ley permitió explicar y predecir con precisión los movimientos de los planetas, lunas y otros cuerpos celestes.
+    </p>
+    <div class="row internal-section">
+
+      <div class="col-6">
+        <h5>Intensidad gravitacional</h5>
+        <br>
+        <p>
+          Newton fue quien introdujo el concepto de campo gravitacional, que es una descripción matemática de cómo la masa causa una fuerza gravitacional que actúa sobre otras masas en su entorno. Este campo se puede representar mediante un vector que indica la dirección y magnitud de la fuerza gravitacional en cada punto del espacio.
+        </p>
+      </div>
+      <div class="col-6 one-image">
+        <a href="https://github.com/DavidOlmos03/fieldsPhysicsITM/blob/main/gravitation/Intensidad_Gravitacional_2D_J_asinh.m"><img src="../../../../assets/imgs/physics/mechanics/Celestial Mechanics/intensityG.png"></a>
+      </div>
+      <br>
+    </div>
+    <hr>
+    <div class="row internal-section">
+      <div class="col-6 one-image">
+        <a href="https://github.com/DavidOlmos03/fieldsPhysicsITM/blob/main/gravitation/Campo_Gravitacional_3D_J.m"><img src="../../../../assets/imgs/physics/mechanics/Celestial Mechanics/gravitationalField J.png"></a>
+      </div>
+      <br>
+      <div class="col-6">
+        <h5>Potencial gravitacional</h5>
+        <br>
+        <p>
+          El potencial gravitacional, por otro lado, es una función escalar que describe cómo la energía potencial gravitacional cambia en función de la posición en el campo gravitacional. Este concepto es fundamental en la mecánica celeste para calcular el movimiento de los cuerpos celestes.
+          <br>
+          <br>
+          Newton desarrolló estas ideas en su obra principal, "Philosophiæ Naturalis Principia Mathematica" (Principia), publicada en 1687. En esta obra, presentó las ecuaciones que describen la ley de la gravitación universal y cómo se relaciona con el campo gravitacional y el potencial gravitacional.
+        </p>
+      </div>
+    </div>
+    <br>
+    <div class="gallery">
+      <figure class="card">
+        <img src="assets/imgs/physics/mechanics/Quantum/Quantum_1.jpg" alt="Imagen">
+      </figure>
+      <figure class="card">
+        <img src="assets/imgs/physics/mechanics/Quantum/Quantum_2.jpg" alt="Imagen">
+      </figure>
+      <figure class="card">
+        <img src="assets/imgs/physics/mechanics/Quantum/Quantum_3.jpg" alt="Imagen">
+      </figure>
+      <figure class="card">
+        <img src="assets/imgs/physics/mechanics/Quantum/Quantum_5.jpg" alt="Imagen">
+      </figure>
+      <figure class="card">
+        <img src="assets/imgs/physics/mechanics/Quantum/Quantum_6.jpg" alt="Imagen">
+      </figure>
+    </div>
+    </div>
+
 </div>
-
-
 
 <br>

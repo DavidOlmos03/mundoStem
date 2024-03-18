@@ -11,7 +11,7 @@ import {
   selector: 'app-custom-button',
   standalone: true,
   styleUrls: ['./table.component.css'],
-  template: `<!--<button id="editButton" (click)="buttonEdit()"><i class="fa-solid fa-pencil"></i></button>-->
+  template: `<button id="editButton" (click)="buttonEdit()"><i class="fa-solid fa-pencil"></i></button>
 
   <button id="deteleButton" (click)="buttonDelete()"><i class="fas fa-trash-alt"></i></button>`
 })

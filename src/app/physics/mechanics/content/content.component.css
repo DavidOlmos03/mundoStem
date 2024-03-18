@@ -1,20 +1,28 @@
 /** Estilo para el indice**/
-#indice{
+#indice_1,
+#indice_2{
   display: flex; /*Se aplica el estilo para que sepuedan ordenar en una sola fila*/
   flex-direction: row;
   list-style-type: none;
   background-color: rgba(194, 63, 63, 0.294);
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
 }
-#indice li{
+#indice_1 li,
+#indice_2 li{
   padding: 0px 10px 0px 10px;
 }
-#indice a{
+#indice_1 a,
+#indice_2 a{
   cursor: pointer;
 }
-#indice li:hover{
+#indice_1 li:hover,
+#indice_2 li:hover{
   background-color: #F9423D;
 }
-
+#indice_2{
+  margin: 0px 20px 0px 20px;
+}
 /**Estilos generales**/
 .content p {
   line-height: 1.5; /*Agregar espacios entre lineas*/
@@ -54,7 +62,6 @@
 
 .card {
   flex: 2;
-  cursor: pointer;
   border-radius: 1rem;
   overflow: hidden;
   background-color: var(--background);
@@ -141,3 +148,23 @@ iframe:hover{
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.439);
   transition: 0.4s ease-in-out;
 }
+/**Estilos para el boton de scrollToTop**/
+@import "~@fortawesome/fontawesome-free/css/all.css";
+
+#scrollToTopButton{
+  position: fixed;
+  margin: 20% 10% 0% 85%;
+  z-index: 1;
+  background-color: transparent;
+  padding: auto;
+  border: 0;
+  width: 60px;
+  height: 60px;
+  outline: none; /* Evita que se muestre el borde al ser seleccionado */
+}
+#scrollToTopButton i {
+  color: black;
+  font-size: 50px;
+}
+#scrollToTopButton i:hover{
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.439)}

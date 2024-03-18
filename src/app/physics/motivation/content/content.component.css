@@ -54,7 +54,7 @@
 
 .card {
   flex: 2;
-  cursor: pointer;
+  /*cursor: pointer;*/
   border-radius: 1rem;
   overflow: hidden;
   background-color: var(--background);
