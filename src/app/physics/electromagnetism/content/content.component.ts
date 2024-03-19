@@ -7,6 +7,7 @@ import { Component} from '@angular/core';
 })
 export class ContentElectromagnetismComponent {
   mostrarTextoCompleto = false;
+  selectedPart:string = "Discovery";
   toggleTextoCompleto() {
     this.mostrarTextoCompleto = !this.mostrarTextoCompleto;
   }

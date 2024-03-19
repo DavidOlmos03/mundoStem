@@ -2,22 +2,25 @@
 <div class="content">
   <h1>{{"physics-module.history"|translate}}</h1>
   <br>
-  <ul id="indice">
-    <li><a href="/electromagnetism#Discovery">Discovery</a></li>
-    <li><a href="/electromagnetism#Development">Development</a></li>
-    <li><a href="/electromagnetism#Research">Research</a></li>
-    <li><a href="/electromagnetism#Unification">Unification</a></li>
-    <li><a href="/electromagnetism#Aplications">Aplications</a></li>
-    <li><a href="/electromagnetism#quantum-electrodynamics">quantum-electrodynamics</a></li>
-    <li><a href="/electromagnetism#Innovations">Innovations</a></li>
-
+  <ul id="indice_1">
+    <li><a (click)="selectedPart='Discovery'">{{"physics-module.electromagnetism.discovery.title1"|translate}}</a></li>
+    <li><a (click)="selectedPart='Development'">Desarrollo de la Teoría Eléctrica</a></li>
+    <li><a (click)="selectedPart='Research'">Investigaciones en Magnetismo</a></li>
+    <li><a (click)="selectedPart='Unification'">Unificación de Electricidad y Magnetismo</a></li>
   </ul>
+  <ul id="indice_2">
+    <li><a (click)="selectedPart='Aplications'">Aplicaciones Prácticas y Desarrollos Tecnológicos</a></li>
+    <li><a (click)="selectedPart='quantum-electrodynamics'">Teoría Cuántica y Electrodinámica Cuántica</a></li>
+    <li><a (click)="selectedPart='Innovations'">Innovaciones Contemporáneas</a></li>
+  </ul>
+  <hr>
+
   <br>
   <p>{{"physics-module.electromagnetism.historyText"|translate}}</p>
  <!--
         Discovery
       -->
-  <div id="Discovery">
+  <div id="Discovery" *ngIf="selectedPart == 'Discovery'">
     <h3>{{"physics-module.electromagnetism.discovery.title1"|translate}}</h3>
     <p>{{"physics-module.electromagnetism.discovery.text1"|translate}}</p>
       <div class="row">
@@ -99,7 +102,7 @@
   <!--
     Development
       -->
-  <div id="Development">
+  <div id="Development" *ngIf="selectedPart == 'Development'">
     <h3>Desarrollo de la Teoría Eléctrica (Siglo XVIII-XIX)</h3>
     <p>
       Descubrimiento de la electricidad estática: En el siglo XVIII, experimentos con objetos como ámbar y vidrio frotados condujeron al descubrimiento de la electricidad estática. Figuras destacadas en este campo incluyen a William Gilbert, Otto von Guericke y Stephen Gray.
@@ -140,7 +143,7 @@
   <!--
     Research
   -->
-  <div id="Research">
+  <div id="Research" *ngIf="selectedPart == 'Research'">
     <h3>Investigaciones en Magnetismo (Siglo XVIII-XIX)</h3>
     <p>
       Durante los siglos XVIII y XIX, las investigaciones en magnetismo experimentaron avances significativos que sentaron las bases para nuestra comprensión moderna de este fenómeno.
@@ -194,7 +197,7 @@
   <!--
     Unification
   -->
-  <div id="Unification">
+  <div id="Unification" *ngIf="selectedPart == 'Unification'">
     <h3>Unificación de Electricidad y Magnetismo (Siglo XIX)</h3>
     <p>
       Durante el siglo XIX, se produjo una notable unificación de los campos de la electricidad y el magnetismo, que culminó en el desarrollo de la teoría electromagnética.
@@ -239,7 +242,7 @@
   <!--
     Aplications
   -->
-  <div id="Aplications">
+  <div id="Aplications" *ngIf="selectedPart == 'Aplications'">
     <h3>Aplicaciones Prácticas y Desarrollos Tecnológicos (Siglo XIX-XX)</h3>
     <p>
       Durante los siglos XIX y XX, el electromagnetismo fue el motor detrás de numerosas aplicaciones prácticas y desarrollos tecnológicos que transformaron la sociedad.
@@ -286,7 +289,7 @@
   <!--
     Quantum theory and quantum electrodynamics
   -->
-  <div id="quantum-electrodynamics">
+  <div id="quantum-electrodynamics" *ngIf="selectedPart == 'quantum-electrodynamics'">
     <h3>Teoría Cuántica y Electrodinámica Cuántica (Siglo XX)</h3>
     <p>
       El siglo XX fue testigo de una revolución en nuestra comprensión de la naturaleza de la materia y la energía, especialmente con el desarrollo de la teoría cuántica y la electrodinámica cuántica.
@@ -349,7 +352,7 @@
   <!--
     Innovations
   -->
-  <div id="Innovations">
+  <div id="Innovations" *ngIf="selectedPart == 'Innovations'">
     <h3>Innovaciones Contemporáneas (Siglo XXI)</h3>
     <p>
       En el campo del electromagnetismo, el siglo XXI ha presenciado una serie de avances significativos que han transformado la forma en que interactuamos con la electricidad y el magnetismo.
