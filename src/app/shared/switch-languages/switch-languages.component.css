@@ -6,4 +6,5 @@ select:hover{
 }
 option{
   background-color: #00000078;
+  max-width: 20%;
 }

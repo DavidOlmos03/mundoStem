@@ -7,23 +7,63 @@
 <div class="content">
   <h1>{{"physics-module.history"|translate}}</h1>
   <br>
-  <ul id="indice_1">
-    <li><a (click)="selectedPart='Aristotle'">{{'physics-module.mechanics.Aristotle.title'|translate}}</a></li>
-    <li><a (click)="selectedPart='Galileo'">Galileo Galilei</a></li>
-    <li><a (click)="selectedPart='Newton'">Isaac Newton</a></li>
-    <li><a (click)="selectedPart='three-body'">Three-body problem</a></li>
-    <li><a (click)="selectedPart='double-pendulum'">Double pendulum problem</a></li>
-    <li><a (click)="selectedPart='rigid-body'">Rigid body problem</a></li>
-    <li><a (click)="selectedPart='Einsteins-theory'">Einstein's theory of relativity</a></li>
-    <li><a (click)="selectedPart='Quantum'">Quantum mechanics</a></li>
-  </ul>
-  <ul id="indice_2">
-    <li><a (click)="selectedPart='celestial-mechanics'">Mecánica celeste</a></li>
-  </ul>
+  <!--Desktop mode for indix-->
+  <div class="desktop-mode">
+    <ul id="indice_1">
+      <li><a (click)="selectedPart='Aristotle'">{{'physics-module.mechanics.Aristotle.title'|translate}}</a></li>
+      <li><a (click)="selectedPart='Galileo'">Galileo Galilei</a></li>
+      <li><a (click)="selectedPart='Newton'">Isaac Newton</a></li>
+      <li><a (click)="selectedPart='three-body'">Three-body problem</a></li>
+      <li><a (click)="selectedPart='double-pendulum'">Double pendulum problem</a></li>
+      <li><a (click)="selectedPart='rigid-body'">Rigid body problem</a></li>
+      <li><a (click)="selectedPart='Einsteins-theory'">Einstein's theory of relativity</a></li>
+      <li><a (click)="selectedPart='Quantum'">Quantum mechanics</a></li>
+    </ul>
+    <ul id="indice_2">
+      <li><a (click)="selectedPart='celestial-mechanics'">Mecánica celeste</a></li>
+    </ul>
+  </div>
+  <!--Tablet mode for indix-->
+  <div class="tablet-mode">
+    <ul id="indice_1">
+      <li><a (click)="selectedPart='Aristotle'">{{'physics-module.mechanics.Aristotle.title'|translate}}</a></li>
+      <li><a (click)="selectedPart='Galileo'">Galileo Galilei</a></li>
+      <li><a (click)="selectedPart='Newton'">Isaac Newton</a></li>
+      <li><a (click)="selectedPart='three-body'">Three-body problem</a></li>
+      <li><a (click)="selectedPart='double-pendulum'">Double pendulum problem</a></li>
+    </ul>
+    <ul id="indice_2">
+      <li><a (click)="selectedPart='rigid-body'">Rigid body problem</a></li>
+      <li><a (click)="selectedPart='Einsteins-theory'">Einstein's theory of relativity</a></li>
+      <li><a (click)="selectedPart='Quantum'">Quantum mechanics</a></li>
+    </ul>
+    <ul id="indice_3">
+      <li><a (click)="selectedPart='celestial-mechanics'">Mecánica celeste</a></li>
+    </ul>
+  </div>
+  <!--Mobile mode for indix-->
+  <div class="mobile-mode">
+    <ul id="indice_1">
+      <li><a (click)="selectedPart='Aristotle'">{{'physics-module.mechanics.Aristotle.title'|translate}}</a></li>
+      <li><a (click)="selectedPart='Galileo'">Galileo Galilei</a></li>
+      <li><a (click)="selectedPart='Newton'">Isaac Newton</a></li>
+      <li><a (click)="selectedPart='three-body'">Three-body problem</a></li>
+    </ul>
+    <ul id="indice_2">
+      <li><a (click)="selectedPart='double-pendulum'">Double pendulum problem</a></li>
+      <li><a (click)="selectedPart='rigid-body'">Rigid body problem</a></li>
+      <li><a (click)="selectedPart='Einsteins-theory'">Einstein's theory of relativity</a></li>
+    </ul>
+    <ul id="indice_3">
+      <li><a (click)="selectedPart='Quantum'">Quantum mechanics</a></li>
+      <li><a (click)="selectedPart='celestial-mechanics'">Mecánica celeste</a></li>
+    </ul>
+  </div>
   <hr>
   <br>
   <!-- Botón para ir al inicio de la página -->
   <button id="scrollToTopButton" (click)="scrollToTop()"><i class="fa-solid fa-chevron-up"></i></button>
+
   <p>{{'physics-module.mechanics.history-text'|translate}}</p>
   <!--
         Aristoteles
@@ -31,8 +71,22 @@
   <div id="Aristotle" *ngIf="selectedPart == 'Aristotle'">
     <h3>{{'physics-module.mechanics.Aristotle.title'|translate}}</h3>
     <p>{{'physics-module.mechanics.Aristotle.text1'|translate}}</p>
-    <div class="row">
-      <div class="col-6">
+    <div class="row desktop-mode">
+        <div class="col-6">
+          <p>
+            <b>{{'physics-module.mechanics.Aristotle.subtitle1'|translate}}<br></b>
+            {{'physics-module.mechanics.Aristotle.text2'|translate}}
+            <br>
+            <br>
+            {{'physics-module.mechanics.Aristotle.text2'|translate}}
+          </p>
+        </div>
+        <div class="col-6 one-image">
+          <img src="assets/imgs/physics/mechanics/Aristotle/Aristotle_5.jpg">
+        </div>
+    </div>
+    <div class="tablet-mode">
+      <div class="col-12">
         <p>
           <b>{{'physics-module.mechanics.Aristotle.subtitle1'|translate}}<br></b>
           {{'physics-module.mechanics.Aristotle.text2'|translate}}
@@ -41,7 +95,21 @@
           {{'physics-module.mechanics.Aristotle.text2'|translate}}
         </p>
       </div>
-      <div class="col-6 one-image">
+      <div class="col-12 one-image">
+        <img src="assets/imgs/physics/mechanics/Aristotle/Aristotle_5.jpg">
+      </div>
+    </div>
+    <div class="mobile-mode">
+      <div class="col-12">
+        <p>
+          <b>{{'physics-module.mechanics.Aristotle.subtitle1'|translate}}<br></b>
+          {{'physics-module.mechanics.Aristotle.text2'|translate}}
+          <br>
+          <br>
+          {{'physics-module.mechanics.Aristotle.text2'|translate}}
+        </p>
+      </div>
+      <div class="col-12 one-image">
         <img src="assets/imgs/physics/mechanics/Aristotle/Aristotle_5.jpg">
       </div>
     </div>
@@ -143,15 +211,43 @@
       mechanics that still has no general analytical solution. The complexity of this problem has led to the development
       of numerical methods and the study of chaotic systems.
     </p>
-    <div class="row internal-section">
-      <div class="col-6">
-        <h4>Video en español</h4>
-        <iframe src="https://www.youtube.com/embed/uailf0LCkPk" allowfullscreen></iframe>
+    <div class="desktop-mode">
+      <div class="row internal-section">
+        <div class="col-6">
+          <h4>Video en español</h4>
+          <iframe src="https://www.youtube.com/embed/uailf0LCkPk" allowfullscreen></iframe>
 
+        </div>
+        <div class="col-6">
+          <h4>Video en inglés</h4>
+          <iframe src="https://www.youtube.com/embed/D89ngRr4uZg" allowfullscreen></iframe>
+        </div>
       </div>
-      <div class="col-6">
-        <h4>Video en inglés</h4>
-        <iframe src="https://www.youtube.com/embed/D89ngRr4uZg" allowfullscreen></iframe>
+    </div>
+    <div class="tablet-mode">
+      <div class="row internal-section">
+        <div class="col-6">
+          <h4>Video en español</h4>
+          <iframe src="https://www.youtube.com/embed/uailf0LCkPk" allowfullscreen></iframe>
+
+        </div>
+        <div class="col-6">
+          <h4>Video en inglés</h4>
+          <iframe src="https://www.youtube.com/embed/D89ngRr4uZg" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="mobile-mode">
+      <div class="internal-section">
+        <div class="col-12">
+          <h4>Video en español</h4>
+          <iframe src="https://www.youtube.com/embed/uailf0LCkPk" allowfullscreen></iframe>
+
+        </div>
+        <div class="col-12">
+          <h4>Video en inglés</h4>
+          <iframe src="https://www.youtube.com/embed/D89ngRr4uZg" allowfullscreen></iframe>
+        </div>
       </div>
     </div>
   </div>

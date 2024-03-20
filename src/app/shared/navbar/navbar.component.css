@@ -1,45 +1,9 @@
-/*
-    MENU
-*/
-/*
-.navbar-container{
-  width: 100%;
-  position: static;
-}
-.buttons{
-  margin-left: 30%;
-}
-.login{
-  position: absolute;
-  width: 100%;
-  z-index: 2;
-}
-.signup{
-  position: absolute;
-  width: 100%;
-  z-index: 2;
-}*/
 nav {
   position: fixed;
   height: 100px;
-  width: 98%;
-}
-.navbar{
-  width: 60;
+  width: 100%;
 }
 
-.buttons{
-  margin-left: 30%;
-}
-.exit{
-  margin-left: 45%;
-}
-
-.switch-languages{
-  position: fixed;
-  width: 5%;
-
-}
 
 li:hover{
   background-color: #F9423D;
@@ -47,4 +11,47 @@ li:hover{
 
 ul .dropdown-item:hover{
   background-color: #F9423D;
+}
+
+
+
+/* Estilos para dispositivos de escritorio (PC) */
+@media only screen and (min-width: 1024px) {
+  .switch-language{
+    background-color: #f9433d78;
+    border-radius: 5%;
+    margin-left: 80%;
+  }
+}
+
+/* Estilos para tabletas */
+@media only screen and (min-width: 431px) and (max-width: 1023px) {
+  .exit{
+    margin: auto;
+  }
+  .switch-language{
+    background-color: #f9433d78;
+    border-radius: 5%;
+    margin-left: 80%;
+  }
+}
+
+/* Estilos para dispositivos móviles */
+@media only screen and (max-width: 430px) {
+  /* Agrega tus estilos para móviles aquí */
+  nav{
+    max-width: 430px;
+  }
+  li{
+    text-align: center;
+  }
+  .switch-language{
+    background-color: #f9433d78;
+    border-radius: 5%;
+    margin-left: 70%;
+    max-width: 20%;
+  }
+  .switch-language option{
+    max-width: 20%;
+  }
 }

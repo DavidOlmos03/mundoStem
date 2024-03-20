@@ -20,4 +20,10 @@ body{
   margin: auto;
   height: auto;
 }
+app-footer{
+  padding: 0px;
+}
 
+.row{
+  margin: 0px;
+}

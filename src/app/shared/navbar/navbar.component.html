@@ -14,7 +14,6 @@
           <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
             aria-expanded="false">{{'navbar.mathematics'|translate}}</a>
           <ul class="dropdown-menu">
-
             <li><a class="dropdown-item" href="vectorgeometry">{{'navbar.math-list.vectorGeo'|translate}}</a></li>
             <li><a class="dropdown-item" href="calculus">{{'navbar.math-list.calculus'|translate}}</a></li>
             <li><a class="dropdown-item" href="algebra">{{'navbar.math-list.algebra'|translate}}</a></li>
@@ -57,7 +56,6 @@
             <li><a class="dropdown-item" href="books">Books</a></li>
           </ul>
         </li>
-
       </ul>
       <div class="buttons" *ngIf="logueadoFunction() == null">
         <a href="login" class="btn buttom_Form btn-dark">{{'navbar.login'|translate}}</a>
@@ -68,7 +66,7 @@
       </div>
     </div>
   </div>
-  <div class="row switch-language col-md-2" style="background-color: #f9433d78; border-radius: 10%; margin-left: 82%;">
+  <div class="switch-language col-md-2">
       <app-switch-languages></app-switch-languages>
   </div>
 </nav>
