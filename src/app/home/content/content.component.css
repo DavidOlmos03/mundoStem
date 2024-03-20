@@ -3,11 +3,22 @@ p {
   text-align: justify;
   font-family: oblique;
 }
-.video {
-  width: 100%;
+
+/**Estilo para los videos*/
+iframe {
+  align-items: center;
+  margin:auto;
+  width: 70%;
+  height: 315px;
+  border-radius: 1rem;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
+  display: flex;
 }
-.video iframe{
-    width: 100%;
+
+iframe:hover{
+  width: 72%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.439);
+  transition: 0.4s ease-in-out;
 }
 /* Estilos para dispositivos de escritorio (PC) */
 @media only screen and (min-width: 1024px) {
@@ -21,5 +32,12 @@ p {
 
 /* Estilos para dispositivos móviles */
 @media only screen and (max-width: 430px) {
+  /**Estilo para los videos*/
+  iframe {
+    width: 100%;
+  }
 
+  iframe:hover{
+    width: 99%;
+  }
 }
