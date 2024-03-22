@@ -11,7 +11,7 @@ body {
     background: #ffffff;
 }
 
-body::before {
+body::after {
     content: "";
     left: 0;
     top: 0;
@@ -26,17 +26,18 @@ body::before {
     z-index: 0;
 }
 #homeButton {
-  z-index: 1;
+  position:fixed;
+  z-index: 2;
 }
 #switch-language{
   max-width: 200px;
   background-color: transparent;
   margin-left: 15%;
-  z-index: 1;
+  z-index: 2;
   position: fixed;
 }
 nav {
-    z-index: 1;
+    z-index: 2;
     position: fixed;
     margin-left: 20%;
 }
@@ -63,13 +64,14 @@ nav .btn{
   border-radius: 8px;
   cursor: pointer;
 }
-
+.description-box{
+  z-index: 1;
+  padding: 10% 10% 3% 0%;
+  position: relative;
+  display: flex;
+}
 .description{
   color:#ffffff;
-  margin: 7% 5% 0% 50%;
-  padding: 3% 0% 3% 0%;
-  position: fixed;
-  width: auto;
   background-color: rgba(0, 0, 0, 0.348);
 }
 .description h1{
@@ -81,17 +83,19 @@ nav .btn{
   font-size: 15px;
   padding: 0% 2% 0% 2%;
 }
+.form-box{
+  z-index: 1;
+  padding: 5% 0% 0% 5%;
+  /*width: 100%;*/
+  /*position: relative;*/
+  display: flex;
+}
 .form-wrapper {
-  position: fixed;
-    border-radius: 4px;
-    padding: 20px 70px 70px 70px;
-    width: 400px;
-    max-height: 480px;
-    margin-left: 5%;
-    margin-top: 1%;
-    margin-bottom: 0.5%;
-    background: rgba(0, 0, 0, .75);
-    z-index: 1;
+  /*position: fixed;*/
+  border-radius: 4px;
+  padding: 70px;
+  width: 70%;
+  background: rgba(0, 0, 0, .75);
 }
 
 .form-wrapper h2 {
@@ -222,4 +226,62 @@ form .form-help :where(label, a) {
     .form-wrapper form {
         margin: 25px 0 40px;
     }
+}
+
+
+/* Estilos para tabletas */
+@media only screen and (min-width: 431px) and (max-width: 1023px) {
+  .description-box{
+    z-index: 1;
+    padding: 15% 3% 3% 3%;
+  }
+  .form-box{
+    z-index: 1;
+    padding: 0% 20% 0% 20%;
+    width: 100%;
+    display: flex;
+  }
+  .form-wrapper {
+    width: 100%;
+  }
+  #homeButton {
+    position:fixed;
+    z-index: 2;
+  }
+  #switch-language{
+    margin-left: 47%;
+    max-width: 80px;
+  }
+  nav {
+      z-index: 2;
+      position: fixed;
+      margin-left: 42%;
+  }
+}
+
+/* Estilos para dispositivos móviles */
+@media only screen and (max-width: 430px) {
+  .description-box{
+    z-index: 1;
+    padding: 15% 3% 3% 3%;
+  }
+  .form-box{
+    z-index: 1;
+    padding: 5% 5% 5% 5%;
+    display: flex;
+  }
+  #homeButton {
+    position:fixed;
+    z-index: 2;
+  }
+  #switch-language{
+    margin-left: 47%;
+    max-width: 60px;
+  }
+  nav {
+      z-index: 2;
+      position: fixed;
+      margin-left: 42%;
+  }
+
 }
