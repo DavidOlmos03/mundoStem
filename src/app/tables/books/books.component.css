@@ -40,4 +40,6 @@ body{
 li{
   cursor:pointer;
 }
-
+.container-fluid{
+  padding: 0px;
+}

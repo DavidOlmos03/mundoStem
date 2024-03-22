@@ -31,7 +31,7 @@ header{
     position: absolute;
     display: block;
     bottom: 0;
-    width: 98%;
+    width: 100%;
   }
 }
 nav.sticky-header{
@@ -39,6 +39,7 @@ nav.sticky-header{
 }
 
 body{
+  width: 100%;
   height: auto;
   background-color: #ecf0f1;
   font-family: helvetica, arial, sans-serif;

@@ -24,8 +24,8 @@
         </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-6">
+    <div class="row desktop-mode">
+      <div class="form-box col-lg-6 order-lg-1 order-2">
         <div class="form-wrapper">
           <h2>Login</h2>
           <form action="#" (ngSubmit)="enviarDatos()">
@@ -48,9 +48,52 @@
               </div>
           </form>
           <p>{{'login.new'|translate}}<a href="signup">{{'login.signUpNow'|translate}}</a></p>
+        </div>
       </div>
+      <div class="description-box col-lg-6 order-lg-2 order-1">
+        <div class="description">
+          <h1>MUNDO STEM</h1>
+        <p><b>{{'login.advantages'|translate}}</b>
+          <br>
+          <br>
+        1. {{'login.advantage1'|translate}}
+        <br>
+        <br>
+        2. {{'login.advantage2'|translate}}
+        <br>
+        <br>
+        3. {{'login.advantage3'|translate}}</p>
+        </div>
       </div>
-      <div class="description col-6">
+    </div>
+<!--
+    <div class="mobile-mode">
+      <div class="form-box col-12">
+        <div class="form-wrapper">
+          <h2>Login</h2>
+          <form action="#" (ngSubmit)="enviarDatos()">
+              <div class="form-control">
+                  <input type="text" name="email_address" [(ngModel)]="email_address" required>
+                  <label>{{'login.email'|translate}}</label>
+              </div>
+              <div class="form-control">
+                  <input type="password" name="password" [(ngModel)]="password" required>
+                  <label>{{'login.password'|translate}}</label>
+              </div>
+              <button type="submit" >{{'login.login'|translate}}</button>
+              --<input type="submit" value="Login" />--
+              <div class="form-help">
+                  <div class="remember-me">
+                      <input type="checkbox" id="remember-me">
+                      <label for="remember-me">{{'login.rememberMe'|translate}}</label>
+                  </div>
+                  <a href="#">{{'login.help'|translate}}</a>
+              </div>
+          </form>
+          <p>{{'login.new'|translate}}<a href="signup">{{'login.signUpNow'|translate}}</a></p>
+        </div>
+      </div>
+      <div class="description col-12">
         <h1>MUNDO STEM</h1>
         <p><b>{{'login.advantages'|translate}}</b>
           <br>
@@ -62,11 +105,9 @@
         <br>
         <br>
         3. {{'login.advantage3'|translate}}</p>
-
       </div>
-    </div>
+    </div>-->
 
 </body>
 
 </html>
-
