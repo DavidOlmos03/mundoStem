@@ -9,7 +9,7 @@
   height: 200px;
   //background-color: #3498db;
   background-image: url(../../../assets/imgs/physics/electromagnetism/electromagnetism.jpg);
-  background-size: cover;
+  //background-size: cover;
   text-align: center;
   position: relative;
   position: fixed;
@@ -17,10 +17,7 @@
   overflow: hidden;
   @include transition(all .5s ease);
 }
-/*body{
-  padding-top: 330px;
-  @include transition(padding-top .5s ease);
-}*/
+
 body{
   height: auto;
   background-color: #ecf0f1;

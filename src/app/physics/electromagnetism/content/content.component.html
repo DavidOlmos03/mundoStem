@@ -2,20 +2,58 @@
 <div class="content">
   <h1>{{"physics-module.history"|translate}}</h1>
   <br>
-  <ul id="indice_1">
-    <li><a (click)="selectedPart='Discovery'">{{"physics-module.electromagnetism.discovery.title1"|translate}}</a></li>
-    <li><a (click)="selectedPart='Development'">Desarrollo de la Teoría Eléctrica</a></li>
-    <li><a (click)="selectedPart='Research'">Investigaciones en Magnetismo</a></li>
-    <li><a (click)="selectedPart='Unification'">Unificación de Electricidad y Magnetismo</a></li>
-  </ul>
-  <ul id="indice_2">
-    <li><a (click)="selectedPart='Aplications'">Aplicaciones Prácticas y Desarrollos Tecnológicos</a></li>
-    <li><a (click)="selectedPart='quantum-electrodynamics'">Teoría Cuántica y Electrodinámica Cuántica</a></li>
-    <li><a (click)="selectedPart='Innovations'">Innovaciones Contemporáneas</a></li>
-  </ul>
+  <!--Desktop mode for index-->
+  <div class="desktop-mode">
+    <ul id="indice_1">
+      <li><a (click)="selectedPart='Discovery'">{{"physics-module.electromagnetism.discovery.title1"|translate}}</a></li>
+      <li><a (click)="selectedPart='Development'">Desarrollo de la Teoría Eléctrica</a></li>
+      <li><a (click)="selectedPart='Research'">Investigaciones en Magnetismo</a></li>
+      <li><a (click)="selectedPart='Unification'">Unificación de Electricidad y Magnetismo</a></li>
+    </ul>
+    <ul id="indice_2">
+      <li><a (click)="selectedPart='Aplications'">Aplicaciones Prácticas y Desarrollos Tecnológicos</a></li>
+      <li><a (click)="selectedPart='quantum-electrodynamics'">Teoría Cuántica y Electrodinámica Cuántica</a></li>
+      <li><a (click)="selectedPart='Innovations'">Innovaciones Contemporáneas</a></li>
+    </ul>
+  </div>
+  <!--Tablet mode for index-->
+  <div class="tablet-mode">
+    <ul id="indice_1">
+      <li><a (click)="selectedPart='Discovery'">{{"physics-module.electromagnetism.discovery.title1"|translate}}</a></li>
+      <li><a (click)="selectedPart='Development'">Desarrollo de la Teoría Eléctrica</a></li>
+      <li><a (click)="selectedPart='Research'">Investigaciones en Magnetismo</a></li>
+    </ul>
+    <ul id="indice_2">
+      <li><a (click)="selectedPart='Unification'">Unificación de Electricidad y Magnetismo</a></li>
+      <li><a (click)="selectedPart='Aplications'">Aplicaciones Prácticas y Desarrollos Tecnológicos</a></li>
+      <li><a (click)="selectedPart='quantum-electrodynamics'">Teoría Cuántica y Electrodinámica Cuántica</a></li>
+    </ul>
+    <div id="indice_3">
+      <li><a (click)="selectedPart='Innovations'">Innovaciones Contemporáneas</a></li>
+    </div>
+  </div>
+  <!--Mobile mode for index-->
+  <div class="mobile-mode">
+    <ul id="indice_1">
+      <li><a (click)="selectedPart='Discovery'">{{"physics-module.electromagnetism.discovery.title1"|translate}}</a></li>
+      <li><a (click)="selectedPart='Development'">Desarrollo de la Teoría Eléctrica</a></li>
+      <li><a (click)="selectedPart='Research'">Investigaciones en Magnetismo</a></li>
+    </ul>
+    <ul id="indice_2">
+      <li><a (click)="selectedPart='Unification'">Unificación de Electricidad y Magnetismo</a></li>
+      <li><a (click)="selectedPart='Aplications'">Aplicaciones Prácticas y Desarrollos Tecnológicos</a></li>
+      <li><a (click)="selectedPart='quantum-electrodynamics'">Teoría Cuántica y Electrodinámica Cuántica</a></li>
+    </ul>
+    <div id="indice_3">
+      <li><a (click)="selectedPart='Innovations'">Innovaciones Contemporáneas</a></li>
+    </div>
+  </div>
   <hr>
-
   <br>
+
+  <!-- Botón para ir al inicio de la página -->
+  <button id="scrollToTopButton" (click)="scrollToTop()"><i class="fa-solid fa-chevron-up"></i></button>
+
   <p>{{"physics-module.electromagnetism.historyText"|translate}}</p>
  <!--
         Discovery
@@ -275,14 +313,14 @@
 
 
     <div class="row internal-section">
-      <div class="col-6" width="500" height="315">
+      <div class="col-md-6 col-12">
         <h4>Video en español</h4>
-        <iframe width="500" height="315" src="https://www.youtube.com/embed/tusvcCULebE" frameborder="0" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/tusvcCULebE" frameborder="0" allowfullscreen></iframe>
 
       </div>
-      <div class="col-6">
+      <div class="col-md-6 col-12">
         <h4>Video en inglés</h4>
-        <iframe width="500" height="315" src="https://www.youtube.com/embed/CxVwdv76KBQ" frameborder="0" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/CxVwdv76KBQ" frameborder="0" allowfullscreen></iframe>
       </div>
     </div>
   </div>

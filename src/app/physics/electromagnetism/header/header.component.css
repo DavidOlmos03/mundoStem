@@ -1,6 +1,14 @@
 .header{
   width: 100%;
-  height: 180px;
-  position:static;
+  height: 200px;
+  position: static;
   background-color: transparent;
+
 }
+
+@media only screen and (max-width:470px){
+  #Tittle{
+    font-size:xx-large;
+  }
+}
+

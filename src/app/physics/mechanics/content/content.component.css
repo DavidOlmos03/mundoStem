@@ -30,6 +30,32 @@
 }
 
 
+/** Estilo para el indice**/
+#indice_1,
+#indice_2{
+  display: flex; /*Se aplica el estilo para que sepuedan ordenar en una sola fila*/
+  flex-direction: row;
+  list-style-type: none;
+  background-color: rgba(194, 63, 63, 0.294);
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+}
+#indice_1 li,
+#indice_2 li{
+  padding: 0px 10px 0px 10px;
+}
+#indice_1 a,
+#indice_2 a{
+  cursor: pointer;
+}
+#indice_1 li:hover,
+#indice_2 li:hover{
+  background-color: #F9423D;
+}
+#indice_2{
+  margin: 0px 20px 0px 20px;
+}
+
 
 /**Estilos para el carousel tipo 1**/
 .gallery {
@@ -125,6 +151,8 @@ iframe:hover{
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.439);
   transition: 0.4s ease-in-out;
 }
+
+
 /**Estilos para el boton de scrollToTop**/
 @import "~@fortawesome/fontawesome-free/css/all.css";
 

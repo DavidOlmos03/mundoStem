@@ -8,3 +8,9 @@
 .row{
   margin: 0px;
 }
+
+@media only screen and (max-width:470px){
+  #Tittle{
+    font-size:xx-large;
+  }
+}
