@@ -7,4 +7,17 @@ import { Component } from '@angular/core';
 })
 export class ContentMotivationComponent {
   selectedPart:string = "Cosmos"
+  hovered: number | null = null;
+  texts: string[] = [
+    "Carl Sagan",
+    "Neil deGrasse"
+  ];
+
+  onMouseEnter(index: number) {
+    this.hovered = index;
+  }
+
+  onMouseLeave() {
+    this.hovered = null;
+  }
 }

@@ -4,16 +4,38 @@
 <div class="content">
   <h1>{{"physics-module.history"|translate}}</h1>
   <br>
-  <ul id="indice">
-    <li><a (click)="selectedPart='Cosmos'">Serie cosmos</a></li>
-    <li><a (click)="selectedPart='elDivulgatorio'">El divulgatorio (UdeA)</a></li>
-    <li><a (click)="selectedPart='Newton'">Isaac Newton</a></li>
-    <li><a (click)="selectedPart='three-body'">Three-body problem</a></li>
-    <li><a (click)="selectedPart='double-pendulum'">Double pendulum problem</a></li>
-    <li><a (click)="selectedPart='rigid-body'">Rigid body problem</a></li>
-    <li><a (click)="selectedPart='Einsteins-theory'">Einstein's theory of relativity</a></li>
-    <li><a (click)="selectedPart='Quantum'">Quantum mechanics</a></li>
-  </ul>
+
+  <!--Desktop mode for index-->
+  <div class="desktop-mode">
+    <ul id="indice_1">
+      <li><a (click)="selectedPart='Cosmos'">Serie cosmos</a></li>
+      <li><a (click)="selectedPart='elDivulgatorio'">El divulgatorio (UdeA)</a></li>
+      <li><a (click)="selectedPart='Veritasium'">Veritasium</a></li>
+      <li><a (click)="selectedPart='Derivando'">Derivando</a></li>
+    </ul>
+  </div>
+
+  <!--Tablet mode for index-->
+  <div class="tablet-mode">
+    <ul id="indice_1">
+      <li><a (click)="selectedPart='Cosmos'">Serie cosmos</a></li>
+      <li><a (click)="selectedPart='elDivulgatorio'">El divulgatorio (UdeA)</a></li>
+      <li><a (click)="selectedPart='Veritasium'">Veritasium</a></li>
+      <li><a (click)="selectedPart='Derivando'">Derivando</a></li>
+    </ul>
+  </div>
+
+  <!--Mobile mode for index-->
+  <div class="mobile-mode">
+    <ul id="indice_1">
+      <li><a (click)="selectedPart='Cosmos'">Serie cosmos</a></li>
+      <li><a (click)="selectedPart='elDivulgatorio'">El divulgatorio (UdeA)</a></li>
+      <li><a (click)="selectedPart='Veritasium'">Veritasium</a></li>
+    </ul>
+    <ul id="indice_2">
+      <li><a (click)="selectedPart='Derivando'">Derivando</a></li>
+    </ul>
+  </div>
   <br>
   <div class="row">
     <div class="col-12 col-md-6">
@@ -97,14 +119,22 @@
         </div>
       </div>
       <div class="col-12 col-md-5">
-        <div class="one-image">
-          <img src="assets/imgs/physics/motivation/CarlSagan.jpg">
+        <div class="content-one-image">
+          <div class="one-image">
+            <img src="assets/imgs/physics/motivation/CarlSagan.jpg" alt="Imagen" (mouseenter)="onMouseEnter(0)" (mouseleave)="onMouseLeave()">
+          </div>
+          <div>
+            <figcaption *ngIf="hovered !== null && hovered == 0" id="texto"><b>{{texts[hovered]}}</b></figcaption>
+          </div>
         </div>
         <br>
         <hr>
         <br>
-        <div class="one-image">
-          <img src="assets/imgs/physics/motivation/deGrasse.jpg">
+        <div class="content-one-image">
+          <div class="one-image">
+            <img src="assets/imgs/physics/motivation/deGrasse.jpg"  alt="Imagen" (mouseenter)="onMouseEnter(1)" (mouseleave)="onMouseLeave()">
+          </div>
+          <figcaption *ngIf="hovered !== null && hovered == 1" id="texto"><b>{{texts[hovered]}}</b></figcaption>
         </div>
       </div>
     </div>
@@ -132,53 +162,36 @@
       Contando así con diferentes grupos dedicados a la divulgación cientifica, grupos pertenecientes a la facultad de ingenieria o ciencias exactas, aqui presentamos uno de estos grupos,
       con el fin de motivar a que revisen sus redes sociales y contenido el cual sirve como base y motivación para estudiar ciencia.
     </p>
-    <div class="one-image">
-      <a href="https://www.instagram.com/el.divulgatorio/">
-        <img src="assets/imgs/physics/motivation/elDivulgatorio.png" alt="elDivulgatorioImage" style="height: 200px;">
-      </a>
-    </div>
-    <div class="row">
-      <div class="col-md-6">
-        <!--Carousel tipo 2-->
-        <section>
-          <img src="assets/imgs/physics/mechanics/Galileo Galilei/Galileo_1.jpg" alt="Imagen">
-          <img src="assets/imgs/physics/mechanics/Galileo Galilei/Galileo_2.jpg" alt="Imagen">
-          <img src="assets/imgs/physics/mechanics/Galileo Galilei/Galileo_3.jpg" alt="Imagen">
-          <img src="assets/imgs/physics/mechanics/Galileo Galilei/Galileo_4.jpg" alt="Imagen">
-        </section>
-      </div>
-      <div class="col-md-6">
-        <div class="row">
-          <p>{{'physics-module.mechanics.Galileo.text2.part0'|translate}}</p>
-          <p>1. {{'physics-module.mechanics.Galileo.text2.part1'|translate}} </p><br>
-          <p>2. {{'physics-module.mechanics.Galileo.text2.part2'|translate}} </p><br>
-          <p>3. {{'physics-module.mechanics.Galileo.text2.part3'|translate}} </p><br>
-          <p>4. {{'physics-module.mechanics.Galileo.text2.part4'|translate}} </p>
-        </div>
-      </div>
-    </div>
     <div class="row internal-section">
-      <div class="row">
-        <h3> {{'physics-module.mechanics.Galileo.quotes.title'|translate}} </h3>
-        <p>"{{'physics-module.mechanics.Galileo.quotes.quote1'|translate}}"
-          <br>
-          -Galileo Galilei
-        </p>
+      <div class="one-image" style="margin-bottom: 10px;">
+        <a href="https://www.instagram.com/el.divulgatorio/">
+          <img src="assets/imgs/physics/motivation/elDivulgatorio.png" alt="elDivulgatorioImage" style="height: 200px;">
+        </a>
       </div>
-      <div class="row">
-        <p>"{{'physics-module.mechanics.Galileo.quotes.quote2'|translate}}"
-          <br>
-          -Galileo Galilei
-        </p>
-      </div>
+      <hr>
+      <!--Carousel tipo 2-->
+      <section>
+        <a href="https://www.instagram.com/p/CzrVFv8gvmN/?img_index=1">
+          <img src="assets/imgs/physics/motivation/elDivulgatorioImage2.png" alt="Imagen">
+        </a>
+        <a href="https://www.instagram.com/p/Cyi-Tdvrg_U/?img_index=2">
+          <img src="assets/imgs/physics/motivation/elDivulgatorioImage1.png" alt="Imagen">
+        </a>
+        <a href="https://www.instagram.com/p/CwgMyRZpvf_/?img_index=1">
+          <img src="assets/imgs/physics/motivation/elDivulgatorioImage3.png"alt="Imagen">
+        </a>
+        <a href="https://www.instagram.com/p/Cp-ToeVLMmu/?img_index=1">
+          <img src="assets/imgs/physics/motivation/elDivulgatorioImage4.png" alt="Imagen">
+        </a>
+      </section>
     </div>
   </div>
 
   <!--
     Isaac Newton
   -->
-  <div id="Newton" *ngIf="selectedPart == 'Newton'">
-    <h3>Isaac Newton</h3>
+  <div id="Veritasium" *ngIf="selectedPart == 'Veritasium'">
+    <h3>Veritasium</h3>
     <p>
       {{'physics-module.mechanics.Newton.text1'|translate}}
     </p>
@@ -204,8 +217,8 @@
   <!--
     Three body problem
   -->
-  <div id="three-body" *ngIf="selectedPart == 'three-body'">
-    <h3>Three-body problem</h3>
+  <div id="Derivando" *ngIf="selectedPart == 'Derivando'">
+    <h3>Derivando</h3>
     <p>
       Three-body problem: The gravitational interaction between three celestial bodies is a classic problem in celestial
       mechanics that still has no general analytical solution. The complexity of this problem has led to the development

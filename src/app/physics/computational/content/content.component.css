@@ -28,23 +28,6 @@
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.439);
 }
 
-/** Estilo para el indice**/
-#indice{
-  display: flex; /*Se aplica el estilo para que sepuedan ordenar en una sola fila*/
-  flex-direction: row;
-  list-style-type: none;
-  background-color: rgba(194, 63, 63, 0.294);
-}
-#indice li{
-  padding: 0px 10px 0px 10px;
-}
-#indice a{
-  cursor: pointer;
-}
-#indice li:hover{
-  background-color: #F9423D;
-}
-
 /**Estilos para el carousel tipo 1**/
 .gallery {
   display: flex;
