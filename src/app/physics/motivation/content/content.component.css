@@ -37,12 +37,16 @@
   /*padding: 0% 5% 0% 5%;*/
 }
 .one-image img{
-  max-width:500px;
+  max-width:100%;
   border-radius: 1rem;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 .one-image img:hover{
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.439);
+}
+.text{
+  padding: 60px;
+  border-right: 1px solid #dee2e6;
 }
 /**Estilos para el carousel tipo 1**/
 .gallery {

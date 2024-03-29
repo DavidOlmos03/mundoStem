@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrl: './content.component.css'
 })
 export class ContentMotivationComponent {
-  selectedPart:string = ""
+  selectedPart:string = "Cosmos"
 }

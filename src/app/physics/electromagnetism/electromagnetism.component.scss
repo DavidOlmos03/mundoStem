@@ -7,7 +7,6 @@
 .header{
   width: 100%;
   height: 200px;
-  //background-color: #3498db;
   background-image: url(../../../assets/imgs/physics/electromagnetism/electromagnetism.jpg);
   //background-size: cover;
   text-align: center;
@@ -36,3 +35,8 @@ body.sticky-header{
   }
 }
 
+@media only screen and (max-width:470px){
+  .header{
+    background-size: cover;
+  }
+}

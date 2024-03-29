@@ -5,8 +5,8 @@
   <h1>{{"physics-module.history"|translate}}</h1>
   <br>
   <ul id="indice">
-    <li><a (click)="selectedPart='Aristotle'">{{'physics-module.mechanics.Aristotle.title'|translate}}</a></li>
-    <li><a (click)="selectedPart='Galileo'">Galileo Galilei</a></li>
+    <li><a (click)="selectedPart='Cosmos'">Serie cosmos</a></li>
+    <li><a (click)="selectedPart='elDivulgatorio'">El divulgatorio (UdeA)</a></li>
     <li><a (click)="selectedPart='Newton'">Isaac Newton</a></li>
     <li><a (click)="selectedPart='three-body'">Three-body problem</a></li>
     <li><a (click)="selectedPart='double-pendulum'">Double pendulum problem</a></li>
@@ -15,51 +15,128 @@
     <li><a (click)="selectedPart='Quantum'">Quantum mechanics</a></li>
   </ul>
   <br>
-  <p>{{'physics-module.mechanics.history-text'|translate}}</p>
+  <div class="row">
+    <div class="col-12 col-md-6">
+      <ul>
+        <li><p>"La física te enseña a mirar más allá de lo evidente y a cuestionar lo que parece ser la verdad absoluta." - Carlo Rovelli</p></li>
+        <li><p>"En física, lo importante no es cómo lo estás haciendo, sino por qué lo estás haciendo." - Leon M. Lederman</p></li>
+      </ul>
+    </div>
+    <div class="col-12 col-md-6">
+      <ul>
+        <li><p>"La física es como el ajedrez. Para tener éxito, debes pensar en el próximo movimiento." - Albert Einstein</p></li>
+        <li><p>"La física es la llave maestra para desbloquear los secretos del universo." - Stephen Hawking</p></li>
+      </ul>
+    </div>
+  </div>
+
+
   <!--
-        Aristoteles
+        Cosmos
       -->
-  <div id="Aristotle" *ngIf="selectedPart == 'Aristotle'">
-    <h3>{{'physics-module.mechanics.Aristotle.title'|translate}}</h3>
-    <p>{{'physics-module.mechanics.Aristotle.text1'|translate}}</p>
+  <div id="Cosmos" *ngIf="selectedPart == 'Cosmos'">
+    <h3>Serie Cosmos</h3>
+    <p>
+      La serie "Cosmos" ha sido una influyente franquicia televisiva que ha explorado los misterios del universo y la ciencia desde diferentes perspectivas, desde la visión de Carl Sagan hasta la versión presentada por Neil deGrasse Tyson.</p>
     <div class="row">
-      <div class="col-6">
-        <p>
-          <b>{{'physics-module.mechanics.Aristotle.subtitle1'|translate}}<br></b>
-          {{'physics-module.mechanics.Aristotle.text2'|translate}}
-          <br>
-          <br>
-          {{'physics-module.mechanics.Aristotle.text2'|translate}}
-        </p>
+      <div class="text col-12 col-md-6">
+        <div id="CarlSagan">
+          <p>
+            <b>Carl Sagan (Cosmos: Un viaje personal):</b>
+          </p>
+          <ul>
+            <li>
+              <p>
+                "Cosmos: Un viaje personal" es una serie de televisión documental creada por Carl Sagan, Ann Druyan y Steven Soter, que se estrenó en 1980.
+              </p>
+            </li>
+            <li>
+              <p>
+                Sagan, un astrónomo y divulgador científico, presentó la serie con su característico estilo didáctico y poético, explorando una amplia gama de temas científicos, desde el origen del universo hasta la evolución de la vida en la Tierra.
+              </p>
+            </li>
+            <li>
+              <p>
+                La serie se centró en temas como el Big Bang, la evolución, la historia de la astronomía, el sistema solar y la búsqueda de vida extraterrestre.
+              </p>
+            </li>
+            <li>
+              <p>
+                "Cosmos: Un viaje personal" se convirtió en un hito en la divulgación científica, llegando a audiencias de todo el mundo y ganando numerosos premios.
+              </p>
+            </li>
+          </ul>
+        </div>
+        <div id="NeildeGrasse">
+          <p>
+            <b>Neil deGrasse Tyson (Cosmos: Una odisea de tiempo y espacio):</b>
+          </p>
+          <ul>
+            <li>
+              <p>
+                En 2014, se lanzó "Cosmos: Una odisea de tiempo y espacio", una secuela de la serie original, presentada por el astrofísico Neil deGrasse Tyson y producida por Ann Druyan, la viuda de Carl Sagan, junto con Seth MacFarlane.              </p>
+            </li>
+            <li>
+              <p>
+                Tyson llevó la serie a una nueva generación de espectadores, manteniendo el espíritu de exploración científica y maravilla cósmica iniciado por Sagan.
+              </p>
+            </li>
+            <li>
+              <p>
+                La serie abordó temas contemporáneos en la ciencia, como la teoría del cambio climático, la genética y la exploración espacial, así como conceptos fundamentales en la astronomía y la cosmología.
+              </p>
+            </li>
+            <li>
+              <p>
+                "Cosmos: Una odisea de tiempo y espacio" recibió elogios por su presentación visualmente impresionante, sus efectos especiales avanzados y su capacidad para comunicar conceptos científicos complejos de manera accesible.              </p>
+            </li>
+          </ul>
+        </div>
+        <div>
+          Link para ver la serie en <a href="https://www.documaniatv.com/ciencia-y-tecnologia/cosmos-carl-sagan-1-en-la-orilla-del-oceano-cosmico-video_3d150ecab.html">www.documaniatv.com/</a>
+        </div>
       </div>
-      <div class="col-6 one-image">
-        <img src="assets/imgs/physics/mechanics/Aristotle/Aristotle_5.jpg">
+      <div class="col-12 col-md-5">
+        <div class="one-image">
+          <img src="assets/imgs/physics/motivation/CarlSagan.jpg">
+        </div>
+        <br>
+        <hr>
+        <br>
+        <div class="one-image">
+          <img src="assets/imgs/physics/motivation/deGrasse.jpg">
+        </div>
       </div>
     </div>
+
     <!--Carousel tipo 1-->
     <div class="gallery">
       <figure class="card">
-        <img src="assets/imgs/physics/mechanics/Aristotle/AristotleElements_1.png" alt="Imagen">
+        <img src="assets/imgs/physics/motivation/cosmosImage.jpeg" alt="Imagen">
       </figure>
       <figure class="card">
-        <img src="assets/imgs/physics/mechanics/Aristotle/Aristotle_3.jpg" alt="Imagen">
+        <img src="assets/imgs/physics/motivation/cosmosImage2.webp" alt="Imagen">
       </figure>
       <figure class="card">
-        <img src="assets/imgs/physics/mechanics/Aristotle/Aristotle_4.jpg" alt="Imagen">
-      </figure>
-      <figure class="card" id="fourth-image-Aristotle">
-        <img src="assets/imgs/physics/mechanics/Aristotle/Aristotle_2.jpg" alt="Imagen">
+        <img src="assets/imgs/physics/motivation/cosmosImage3.jpg" alt="Imagen">
       </figure>
     </div>
   </div>
   <!--
-    Galileo Galilei
+    elDivulgatorio
       -->
-  <div id="Galileo" *ngIf="selectedPart == 'Galileo'">
-    <h3>Galileo Galilei</h3>
+  <div id="elDivulgatorio" *ngIf="selectedPart == 'elDivulgatorio'">
+    <h3>El divulgatorio (UdeA)</h3>
     <p>
-      {{'physics-module.mechanics.Galileo.text1'|translate}}
+      La Universidad de Antioquia, una de las mejores universidades de Colombia, cuenta con muchas personas amantes de la ciencia, el conocimiento y la divulgación.
+      Contando así con diferentes grupos dedicados a la divulgación cientifica, grupos pertenecientes a la facultad de ingenieria o ciencias exactas, aqui presentamos uno de estos grupos,
+      con el fin de motivar a que revisen sus redes sociales y contenido el cual sirve como base y motivación para estudiar ciencia.
     </p>
+    <div class="one-image">
+      <a href="https://www.instagram.com/el.divulgatorio/">
+        <img src="assets/imgs/physics/motivation/elDivulgatorio.png" alt="elDivulgatorioImage" style="height: 200px;">
+      </a>
+    </div>
     <div class="row">
       <div class="col-md-6">
         <!--Carousel tipo 2-->

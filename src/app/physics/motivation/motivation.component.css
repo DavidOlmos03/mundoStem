@@ -1,3 +1,9 @@
 .header{
   z-index: 1;
 }
+.content{
+  margin: 0px 20px 0px 20px;
+}
+.row{
+  margin: 0px;
+}

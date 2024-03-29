@@ -3,12 +3,11 @@
   height: 200px;
   position: static;
   background-color: transparent;
-
 }
 
 @media only screen and (max-width:470px){
   #Tittle{
-    font-size:xx-large;
+    font-size: x-large;
   }
 }
 
