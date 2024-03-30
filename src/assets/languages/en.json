@@ -150,6 +150,18 @@
         "text5":"Laws of Electrodynamics: In the 1830s, Michael Faraday formulated the laws of electrodynamics, including Faraday's law of electromagnetic induction, which states that a change in the magnetic field across a circuit induces an electric current in the circuit. circuit.",
         "text6":"Development of mathematical theory: James Clerk Maxwell in the 19th century unified electrical and magnetic phenomena into a coherent set of equations known as Maxwell's equations. These equations form the basis of electromagnetic theory and predicted the existence of electromagnetic waves, confirmed experimentally by Heinrich Hertz.",
         "text7":"These are just some of the major milestones in the development of electrical theory during the 18th and 19th centuries. These advances laid the foundation for the technological revolution that transformed modern society, from electric lighting to wireless communications."
+      },
+      "Research":{
+        "Research":"Research in Magnetism",
+        "text1":"During the 18th and 19th centuries, research in magnetism experienced significant advances that laid the foundation for our modern understanding of this phenomenon.",
+        "text2":"Early discoveries of magnetism: Magnetism has been observed and studied since ancient times, but it was in the 18th century that more systematic advances were made in its understanding. Experiments with natural magnetic materials such as magnetite (iron oxide) led to the discovery of basic magnetic properties.",
+        "text3":"Laws of magnetism: Charles-Augustin de Coulomb, known for his research in electricity, also contributed to the study of magnetism in the 18th century. He established fundamental laws for magnetic interaction, which are analogous to Coulomb's laws for electrical interaction.",
+        "text4":"Beginnings of electromagnetic theory: Although considered primarily a 19th century figure, the work of Hans Christian Oersted in 1820 was seminal. He discovered that an electric current can generate a magnetic field, laying the foundation for the connection between electricity and magnetism.",
+        "text5":"Development of the theory of magnetism: William Gilbert was a prominent figure in the 16th century who conducted experiments and formulated theories about magnetism, establishing the foundations of modern research in this field. However, his ideas were significantly developed and refined in the following centuries.",
+        "text6":"Research on magnetization and molecular magnetism: In the 19th century, scientists such as André-Marie Ampère and Michael Faraday conducted important research on the molecular nature of magnetism and the magnetization of materials. His experiments helped to better understand how atoms and molecules in magnetic materials are organized and behave.",
+        "text7":"Advances in magnetic technology: During this period, there were also significant advances in the practical application of magnetism, including the invention of improved magnetic compasses, the creation of more powerful artificial magnets, and the development of techniques to magnetize and demagnetize materials as needed.",
+        "text8":"These are just some of the major milestones in magnetism research during the 18th and 19th centuries. These advances laid the foundation for later developments in fields such as physics, electrical engineering, materials technology, and many other areas of modern science and technology."
+
       }
     }
   },
