@@ -93,10 +93,36 @@
       },
       "threeBody":{
         "threeBodyProblem":"Three-body problem",
-        "text1":"Three-body problem: The gravitational interaction between three celestial bodies is a classic problem in celestial mechanics that still has no general analytical solution. The complexity of this problem has led to the development of numerical methods and the study of chaotic systems."
+        "text1":"The gravitational interaction between three celestial bodies is a classic problem in celestial mechanics that still has no general analytical solution. The complexity of this problem has led to the development of numerical methods and the study of chaotic systems."
       },
       "doublePendulum":{
-        "doublePendulum":"Double pendulum problem"
+        "doublePendulum":"Double pendulum problem",
+        "text1":"A classic problem in mechanics is the study of the double pendulum, which presents chaotic behaviors and is an example of nonlinear dynamic systems.",
+        "text2":"The double pendulum is a dynamic system in physics that consists of two simple pendulums connected to each other. This system is of interest in physics due to its chaotic behavior and the richness of dynamic phenomena it exhibits. The relationship between the double pendulum and physics can be explored in several aspects:"
+      },
+      "rigidBody":{
+        "rigidBody":"Rigid body problem",
+        "text1":"The study of rotating rigid bodies has led to the development of rigid mechanics and has found applications in engineering and vehicle dynamics."
+      },
+      "Einstein":{
+        "EinsteinTheory":"Einstein's theory of relativity",
+        "text1":"In the early 20th century, Albert Einstein proposed the theory of relativity, which transformed the understanding of gravity. The theory of general relativity describes gravity as a curvature of space-time caused by the presence of mass and energy."
+      },
+      "quantumMechanics":{
+        "quantumMechanics":"Quantum mechanics",
+        "text1":"At the subatomic level, quantum mechanics replaced classical mechanics. Developed in the first half of the 20th century, quantum mechanics describes the behavior of subatomic particles and has led to technologies such as quantum electronics.",
+        "subtitle1":"Double-slit experiment",
+        "text2":"In modern physics, the double-slit experiment demonstrates that light and matter can satisfy the seemingly incongruous classical definitions for both waves and particles, which is considered evidence for the fundamentally probabilistic nature of quantum mechanics. This type of experiment was first performed by Thomas Young in 1801, as a demonstration of the wave behavior of visible light. At that time it was thought that light consisted of either waves or particles. With the beginning of modern physics, about a hundred years later, it was realized that light could in fact show both wave and particle characteristics. In 1927, Davisson and Germer and, independently George Paget Thomson and his research student Alexander Reid demonstrated that electrons show the same behavior, which was later extended to atoms and molecules. Thomas Young's experiment with light was part of classical physics long before the development of quantum mechanics and the concept of wave–particle duality. He believed it demonstrated that Christiaan Huygens' wave theory of light was correct, and his experiment is sometimes referred to as Young's experiment or Young's slits."
+      },
+      "celestialMechanics":{
+        "celestialMechanics":"Celestial mechanics",
+        "text1":"The history of celestial mechanics has its roots in ancient civilizations that observed the movement of celestial bodies and developed theories to explain it. However, one of the most important milestones in the development of celestial mechanics was the formulation of the laws of planetary motion by Johannes Kepler in the 17th century. Kepler discovered that the planets move in elliptical orbits around the Sun, and established three empirical laws that describe these movements.",
+        "text2":"Isaac Newton later revolutionized our understanding of celestial mechanics with his major work, ''Principia Mathematica,'' published in 1687. In this work, Newton formulated the law of universal gravitation, which states that the force of attraction between two bodies is directly proportional to the product of their masses and inversely proportional to the square of the distance between them. This law made it possible to accurately explain and predict the movements of the planets, moons and other celestial bodies.",
+        "subtitle1":"Gravitational intensity",
+        "text3":"Newton was the one who introduced the concept of a gravitational field, which is a mathematical description of how mass causes a gravitational force that acts on other masses in its environment. This field can be represented by a vector that indicates the direction and magnitude of the gravitational force at each point in space.",
+        "subtitle2":"Gravitational potential",
+        "text4_1":"The gravitational potential, on the other hand, is a scalar function that describes how the gravitational potential energy changes as a function of position in the gravitational field. This concept is fundamental in celestial mechanics to calculate the movement of celestial bodies.",
+        "text4_2":"Newton developed these ideas in his major work, ''Philosophiæ Naturalis Principia Mathematica'' (Principia), published in 1687. In this work, he presented the equations that describe the law of universal gravitation and how it relates to the gravitational field and the gravitational potential."
       }
     },
     "electromagnetism":{
@@ -114,6 +140,16 @@
         "text7":"He also contributed to the development of the Leyden condenser at the same time as Musschenbroek.",
         "text8":"He discovered that certain conductors could discharge electricity from a capacitor.",
         "text9":"He developed the theory that electricity is a fluid composed of individual electrical particles."
+      },
+      "Development":{
+        "Development":"Development of Electrical Theory",
+        "text1":"Discovery of static electricity: In the 18th century, experiments with objects such as rubbed amber and glass led to the discovery of static electricity. Prominent figures in this field include William Gilbert, Otto von Guericke, and Stephen Gray.",
+        "text2":"Laws of electrical behavior: Charles-Augustin de Coulomb in the 18th century established the fundamental laws of electrostatics, including Coulomb's Law which describes the force between electric charges.",
+        "text3":"Invention of the voltaic cell: In 1800, Alessandro Volta invented the voltaic cell, the first electric battery that could produce a constant electric current. This advance was fundamental to the development of electrolysis and the understanding of electric current.",
+        "text4":"Electric flow theory: In the 1820s, André-Marie Ampère developed the theory of electric flow, which established the fundamental laws of magnetism and the interaction between electric currents.",
+        "text5":"Laws of Electrodynamics: In the 1830s, Michael Faraday formulated the laws of electrodynamics, including Faraday's law of electromagnetic induction, which states that a change in the magnetic field across a circuit induces an electric current in the circuit. circuit.",
+        "text6":"Development of mathematical theory: James Clerk Maxwell in the 19th century unified electrical and magnetic phenomena into a coherent set of equations known as Maxwell's equations. These equations form the basis of electromagnetic theory and predicted the existence of electromagnetic waves, confirmed experimentally by Heinrich Hertz.",
+        "text7":"These are just some of the major milestones in the development of electrical theory during the 18th and 19th centuries. These advances laid the foundation for the technological revolution that transformed modern society, from electric lighting to wireless communications."
       }
     }
   },

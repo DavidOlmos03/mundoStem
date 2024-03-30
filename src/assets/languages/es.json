@@ -91,9 +91,38 @@
       "Newton":{
         "text1":"Isaac Newton (1643-1727): Newton consolidó las ideas de Galileo y formuló las leyes del movimiento y la ley de la gravitación universal. Sus contribuciones revolucionaron la física y la astronomía, proporcionando un marco matemático para comprender y predecir el movimiento de los objetos."
       },
-      "Three-body problem":"Problema de tres cuerpos",
-      "Three-body":{
-
+      "threeBody":{
+        "threeBodyProblem":"Problema de tres cuerpos",
+        "text1":"La interacción gravitacional entre tres cuerpos celestes es un problema clásico de la mecánica celeste que aún no tiene una solución analítica general. La complejidad de este problema ha llevado al desarrollo de métodos numéricos y al estudio de sistemas caóticos."
+      },
+      "doublePendulum":{
+        "doublePendulum":"Problema del pendulo doble",
+        "text1":"Un problema clásico en mecánica es el estudio del doble péndulo, que presenta comportamientos caóticos y es un ejemplo de sistemas dinámicos no lineales.",
+        "text2":"El péndulo doble es un sistema dinámico en la física que consta de dos péndulos simples conectados entre sí. Este sistema es de interés en la física debido a su comportamiento caótico y a la riqueza de fenómenos dinámicos que exhibe. La relación entre el péndulo doble y la física se puede explorar en varios aspectos:"
+      },
+      "rigidBody":{
+        "rigidBody":"Problema del cuerpo rígido",
+        "text1":"El estudio de cuerpos rígidos giratorios ha llevado al desarrollo de la mecánica rígida y ha encontrado aplicaciones en ingeniería y dinámica de vehículos."
+      },
+      "Einstein":{
+        "EinsteinTheory":"Teoria de la relatividad de Einstein",
+        "text1":"A principios del siglo XX, Albert Einstein propuso la teoría de la relatividad, que transformó la comprensión de la gravedad. La teoría de la relatividad general describe la gravedad como una curvatura del espacio-tiempo provocada por la presencia de masa y energía."
+      },
+      "quantumMechanics":{
+        "quantumMechanics":"Mecánica cuantica",
+        "text1":"A nivel subatómico, la mecánica cuántica reemplazó a la mecánica clásica. Desarrollada en la primera mitad del siglo XX, la mecánica cuántica describe el comportamiento de las partículas subatómicas y ha dado lugar a tecnologías como la electrónica cuántica.",
+        "subtitle1":"Experimento de la doble rendija",
+        "text2":"En la física moderna, el experimento de la doble rendija demuestra que la luz y la materia pueden satisfacer las definiciones clásicas aparentemente incongruentes tanto para ondas como para partículas, lo que se considera evidencia de la naturaleza fundamentalmente probabilística de la mecánica cuántica. Este tipo de experimento fue Realizado por primera vez por Thomas Young en 1801, como una demostración del comportamiento ondulatorio de la luz visible. En ese momento se pensaba que la luz estaba formada por ondas o partículas. Con el comienzo de la física moderna, unos cien años más tarde, se descubrió que la luz podía, de hecho, mostrar características tanto de onda como de partícula. En 1927, Davisson y Germer e, independientemente, George Paget Thomson y su estudiante de investigación Alexander Reid demostraron que los electrones muestran el mismo comportamiento, que luego se extendió a los átomos y las moléculas. El experimento de Thomas Young con la luz era parte de la física clásica mucho antes del desarrollo de la mecánica cuántica y el concepto de dualidad onda-partícula. Creía que demostraba que la teoría ondulatoria de la luz de Christiaan Huygens era correcta, y su experimento a veces se conoce como el experimento de Young o las rendijas de Young."
+      },
+      "celestialMechanics":{
+        "celestialMechanics":"Mecánica celeste",
+        "text1":"La historia de la mecánica celeste tiene sus raíces en las civilizaciones antiguas que observaban el movimiento de los cuerpos celestes y desarrollaban teorías para explicarlo. Sin embargo, uno de los hitos más importantes en el desarrollo de la mecánica celeste fue la formulación de las leyes del movimiento planetario por parte de Johannes Kepler en el siglo XVII. Kepler descubrió que los planetas se mueven en órbitas elípticas alrededor del Sol, y estableció tres leyes empíricas que describen estos movimientos.",
+        "text2":"Posteriormente, Isaac Newton revolucionó nuestra comprensión de la mecánica celeste con su obra principal, ´´Principia Mathematica´´, publicada en 1687. En este trabajo, Newton formuló la ley de la gravitación universal, que establece que la fuerza de atracción entre dos cuerpos es directamente proporcional al producto de sus masas e inversamente proporcional al cuadrado de la distancia entre ellos. Esta ley permitió explicar y predecir con precisión los movimientos de los planetas, lunas y otros cuerpos celestes.",
+        "subtitle1":"Intensidad gravitacional",
+        "text3":"Newton fue quien introdujo el concepto de campo gravitacional, que es una descripción matemática de cómo la masa causa una fuerza gravitacional que actúa sobre otras masas en su entorno. Este campo se puede representar mediante un vector que indica la dirección y magnitud de la fuerza gravitacional en cada punto del espacio.",
+        "subtitle2":"Potencial gravitacional",
+        "text4_1":"El potencial gravitacional, por otro lado, es una función escalar que describe cómo la energía potencial gravitacional cambia en función de la posición en el campo gravitacional. Este concepto es fundamental en la mecánica celeste para calcular el movimiento de los cuerpos celestes.",
+        "text4_2":"Newton desarrolló estas ideas en su obra principal, ´´Philosophiæ Naturalis Principia Mathematica´´ (Principia), publicada en 1687. En esta obra, presentó las ecuaciones que describen la ley de la gravitación universal y cómo se relaciona con el campo gravitacional y el potencial gravitacional."
       }
     },
     "electromagnetism":{
@@ -111,6 +140,16 @@
         "text7":"También contribuyó al desarrollo del condensador de Leyden al mismo tiempo que Musschenbroek.",
         "text8":"Descubrió que ciertos conductores podrían descargar la electricidad de un condensador.",
         "text9":"Desarrolló la teoría de que la electricidad es un fluido compuesto por partículas eléctricas individuales."
+      },
+      "Development":{
+        "Development":"Desarrollo de la Teoría Eléctrica",
+        "text1":"Descubrimiento de la electricidad estática: En el siglo XVIII, experimentos con objetos como ámbar y vidrio frotados condujeron al descubrimiento de la electricidad estática. Figuras destacadas en este campo incluyen a William Gilbert, Otto von Guericke y Stephen Gray.",
+        "text2":"Leyes del comportamiento eléctrico: Charles-Augustin de Coulomb en el siglo XVIII estableció las leyes fundamentales de la electrostática, incluida la Ley de Coulomb que describe la fuerza entre cargas eléctricas.",
+        "text3":"Invento de la pila voltaica: En 1800, Alessandro Volta inventó la pila voltaica, la primera batería eléctrica que podía producir una corriente eléctrica constante. Este avance fue fundamental para el desarrollo de la electrólisis y la comprensión de la corriente eléctrica.",
+        "text4":"Teoría del flujo eléctrico: En la década de 1820, André-Marie Ampère desarrolló la teoría del flujo eléctrico, que establecía las leyes fundamentales del magnetismo y la interacción entre corrientes eléctricas.",
+        "text5":"Leyes de la electrodinámica: En la década de 1830, Michael Faraday formuló las leyes de la electrodinámica, incluida la ley de Faraday de la inducción electromagnética, que establece que un cambio en el campo magnético a través de un circuito induce una corriente eléctrica en el circuito.",
+        "text6":"Desarrollo de la teoría matemática: James Clerk Maxwell en el siglo XIX unificó los fenómenos eléctricos y magnéticos en un conjunto coherente de ecuaciones conocidas como las ecuaciones de Maxwell. Estas ecuaciones forman la base de la teoría electromagnética y predijeron la existencia de las ondas electromagnéticas, confirmadas experimentalmente por Heinrich Hertz.",
+        "text7":"Estos son solo algunos de los principales hitos en el desarrollo de la teoría eléctrica durante los siglos XVIII y XIX. Estos avances sentaron las bases para la revolución tecnológica que transformó la sociedad moderna, desde la iluminación eléctrica hasta las comunicaciones inalámbricas."
       }
     }
 

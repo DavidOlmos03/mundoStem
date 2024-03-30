@@ -7,11 +7,11 @@
       <li><a (click)="selectedPart='Aristotle'">{{'physics-module.mechanics.Aristotle.title'|translate}}</a></li>
       <li><a (click)="selectedPart='Galileo'">Galileo Galilei</a></li>
       <li><a (click)="selectedPart='Newton'">Isaac Newton</a></li>
-      <li><a (click)="selectedPart='three-body'">Three-body problem</a></li>
-      <li><a (click)="selectedPart='double-pendulum'">Double pendulum problem</a></li>
-      <li><a (click)="selectedPart='rigid-body'">Rigid body problem</a></li>
-      <li><a (click)="selectedPart='Einsteins-theory'">Einstein's theory of relativity</a></li>
-      <li><a (click)="selectedPart='Quantum'">Quantum mechanics</a></li>
+      <li><a (click)="selectedPart='three-body'">{{'physics-module.mechanics.threeBody.threeBodyProblem'|translate}}</a></li>
+      <li><a (click)="selectedPart='double-pendulum'">{{'physics-module.mechanics.doublePendulum.doublePendulum'|translate}}</a></li>
+      <li><a (click)="selectedPart='rigid-body'">{{'physics-module.mechanics.rigidBody.rigidBody'|translate}}</a></li>
+      <li><a (click)="selectedPart='Einsteins-theory'">{{'physics-module.mechanics.Einstein.EinsteinTheory'|translate}}</a></li>
+      <li><a (click)="selectedPart='Quantum'">{{'physics-module.mechanics.quantumMechanics.quantumMechanics'|translate}}</a></li>
     </ul>
     <ul id="indice_2">
       <li><a (click)="selectedPart='celestial-mechanics'">Mecánica celeste</a></li>
@@ -23,13 +23,13 @@
       <li><a (click)="selectedPart='Aristotle'">{{'physics-module.mechanics.Aristotle.title'|translate}}</a></li>
       <li><a (click)="selectedPart='Galileo'">Galileo Galilei</a></li>
       <li><a (click)="selectedPart='Newton'">Isaac Newton</a></li>
-      <li><a (click)="selectedPart='three-body'">Three-body problem</a></li>
-      <li><a (click)="selectedPart='double-pendulum'">Double pendulum problem</a></li>
+      <li><a (click)="selectedPart='three-body'">{{'physics-module.mechanics.threeBody.threeBodyProblem'|translate}}</a></li>
+      <li><a (click)="selectedPart='double-pendulum'">{{'physics-module.mechanics.doublePendulum.doublePendulum'|translate}}</a></li>
     </ul>
     <ul id="indice_2">
-      <li><a (click)="selectedPart='rigid-body'">Rigid body problem</a></li>
-      <li><a (click)="selectedPart='Einsteins-theory'">Einstein's theory of relativity</a></li>
-      <li><a (click)="selectedPart='Quantum'">Quantum mechanics</a></li>
+      <li><a (click)="selectedPart='rigid-body'">{{'physics-module.mechanics.rigidBody.rigidBody'|translate}}</a></li>
+      <li><a (click)="selectedPart='Einsteins-theory'">{{'physics-module.mechanics.Einstein.EinsteinTheory'|translate}}</a></li>
+      <li><a (click)="selectedPart='Quantum'">{{'physics-module.mechanics.quantumMechanics.quantumMechanics'|translate}}</a></li>
     </ul>
     <ul id="indice_3">
       <li><a (click)="selectedPart='celestial-mechanics'">Mecánica celeste</a></li>
@@ -41,15 +41,15 @@
       <li><a (click)="selectedPart='Aristotle'">{{'physics-module.mechanics.Aristotle.title'|translate}}</a></li>
       <li><a (click)="selectedPart='Galileo'">Galileo Galilei</a></li>
       <li><a (click)="selectedPart='Newton'">Isaac Newton</a></li>
-      <li><a (click)="selectedPart='three-body'">Three-body problem</a></li>
+      <li><a (click)="selectedPart='three-body'">{{'physics-module.mechanics.threeBody.threeBodyProblem'|translate}}</a></li>
     </ul>
     <ul id="indice_2">
-      <li><a (click)="selectedPart='double-pendulum'">Double pendulum problem</a></li>
-      <li><a (click)="selectedPart='rigid-body'">Rigid body problem</a></li>
-      <li><a (click)="selectedPart='Einsteins-theory'">Einstein's theory of relativity</a></li>
+      <li><a (click)="selectedPart='double-pendulum'">{{'physics-module.mechanics.doublePendulum.doublePendulum'|translate}}</a></li>
+      <li><a (click)="selectedPart='rigid-body'">{{'physics-module.mechanics.rigidBody.rigidBody'|translate}}</a></li>
+      <li><a (click)="selectedPart='Einsteins-theory'">{{'physics-module.mechanics.Einstein.EinsteinTheory'|translate}}</a></li>
     </ul>
     <ul id="indice_3">
-      <li><a (click)="selectedPart='Quantum'">Quantum mechanics</a></li>
+      <li><a (click)="selectedPart='Quantum'">{{'physics-module.mechanics.quantumMechanics.quantumMechanics'|translate}}</a></li>
       <li><a (click)="selectedPart='celestial-mechanics'">Mecánica celeste</a></li>
     </ul>
   </div>
@@ -199,11 +199,9 @@
     Three body problem
   -->
   <div id="three-body" *ngIf="selectedPart == 'three-body'">
-    <h3>Three-body problem</h3>
+    <h3>{{'physics-module.mechanics.threeBody.threeBodyProblem'|translate}}</h3>
     <p>
-      Three-body problem: The gravitational interaction between three celestial bodies is a classic problem in celestial
-      mechanics that still has no general analytical solution. The complexity of this problem has led to the development
-      of numerical methods and the study of chaotic systems.
+      {{'physics-module.mechanics.threeBody.text1'|translate}}
     </p>
 
     <div class="row internal-section">
@@ -224,16 +222,13 @@
     Double pendulum problem
   -->
   <div id="double-pendulum" *ngIf="selectedPart == 'double-pendulum'">
-      <h3>Double pendulum problem</h3>
+      <h3>{{'physics-module.mechanics.doublePendulum.doublePendulum'|translate}}</h3>
     <p>
-      Double pendulum problem: A classic problem in mechanics is the study of the double pendulum, which presents
-      chaotic behaviors and is an example of nonlinear dynamic systems.
+      {{'physics-module.mechanics.doublePendulum.text1'|translate}}
     </p>
     <div class="row internal-sectiom">
       <div class="col-12 col-md-7">
-        <p>El péndulo doble es un sistema dinámico en la física que consta de dos péndulos simples conectados entre sí.
-          Este sistema es de interés en la física debido a su comportamiento caótico y a la riqueza de fenómenos
-          dinámicos que exhibe. La relación entre el péndulo doble y la física se puede explorar en varios aspectos:</p>
+        <p>{{'physics-module.mechanics.doublePendulum.text2'|translate}}</p>
       </div>
       <div class="col-12 col-md-5">
         <iframe src="https://www.youtube.com/embed/HcKJT2pGlUE" frameborder="0" allowfullscreen></iframe>
@@ -245,21 +240,18 @@
     Rigid body problem
   -->
   <div id="rigid-body" *ngIf="selectedPart == 'rigid-body'">
-    <h3>Rigid body problem</h3>
+    <h3>{{'physics-module.mechanics.rigidBody.rigidBody'|translate}}</h3>
     <p>
-      Rigid body problem: The study of rotating rigid bodies has led to the development of rigid mechanics and has found
-      applications in engineering and vehicle dynamics.
+      {{'physics-module.mechanics.rigidBody.text1'|translate}}
     </p>
   </div>
   <!--
     Einstein's theory of relativity
   -->
   <div id="Einstein's-theory" *ngIf="selectedPart == 'Einsteins-theory'">
-    <h3>Einstein's theory of relativity</h3>
+    <h3>{{'physics-module.mechanics.Einstein.EinsteinTheory'|translate}}</h3>
     <p>
-      Einstein's theory of relativity: In the early 20th century, Albert Einstein proposed the theory of relativity,
-      which transformed the understanding of gravity. The theory of general relativity describes gravity as a curvature
-      of space-time caused by the presence of mass and energy.
+      {{'physics-module.mechanics.Einstein.text1'|translate}}
     </p>
     <div class="gallery">
       <figure class="card">
@@ -283,80 +275,21 @@
      Quantum mechanics
   -->
   <div id="Quantum" *ngIf="selectedPart == 'Quantum'">
-  <h3>Quantum mechanics</h3>
+  <h3>{{'physics-module.mechanics.quantumMechanics.quantumMechanics'|translate}}</h3>
   <p>
-    Quantum mechanics: At the subatomic level, quantum mechanics replaced classical mechanics. Developed in the first
-    half of the 20th century, quantum mechanics describes the behavior of subatomic particles and has led to
-    technologies such as quantum electronics.
+    {{'physics-module.mechanics.quantumMechanics.text1'|translate}}
   </p>
   <div class="internal-section">
-    <div class="row desktop-mode">
-      <div class="col-4 one-image">
+    <div class="row">
+      <div class="col-12 col-md-4 order-2 order-md-1 one-image">
         <img src="../../../../assets/imgs/physics/mechanics/Quantum/Quantum_4.jpg">
       </div>
-      <div class="col-8">
-        <h5>Double-slit experiment</h5>
+      <div class="col-12 col-md-8 order-1 order-md-2">
+        <h5>{{'physics-module.mechanics.quantumMechanics.subtitle1'|translate}}</h5>
         <br>
         <p>
-          In modern physics, the double-slit experiment demonstrates that light and matter can satisfy the seemingly
-          incongruous classical definitions for both waves and particles, which is considered evidence for the
-          fundamentally probabilistic nature of quantum mechanics.
-          This type of experiment was first performed by Thomas Young in 1801, as a demonstration of the wave behavior of
-          visible light. At that time it was thought that light consisted of either waves or particles. With the beginning
-          of modern physics, about a hundred years later,
-          it was realized that light could in fact show both wave and particle characteristics. In 1927, Davisson and
-          Germer and, independently George Paget Thomson and his research student Alexander Reid demonstrated that
-          electrons show the same behavior, which was later extended to atoms and molecules.
-          Thomas Young's experiment with light was part of classical physics long before the development of quantum
-          mechanics and the concept of wave–particle duality. He believed it demonstrated that Christiaan Huygens' wave
-          theory of light was correct, and his experiment is sometimes referred to as Young's experiment or Young's slits.
+          {{'physics-module.mechanics.quantumMechanics.text2'|translate}}
         </p>
-      </div>
-    </div>
-    <div class="tablet-mode">
-      <div class="col-12">
-        <h5>Double-slit experiment</h5>
-        <br>
-        <p>
-          In modern physics, the double-slit experiment demonstrates that light and matter can satisfy the seemingly
-          incongruous classical definitions for both waves and particles, which is considered evidence for the
-          fundamentally probabilistic nature of quantum mechanics.
-          This type of experiment was first performed by Thomas Young in 1801, as a demonstration of the wave behavior of
-          visible light. At that time it was thought that light consisted of either waves or particles. With the beginning
-          of modern physics, about a hundred years later,
-          it was realized that light could in fact show both wave and particle characteristics. In 1927, Davisson and
-          Germer and, independently George Paget Thomson and his research student Alexander Reid demonstrated that
-          electrons show the same behavior, which was later extended to atoms and molecules.
-          Thomas Young's experiment with light was part of classical physics long before the development of quantum
-          mechanics and the concept of wave–particle duality. He believed it demonstrated that Christiaan Huygens' wave
-          theory of light was correct, and his experiment is sometimes referred to as Young's experiment or Young's slits.
-        </p>
-      </div>
-      <div class="col-12 one-image">
-        <img src="../../../../assets/imgs/physics/mechanics/Quantum/Quantum_4.jpg">
-      </div>
-    </div>
-    <div class="mobile-mode">
-      <div class="col-12">
-        <h5>Double-slit experiment</h5>
-        <br>
-        <p>
-          In modern physics, the double-slit experiment demonstrates that light and matter can satisfy the seemingly
-          incongruous classical definitions for both waves and particles, which is considered evidence for the
-          fundamentally probabilistic nature of quantum mechanics.
-          This type of experiment was first performed by Thomas Young in 1801, as a demonstration of the wave behavior of
-          visible light. At that time it was thought that light consisted of either waves or particles. With the beginning
-          of modern physics, about a hundred years later,
-          it was realized that light could in fact show both wave and particle characteristics. In 1927, Davisson and
-          Germer and, independently George Paget Thomson and his research student Alexander Reid demonstrated that
-          electrons show the same behavior, which was later extended to atoms and molecules.
-          Thomas Young's experiment with light was part of classical physics long before the development of quantum
-          mechanics and the concept of wave–particle duality. He believed it demonstrated that Christiaan Huygens' wave
-          theory of light was correct, and his experiment is sometimes referred to as Young's experiment or Young's slits.
-        </p>
-      </div>
-      <div class="col-12 one-image">
-        <img src="../../../../assets/imgs/physics/mechanics/Quantum/Quantum_4.jpg">
       </div>
     </div>
   </div>
@@ -383,27 +316,28 @@
      Celestial Mechanics
   -->
   <div id="celestial-mechanics" *ngIf="selectedPart == 'celestial-mechanics'">
-    <h3>Mecánica celeste</h3>
+    <h3>{{'physics-module.mechanics.celestialMechanics.celestialMechanics'|translate}}</h3>
     <p>
-      La historia de la mecánica celeste tiene sus raíces en las civilizaciones antiguas que observaban el movimiento de los cuerpos celestes y desarrollaban teorías para explicarlo. Sin embargo, uno de los hitos más importantes en el desarrollo de la mecánica celeste fue la formulación de las leyes del movimiento planetario por parte de Johannes Kepler en el siglo XVII. Kepler descubrió que los planetas se mueven en órbitas elípticas alrededor del Sol, y estableció tres leyes empíricas que describen estos movimientos.
+      {{'physics-module.mechanics.celestialMechanics.text1'|translate}}
       <br>
-      Posteriormente, Isaac Newton revolucionó nuestra comprensión de la mecánica celeste con su obra principal, "Principia Mathematica", publicada en 1687. En este trabajo, Newton formuló la ley de la gravitación universal, que establece que la fuerza de atracción entre dos cuerpos es directamente proporcional al producto de sus masas e inversamente proporcional al cuadrado de la distancia entre ellos. Esta ley permitió explicar y predecir con precisión los movimientos de los planetas, lunas y otros cuerpos celestes.
+      {{'physics-module.mechanics.celestialMechanics.text2'|translate}}
     </p>
     <div class="internal-section">
-      <div class="row desktop-mode">
-        <div class="col-6">
-          <h5>Intensidad gravitacional</h5>
+      <div class="row">
+        <div class="col-12 col-md-6 order-1 order-md-1">
+          <h5>{{'physics-module.mechanics.celestialMechanics.subtitle1'|translate}}</h5>
           <br>
           <p>
-            Newton fue quien introdujo el concepto de campo gravitacional, que es una descripción matemática de cómo la masa causa una fuerza gravitacional que actúa sobre otras masas en su entorno. Este campo se puede representar mediante un vector que indica la dirección y magnitud de la fuerza gravitacional en cada punto del espacio.
+            {{'physics-module.mechanics.celestialMechanics.text3'|translate}}
           </p>
         </div>
-        <div class="col-6 one-image">
+        <div class="col-12 col-md-6 order-2 order-md-2 one-image">
           <a href="https://github.com/DavidOlmos03/fieldsPhysicsITM/blob/main/gravitation/Intensidad_Gravitacional_2D_J_asinh.m"><img src="../../../../assets/imgs/physics/mechanics/Celestial Mechanics/intensityG.png"></a>
         </div>
         <br>
       </div>
-      <div class="row tablet-mode">
+      <!--
+        <div class="row tablet-mode">
         <div class="col-6">
           <h5>Intensidad gravitacional</h5>
           <br>
@@ -429,25 +363,29 @@
         </div>
         <br>
       </div>
+      -->
+
+
     </div>
     <hr>
     <div class="internal-section">
-      <div class="row desktop-mode">
-        <div class="col-6 one-image">
+      <div class="row">
+        <div class="col-12 col-md-6 order-2 order-md-1 one-image">
           <a href="https://github.com/DavidOlmos03/fieldsPhysicsITM/blob/main/gravitation/Campo_Gravitacional_3D_J.m"><img src="../../../../assets/imgs/physics/mechanics/Celestial Mechanics/gravitationalField J.png"></a>
         </div>
         <br>
-        <div class="col-6">
-          <h5>Potencial gravitacional</h5>
+        <div class="col-12 col-md-6 order-1 order-md-2">
+          <h5>{{'physics-module.mechanics.celestialMechanics.subtitle2'|translate}}</h5>
           <br>
           <p>
-            El potencial gravitacional, por otro lado, es una función escalar que describe cómo la energía potencial gravitacional cambia en función de la posición en el campo gravitacional. Este concepto es fundamental en la mecánica celeste para calcular el movimiento de los cuerpos celestes.
+            {{'physics-module.mechanics.celestialMechanics.text4_1'|translate}}
             <br>
             <br>
-            Newton desarrolló estas ideas en su obra principal, "Philosophiæ Naturalis Principia Mathematica" (Principia), publicada en 1687. En esta obra, presentó las ecuaciones que describen la ley de la gravitación universal y cómo se relaciona con el campo gravitacional y el potencial gravitacional.
+            {{'physics-module.mechanics.celestialMechanics.text4_2'|translate}}
           </p>
         </div>
       </div>
+      <!--
       <div class="row tablet-mode">
         <div class="col-6 one-image">
           <a href="https://github.com/DavidOlmos03/fieldsPhysicsITM/blob/main/gravitation/Campo_Gravitacional_3D_J.m"><img src="../../../../assets/imgs/physics/mechanics/Celestial Mechanics/gravitationalField J.png"></a>
@@ -480,6 +418,7 @@
         </div>
         <br>
       </div>
+      -->
     </div>
     <br>
     <div class="gallery">
