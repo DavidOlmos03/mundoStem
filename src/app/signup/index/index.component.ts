@@ -31,7 +31,6 @@ export class IndexSignupComponent implements OnInit {
     if (this.logueadoFunction() !== null) {
       this.router.navigate(['']);
     }
-
   }
   //OBS. el control del ingreso de datos, deberia hacerse desde el backend, ie verificar que el usuario no exista
   //deberia controlarse desde el backend

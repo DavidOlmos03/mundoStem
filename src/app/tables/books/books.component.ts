@@ -47,7 +47,7 @@ export class BooksGridComponent implements OnInit,OnDestroy {
      * Desde que se inicia la página se verifica si el usuario esta logueado o no
      */
     if (!this.logueadoFunction()) {
-      this.router.navigate(['']);
+        this.router.navigate(['']);
     }
   }
 
