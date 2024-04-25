@@ -46,37 +46,11 @@ export class IndexLoginComponent implements OnInit{
 
   //OBS. el control del ingreso de datos, deberia hacerse desde el backend, ie verificar que el usuario no exista
   //deberia controlarse desde el backend
-  /*enviarDatos(): void {
-    this.datosIngresados = {
-      email_address: this.email_address,
-      password: this.password
-    };
-    const body = {email_address: this.email_address, password: this.password}; // Reemplaza esto con el cuerpo de tu solicitud POST
-    // Realizar la llamada al backend y manejar la respuesta
-    this.http.post(this.url, body).subscribe(
-      (response) => {
-        console.log('Solicitud POST exitosa', response);
-        this.successMessage = 'Se ha ingresado con exito'
 
-        // Realizar acciones adicionales con la respuesta de la API
-        localStorage.setItem('acceso', 'true'); //Al darse el acceso se cuarda la variable de sesion en localStorage
-
-        // Redireccionar a la URL deseada
-        window.location.href = 'http://localhost:4200/';
-        // Por ejemplo, mostrar un mensaje de éxito
-        this.errorMessage = '';
-      },
-      (error) => {
-        console.error('Error en la solicitud POST', error);
-        // Manejar el error de la solicitud
-      }
-    );
-  }*/
   enviarDatos(): void {
     const body = new FormData();
     body.append('username', this.email_address);
     body.append('password', this.password);
-    //const body = {username: this.email_address, password: this.password}; // Reemplaza esto con el cuerpo de tu solicitud POST
     // Realizar la llamada al backend y manejar la respuesta
     this.http.post(this.url, body).subscribe(
       (response:any) => {
@@ -99,7 +73,6 @@ export class IndexLoginComponent implements OnInit{
     );
   }
 
-
   reiniciarDatos(): void {
     this.email_address = "";
     this.password ="";
@@ -108,3 +81,4 @@ export class IndexLoginComponent implements OnInit{
   }
 
 }
+

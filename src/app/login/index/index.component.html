@@ -30,11 +30,11 @@
           <h2>Login</h2>
           <form action="#" (ngSubmit)="enviarDatos()">
               <div class="form-control">
-                  <input type="text" name="email_address" [(ngModel)]="email_address" required>
+                  <input id="email_address" type="text" name="email_address" [(ngModel)]="email_address" required>
                   <label>{{'login.email'|translate}}</label>
               </div>
               <div class="form-control">
-                  <input type="password" name="password" [(ngModel)]="password" required>
+                  <input id="password" type="password" name="password" [(ngModel)]="password" required>
                   <label>{{'login.password'|translate}}</label>
               </div>
               <button type="submit" >{{'login.login'|translate}}</button>

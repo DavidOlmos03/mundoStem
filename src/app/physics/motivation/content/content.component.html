@@ -12,6 +12,9 @@
       <li><a (click)="selectedPart='elDivulgatorio'">El divulgatorio (UdeA)</a></li>
       <li><a (click)="selectedPart='Veritasium'">Veritasium</a></li>
       <li><a (click)="selectedPart='Derivando'">Derivando</a></li>
+      <li><a (click)="selectedPart='falstad'">falstad</a></li>
+      <li><a (click)="selectedPart='phetColorado'">phet.colorado</a></li>
+
     </ul>
   </div>
 
@@ -22,6 +25,10 @@
       <li><a (click)="selectedPart='elDivulgatorio'">El divulgatorio (UdeA)</a></li>
       <li><a (click)="selectedPart='Veritasium'">Veritasium</a></li>
       <li><a (click)="selectedPart='Derivando'">Derivando</a></li>
+    </ul>
+    <ul id="indice_2">
+      <li><a (click)="selectedPart='falstad'">falstad</a></li>
+      <li><a (click)="selectedPart='phetColorado'">phet.colorado</a></li>
     </ul>
   </div>
 
@@ -34,6 +41,8 @@
     </ul>
     <ul id="indice_2">
       <li><a (click)="selectedPart='Derivando'">Derivando</a></li>
+      <li><a (click)="selectedPart='falstad'">falstad</a></li>
+      <li><a (click)="selectedPart='phetColorado'">phet.colorado</a></li>
     </ul>
   </div>
   <br>
@@ -188,7 +197,7 @@
   </div>
 
   <!--
-    Isaac Newton
+    Veritasium
   -->
 
   <div id="Veritasium" *ngIf="selectedPart == 'Veritasium'">
@@ -219,8 +228,8 @@
   </div>
 
   <!--
-    Three body problem
-  -->
+    Derivando
+    -->
   <div id="Derivando" *ngIf="selectedPart == 'Derivando'">
     <h3>Derivando</h3>
     <p>Under construction...</p>
@@ -246,9 +255,11 @@
   <!--
     Double pendulum problem
   -->
-  <div id="double-pendulum" *ngIf="selectedPart == 'double-pendulum'">
-      <h3>Double pendulum problem</h3>
-    <p>
+  <div id="falstad" *ngIf="selectedPart == 'falstad'">
+      <h3>Falstad</h3>
+      <p>Under construction...</p>
+      <!--
+        <p>
       Double pendulum problem: A classic problem in mechanics is the study of the double pendulum, which presents
       chaotic behaviors and is an example of nonlinear dynamic systems.
     </p>
@@ -263,16 +274,15 @@
         <p>(video en español)</p>
       </div>
     </div>
+      -->
+
   </div>
   <!--
     Rigid body problem
   -->
-  <div id="rigid-body" *ngIf="selectedPart == 'rigid-body'">
-    <h3>Rigid body problem</h3>
-    <p>
-      Rigid body problem: The study of rotating rigid bodies has led to the development of rigid mechanics and has found
-      applications in engineering and vehicle dynamics.
-    </p>
+  <div id="phetColorado" *ngIf="selectedPart == 'phetColorado'">
+    <h3>Phet.colorado</h3>
+    <p>Under construction...</p>
   </div>
   <!--
     Einstein's theory of relativity

@@ -4,6 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { PhysicsModule } from './physics/physics.module';
 import { AppComponent } from './app.component';
 import { HomeModule } from './home/home.module';
+//import { SharedModule } from './shared/shared.module';
+
 
 import { MathematicsModule } from './mathematics/mathematics.module';
 import { AppRoutingModule } from './app-routing.module';
@@ -30,6 +32,7 @@ import { TablesModule } from './tables/tables.module';
     AppComponent
   ],
   imports: [
+    //SharedModule,
     BrowserModule,
     HomeModule,
     HttpClientModule,
