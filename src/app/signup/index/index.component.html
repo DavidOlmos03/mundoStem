@@ -42,7 +42,7 @@
             <label class="form-label">{{'signUp.name'|translate}}</label>
               <div class="fv-row">
                 <input type="text" name="full_name" class="form-control"
-                placeholder="Fullname" formControlName="full_name" autocomplete="off" [ngClass]="{
+                :placeholder="{{'signUp.name'|translate}}" formControlName="full_name" autocomplete="off" [ngClass]="{
                   'is-invalid': registrationForm.controls['full_name'].invalid,
                   'is-valid': registrationForm.controls['full_name'].valid
                 }"
@@ -66,7 +66,7 @@
               </div>
               <label>{{'signUp.email'|translate}}</label>
               <div class="">
-                  <input type="text" name="email_address" class="form-control" formControlName="email_address" placeholder="Email"
+                  <input type="text" name="email_address" class="form-control" formControlName="email_address" :placeholder="{{'signUp.email'|translate}}"
                     autocomplete="off" [ngClass]="{
                       'is-invalid': registrationForm.controls['email_address'].invalid,
                       'is-valid': registrationForm.controls['email_address'].valid
@@ -95,7 +95,7 @@
               </div>
               <label>{{'signUp.password'|translate}}</label>
               <div class="">
-                  <input type="password" name="password" class="form-control" formControlName="password" placeholder="Password"
+                  <input type="password" name="password" class="form-control" formControlName="password" :placeholder="{{'signUp.password'|translate}}"
                   autocomplete="off" [ngClass]="{
                     'is-invalid': registrationForm.controls['password'].invalid,
                     'is-valid': registrationForm.controls['password'].valid
@@ -194,7 +194,7 @@
   <ng-container *ngIf="control.hasError(validation) && (control.dirty || control.touched)">
     <div class="fv-plugins-message-container">
       <div class="fv-help-block">
-        <span role="alert" style="color: aliceblue;">
+        <span role="alert" style="color: red;">
           {{ message }}
         </span>
       </div>

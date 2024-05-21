@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
 
 
 @Component({
@@ -15,8 +16,24 @@ import { Router } from '@angular/router';
 })
 
 export class IndexLoginComponent implements OnInit{
-  email_address: string = "";
-  password: string = "";
+  loginForm!: FormGroup;
+  hasError!: boolean;
+
+  defaultAuth: any = {
+    email: '',
+    password: '',
+  };
+
+
+
+  // email_address: string = "";
+  // password: string = "";
+  bioSection = new FormGroup({
+    email_address: new FormControl<string>(''),
+    password: new FormControl<string>('')
+  })
+  email_address = String(this.bioSection.get('email_address')?.value);
+  password = String(this.bioSection.get('password')?.value);
   datosIngresados: any;
   errorMessage: string = '';
   successMessage: String = '';
@@ -26,7 +43,10 @@ export class IndexLoginComponent implements OnInit{
   //url = 'http://localhost:8000/api/read_user_by_email';
   url = 'http://localhost:8000/token';
 
-  constructor(private http: HttpClient, private router: Router) { }
+  constructor(
+    private fb: FormBuilder,
+    private http: HttpClient,
+    private router: Router) { }
   /**
    * Se verifica que el usuario no este logueado para que pueda acceder al login
    */
@@ -41,9 +61,35 @@ export class IndexLoginComponent implements OnInit{
       // Redireccionar a la ruta deseada si el usuario está logueado
       this.router.navigate(['']);
     }
-
+    this.initForm();
   }
 
+  // convenience getter for easy access to form fields
+  get f() {
+    return this.loginForm.controls;
+  }
+
+  initForm() {
+    this.loginForm = this.fb.group({
+      email: [
+        this.defaultAuth.email,
+        Validators.compose([
+          Validators.required,
+          Validators.email,
+          Validators.minLength(3),
+          Validators.maxLength(320), // https://stackoverflow.com/questions/386294/what-is-the-maximum-length-of-a-valid-email-address
+        ]),
+      ],
+      password: [
+        this.defaultAuth.password,
+        Validators.compose([
+          Validators.required,
+          Validators.minLength(3),
+          Validators.maxLength(100),
+        ]),
+      ],
+    });
+  }
   //OBS. el control del ingreso de datos, deberia hacerse desde el backend, ie verificar que el usuario no exista
   //deberia controlarse desde el backend
 
@@ -51,6 +97,7 @@ export class IndexLoginComponent implements OnInit{
     const body = new FormData();
     body.append('username', this.email_address);
     body.append('password', this.password);
+
     // Realizar la llamada al backend y manejar la respuesta
     this.http.post(this.url, body).subscribe(
       (response:any) => {
@@ -73,12 +120,12 @@ export class IndexLoginComponent implements OnInit{
     );
   }
 
-  reiniciarDatos(): void {
-    this.email_address = "";
-    this.password ="";
-    this.errorMessage = '';
-    this.successMessage = '';
-  }
+  // reiniciarDatos(): void {
+  //   this.email_address = "";
+  //   this.password ="";
+  //   this.errorMessage = '';
+  //   this.successMessage = '';
+  // }
 
 }
 
