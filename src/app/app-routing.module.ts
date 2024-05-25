@@ -22,8 +22,10 @@ import { ProgrammerblogComponent } from './programming/programmerblog/programmer
 import { MotivationmathComponent } from './mathematics/motivationmath/motivationmath.component';
 import { MotivationproComponent } from './programming/motivationpro/motivationpro.component';
 
-import { IndexLoginComponent } from './login/index/index.component';
-import { IndexSignupComponent } from './signup/index/index.component';
+// import { IndexLoginComponent } from './login/index/index.component';
+// import { LoginComponent } from './modules/auth/login/login.component';
+
+// import { IndexSignupComponent } from './signup/index/index.component';
 
 
 
@@ -42,8 +44,12 @@ const routes: Routes = [
   { path: 'informaticsegurity', component: InformaticsegurityComponent },
   { path: 'programmerblog', component: ProgrammerblogComponent },
   { path: 'motivationpro', component: MotivationproComponent },
-  { path: 'login', component:IndexLoginComponent},
-  { path: 'signup', component:IndexSignupComponent},
+  // { path: 'login', component:IndexLoginComponent},
+  // { path: 'login', component: LoginComponent},
+  { path:'auth',
+    loadChildren: ()=> import('./modules/auth/auth.module').then(m=>m.AuthModule)
+  },
+  // { path: 'signup', component:IndexSignupComponent},
   { path: 'books', component:BooksGridComponent}
 
 ];

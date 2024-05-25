@@ -41,7 +41,7 @@
           <form class="form" novalidate="novalidate" [formGroup]="registrationForm" (ngSubmit)="guardarDatos()">
             <label class="form-label">{{'signUp.name'|translate}}</label>
               <div class="fv-row">
-                <input type="text" name="full_name" class="form-control"
+                <input type="text" name="full_name" class="form-control" required
                 :placeholder="{{'signUp.name'|translate}}" formControlName="full_name" autocomplete="off" [ngClass]="{
                   'is-invalid': registrationForm.controls['full_name'].invalid,
                   'is-valid': registrationForm.controls['full_name'].valid
@@ -153,6 +153,7 @@
                   </ng-container>
               </div>
               <button type="submit">{{'signUp.signUp'|translate}}</button>
+
               <div class="form-help">
                   <div class="remember-me">
                       <input type="checkbox" id="remember-me">
@@ -160,8 +161,6 @@
                   </div>
                   <a href="#">{{'signUp.help'|translate}}</a>
               </div>
-
-
           </form>
 
 
@@ -201,6 +200,7 @@
     </div>
   </ng-container>
 </ng-template>
+
 
 
 

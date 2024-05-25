@@ -4,20 +4,20 @@ import { Router } from '@angular/router';
 import { ConfirmPasswordValidator } from './confirm-password.validator';
 import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
 
-import { Observable } from 'rxjs';
 
 @Component({
-  selector: 'app-index',
-  templateUrl: './index.component.html',
-  styleUrls: ['./index.component.css']
+  selector: 'app-register',
+  templateUrl: './register.component.html',
+  styleUrl: './register.component.css'
 })
-export class IndexSignupComponent implements OnInit {
-
+export class RegisterComponent implements OnInit {
   constructor(
     private http: HttpClient,
     private router: Router,
-    private fb: FormBuilder
-  ) { }
+    private fb: FormBuilder,
+  ) {
+
+  }
   // Control errores
   registrationForm!: FormGroup;
   hasError:boolean = false;
@@ -70,8 +70,6 @@ export class IndexSignupComponent implements OnInit {
       }
     );
   }
-
-
   id: number  = 0;
   // full_name: string = "";
   bioSection = new FormGroup({
@@ -145,13 +143,4 @@ export class IndexSignupComponent implements OnInit {
       }
     );
   }
-
-  // reiniciarDatos(): void {
-  //   this.id =  0;
-  //   this.full_name=  "";
-  //   this.email_address = "";
-  //   this.password ="";
-  //   this.errorMessage = '';
-  //   this.successMessage = '';
-  // }
 }

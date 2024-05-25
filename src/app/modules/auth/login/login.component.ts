@@ -4,18 +4,19 @@ import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
 
-
 @Component({
-  selector: 'app-index',
-  templateUrl: './index.component.html',
-  styleUrls: ['./index.component.css']
+  selector: 'app-login',
+  // standalone: true,
+  // imports: [],
+  templateUrl: './login.component.html',
+  styleUrl: './login.component.css'
 })
 
 @Injectable({
   providedIn: 'root',
 })
 
-export class IndexLoginComponent implements OnInit{
+export class LoginComponent implements OnInit {
   loginForm!: FormGroup;
   hasError!: boolean;
 
@@ -119,13 +120,4 @@ export class IndexLoginComponent implements OnInit{
       }
     );
   }
-
-  // reiniciarDatos(): void {
-  //   this.email_address = "";
-  //   this.password ="";
-  //   this.errorMessage = '';
-  //   this.successMessage = '';
-  // }
-
 }
-

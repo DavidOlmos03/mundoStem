@@ -11,9 +11,10 @@ import { MathematicsModule } from './mathematics/mathematics.module';
 import { AppRoutingModule } from './app-routing.module';
 import { ProgrammingModule } from './programming/programming.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { LoginModule } from './login/login.module';
+// import { AuthModule } from './modules/auth/auth.module';
+// import { LoginModule } from './login/login.module';
 import { TranslateService } from '@ngx-translate/core';
-import { SignupModule } from './signup/signup.module';
+// import { SignupModule } from './signup/signup.module';
 
 /**
  * Modulos necesarios para crear la página multilenguaje
@@ -40,8 +41,9 @@ import { TablesModule } from './tables/tables.module';
     HttpClientModule,
     FormsModule,
     AppRoutingModule,
-    LoginModule,
-    SignupModule,
+    // LoginModule,
+    // AuthModule,
+    // SignupModule,
     PhysicsModule,
     MathematicsModule,
     ProgrammingModule,
