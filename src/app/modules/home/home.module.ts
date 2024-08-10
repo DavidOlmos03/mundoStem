@@ -1,14 +1,8 @@
-// import { NgModule } from '@angular/core';
-// import { CommonModule } from '@angular/common';
-
 // Modules
-// import { PhysicsModule } from './physics/physics.module';
-// import { HomeRoutingModule } from './home-routing.module';
+
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-// import { IndexComponent } from './index/index.component';
-import { HeaderComponent } from './header/header.component';
 import { LateralComponent } from './lateral/lateral.component';
 import { ContentComponent } from './content/content.component';
 import { SharedModule } from '../../shared/shared.module';
@@ -22,15 +16,11 @@ import { homeComponent } from './home.component';
 
 @NgModule({
   declarations: [
-    // HeaderComponent,
     LateralComponent,
     ContentComponent,
     homeComponent
   ],
   imports: [
-    // CommonModule,
-    // PhysicsModule,
-    // HomeRoutingModule
     CommonModule,
     FormsModule,
     SharedModule,

@@ -12,8 +12,8 @@
             routerLink="/"
             >{{'navbar.home'|translate}}</a>
         </li>
-        <!-- Mathemetics menu -->
-        <li class="Mathematics nav-item dropdown">
+        <!-- Mathemetics Menu -->
+        <li class="Mathematics nav-item dropdown" hidden>
           <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
             aria-expanded="false">{{'navbar.mathematics'|translate}}</a>
           <ul class="dropdown-menu">
@@ -23,7 +23,7 @@
             <li><a class="dropdown-item" href="motivationmath">{{'navbar.motivation'|translate}}</a></li>
           </ul>
         </li>
-        <!-- Physics menu -->
+        <!-- Physics Menu -->
         <li class="physics nav-item dropdown">
           <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
             href="#" role="button"
@@ -47,13 +47,11 @@
               >{{'navbar.motivation'|translate}}</a></li>
           </ul>
         </li>
-        <!-- end physics menu -->
-        <!--<li class="nav-item">
-            <a class="nav-link" href="#">Pricing</a>
-          </li>-->
+        <!-- End Physics Menu -->
+       <!-- Programming Menu -->
         <li class="programming nav-item dropdown">
           <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
-            aria-expanded="false">{{'navbar.programming'|translate}}</a>
+            aria-expanded="false" hidden>{{'navbar.programming'|translate}}</a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="java">Java</a></li>
             <li><a class="dropdown-item" href="">Python</a></li>
@@ -64,8 +62,11 @@
             <li><a class="dropdown-item" href="motivationpro">{{'navbar.motivation'|translate}}</a></li>
           </ul>
         </li>
-        <li class="nav-item active"><a class="nav-link" href="">{{'navbar.tutorials'|translate}}</a></li>
-
+        <!-- End Programming Menu -->
+        <!-- Tutorials -->
+        <li class="nav-item active" hidden><a class="nav-link" href="">{{'navbar.tutorials'|translate}}</a></li>
+        <!-- end tutorials -->
+        <!--Tables  -->
         <li class="programming nav-item dropdown" *ngIf="logueadoFunction() !== null">
           <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
             aria-expanded="false">Tables</a>
@@ -73,6 +74,7 @@
             <li><a class="dropdown-item" href="books">Books</a></li>
           </ul>
         </li>
+        <!-- End Tables -->
       </ul>
       <div class="buttons" *ngIf="logueadoFunction() == null">
         <!-- href="auth/login" -->
