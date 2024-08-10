@@ -13,7 +13,9 @@ ul .dropdown-item:hover{
   background-color: #F9423D;
 }
 
-
+.active-link {
+  background-color: #F9423D; /* Color personalizado */
+}
 
 /* Estilos para dispositivos de escritorio (PC) */
 @media only screen and (min-width: 1024px) {

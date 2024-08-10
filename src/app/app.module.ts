@@ -1,20 +1,29 @@
+// Angular
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { PhysicsModule } from './physics/physics.module';
-import { AppComponent } from './app.component';
-import { HomeModule } from './home/home.module';
-import { SharedModule } from './shared/shared.module';
 
-
-import { MathematicsModule } from './mathematics/mathematics.module';
+// Routing
 import { AppRoutingModule } from './app-routing.module';
+
+
+// Modules
+
+// import { PhysicsModule } from './physics/physics.module';
+import { HomeModule } from './modules/home/home.module';
+import { PhysicsModule } from './modules/physics/physics.module';
+import { SharedModule } from './shared/shared.module';
+import { MathematicsModule } from './mathematics/mathematics.module';
 import { ProgrammingModule } from './programming/programming.module';
+
+
+
+import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // import { AuthModule } from './modules/auth/auth.module';
 // import { LoginModule } from './login/login.module';
-import { TranslateService } from '@ngx-translate/core';
 // import { SignupModule } from './signup/signup.module';
+
 
 /**
  * Modulos necesarios para crear la página multilenguaje
@@ -22,12 +31,16 @@ import { TranslateService } from '@ngx-translate/core';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { TranslateService } from '@ngx-translate/core';
+
+
 /**
  * Para ag gred
  */
 import { AgGridModule } from 'ag-grid-angular';
-
 import { TablesModule } from './tables/tables.module';
+
+
 
 @NgModule({
   declarations: [

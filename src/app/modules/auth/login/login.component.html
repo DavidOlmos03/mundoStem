@@ -9,21 +9,6 @@
 
 </head>
 <body *ngIf="(logueadoFunction() == null)  || !logueadoFunction()">
-    <div class="row">
-      <div id="homeButton" class="col-4">
-        <a href=" " class="button button--dark ng-star-inserted" previewlistener="true">mundoSTEM</a>
-      </div>
-      <div class="col-4">
-        <nav>
-          <a href="signup" class="button button--dark ng-star-inserted" previewlistener="true">{{'navbar.signup'|translate}}</a>
-        </nav>
-      </div>
-      <div class="col-4">
-        <div id="switch-language">
-          <app-switch-languages></app-switch-languages>
-        </div>
-      </div>
-    </div>
     <div class="row desktop-mode">
       <div class="form-box col-lg-6 order-lg-1 order-2">
         <div class="form-wrapper">

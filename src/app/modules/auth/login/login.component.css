@@ -24,40 +24,8 @@ body::after {
     position: fixed;
     z-index: 0;
 }
-#homeButton {
-  position:fixed;
-  z-index: 2;
-}
-#switch-language{
-  max-width: 200px;
-  background-color: transparent;
-  margin-left: 15%;
-  z-index: 2;
-  position: fixed;
-}
-nav {
-    z-index: 2;
-    position: fixed;
-    margin-left: 20%;
-}
 
-.button--dark {
-  margin-top: 10%;
-  background: #262626;
-  color: #fff;
-  text-decoration: none;
-}
-.button {
-  font-family: Nekst;
-  font-weight: 600;
-  font-size: 18px;
-  padding: 8px 24px;
-  text-align: center;
-  border: 2px solid transparent;
-  box-sizing: border-box;
-  border-radius: 8px;
-  cursor: pointer;
-}
+
 .description-box{
   z-index: 1;
   padding: 10% 10% 3% 0%;

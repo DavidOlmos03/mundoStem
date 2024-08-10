@@ -7,9 +7,12 @@
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <a class="navbar-brand" href="#">MundoStem</a>
       <ul class="navbar-nav bg-dark">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">{{'navbar.home'|translate}}</a>
+        <li class="nav-item">
+          <a class="nav-link"
+            routerLink="/"
+            >{{'navbar.home'|translate}}</a>
         </li>
+        <!-- Mathemetics menu -->
         <li class="Mathematics nav-item dropdown">
           <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
             aria-expanded="false">{{'navbar.mathematics'|translate}}</a>
@@ -20,17 +23,31 @@
             <li><a class="dropdown-item" href="motivationmath">{{'navbar.motivation'|translate}}</a></li>
           </ul>
         </li>
+        <!-- Physics menu -->
         <li class="physics nav-item dropdown">
-          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
+            href="#" role="button"
             aria-expanded="false">{{'navbar.physics'|translate}}</a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="mechanics">{{'navbar.physics-list.mechanics'|translate}}</a></li>
-            <li><a class="dropdown-item"
-                href="electromagnetism">{{'navbar.physics-list.electromagnetism'|translate}}</a></li>
-            <li><a class="dropdown-item" href="computational">{{'navbar.physics-list.computational'|translate}}</a></li>
-            <li><a class="dropdown-item" href="physicsMotivation">{{'navbar.motivation'|translate}}</a></li>
+            <li><a
+              class="dropdown-item"
+              routerLink="/physics/mechanics"
+             >{{'navbar.physics-list.mechanics'|translate}}</a></li>
+            <li><a
+              class="dropdown-item"
+              routerLink="/physics/electromagnetism"
+              >{{'navbar.physics-list.electromagnetism'|translate}}</a></li>
+            <li><a
+              class="dropdown-item"
+              routerLink="/physics/computational"
+              >{{'navbar.physics-list.computational'|translate}}</a></li>
+            <li><a
+              class="dropdown-item"
+              routerLink="/physics/motivation"
+              >{{'navbar.motivation'|translate}}</a></li>
           </ul>
         </li>
+        <!-- end physics menu -->
         <!--<li class="nav-item">
             <a class="nav-link" href="#">Pricing</a>
           </li>-->
@@ -58,8 +75,9 @@
         </li>
       </ul>
       <div class="buttons" *ngIf="logueadoFunction() == null">
+        <!-- href="auth/login" -->
         <a href="auth/login" class="btn buttom_Form btn-dark">{{'navbar.login'|translate}}</a>
-        <a href="signup" class="btn buttom_Form btn-dark">{{'navbar.signup'|translate}}</a>
+        <a href="auth/registro" class="btn buttom_Form btn-dark">{{'navbar.signup'|translate}}</a>
       </div>
       <div class="exit" *ngIf="logueadoFunction() !== null">
         <a (click)="showAlertExit()" class="btn buttom_Form btn-dark">{{'navbar.exit'|translate}}</a>

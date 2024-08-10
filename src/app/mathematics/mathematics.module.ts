@@ -4,7 +4,6 @@ import { CalculusComponent } from './calculus/calculus.component';
 import { VectorgeometryComponent } from './vectorgeometry/vectorgeometry.component';
 import { AlgebraComponent } from './algebra/algebra.component';
 import { MotivationmathComponent } from './motivationmath/motivationmath.component';
-import { HomeModule } from '../home/home.module';
 
 import { SharedModule } from '../shared/shared.module';
 import { ContentalgebraComponent } from './algebra/contentalgebra/contentalgebra.component';

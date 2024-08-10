@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
 
 @Component({
@@ -20,13 +20,14 @@ export class LoginComponent implements OnInit {
   loginForm!: FormGroup;
   hasError!: boolean;
 
+  // Variables de la dataurl
+  routeName: string = '';
+  imageSrc: string = '';
+
   defaultAuth: any = {
     email: '',
     password: '',
   };
-
-
-
   // email_address: string = "";
   // password: string = "";
   bioSection = new FormGroup({
@@ -47,7 +48,9 @@ export class LoginComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private http: HttpClient,
-    private router: Router) { }
+    private router: Router,
+    private route: ActivatedRoute
+  ) { }
   /**
    * Se verifica que el usuario no este logueado para que pueda acceder al login
    */
@@ -63,12 +66,24 @@ export class LoginComponent implements OnInit {
       this.router.navigate(['']);
     }
     this.initForm();
-  }
 
-  // convenience getter for easy access to form fields
-  get f() {
-    return this.loginForm.controls;
+    // Cargando la data url
+    this.route.data.subscribe(data => {
+      this.routeName = data['name'];
+      this.imageSrc = data['imageSrc'];
+      console.log('Route Name:', this.routeName);  // Esto debería mostrar "Registro"
+      console.log('Image Src:', this.imageSrc);    // Esto debería mostrar el src de la imagen
+      console.log(data)
+    });
+
+    const fullPath = this.route.snapshot.url.map(segment => segment.path).join('/');
+    console.log('Ruta actual:', fullPath);
+
   }
+  // convenience getter for easy access to form fields
+  // get f() {
+  //   return this.loginForm.controls;
+  // }
 
   initForm() {
     this.loginForm = this.fb.group({

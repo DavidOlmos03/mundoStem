@@ -11,6 +11,10 @@ const routes: Routes = [
     children:[
       {
         path:'login',
+        data:{
+          name:'Login',
+          imageSrc:'assets/images/register-banner.jpg'
+        },
         component:LoginComponent
       },
       {

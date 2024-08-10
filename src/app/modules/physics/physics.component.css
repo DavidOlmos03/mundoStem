@@ -1,0 +1,17 @@
+.header{
+  z-index: 1;
+}
+.page-container{
+  z-index: 0;
+}
+body{
+  margin: auto;
+  height: auto;
+}
+app-footer{
+  padding: 0px;
+}
+
+.row{
+  margin: 0px;
+}

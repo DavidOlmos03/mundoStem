@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';
+
 import Swal from 'sweetalert2';
 
 @Component({
@@ -6,7 +7,8 @@ import Swal from 'sweetalert2';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
-export class NavbarComponent {
+export class NavbarComponent{
+
 
   logueadoFunction() {
     return localStorage.getItem('acceso');
