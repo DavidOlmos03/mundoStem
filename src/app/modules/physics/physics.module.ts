@@ -4,16 +4,12 @@ import { CommonModule } from '@angular/common';
 
 // Components
 import { MechanicsComponent } from './mechanics/mechanics.component';
-// import { HeaderMechanicsComponent } from './mechanics/header/header.component';
 import { ContentMechanicsComponent } from './mechanics/content/content.component'
 import { ElectromagnetismComponent } from './electromagnetism/electromagnetism.component';
-import { HeaderElectromagnetismComponent } from './electromagnetism/header/header.component';
 import { ContentElectromagnetismComponent } from './electromagnetism/content/content.component';
 import { ComputationalComponent } from './computational/computational.component';
-import { HeaderComputationalComponent } from './computational/header/header.component';
 import { ContentComputationalComponent } from './computational/content/content.component';
 import { MotivationComponent } from './motivation/motivation.component';
-import { HeaderMotivationComponent } from './motivation/header/header.component';
 import { ContentMotivationComponent } from './motivation/content/content.component';
 import { PhysicsComponent } from './physics.component';
 import { YouTubePlayerModule } from '@angular/youtube-player';
@@ -34,15 +30,10 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     MechanicsComponent,
-    // HeaderMechanicsComponent,
     ContentMechanicsComponent,
     ElectromagnetismComponent,
     ComputationalComponent,
     MotivationComponent,
-    // HeaderMechanicsComponent,
-    HeaderElectromagnetismComponent,
-    HeaderComputationalComponent,
-    HeaderMotivationComponent,
     ContentMechanicsComponent,
     ContentElectromagnetismComponent,
     ContentComputationalComponent,

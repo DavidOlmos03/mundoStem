@@ -42,7 +42,7 @@ export class HeaderComponent implements OnInit {
     currentRoute.data.subscribe(data => {
       this.routeName = data['name'];
       this.imageSrc = data['imageSrc'];
-      console.log('Datos de la ruta activa:', data);
+      // console.log('Datos de la ruta activa:', data);
     });
   }
 }

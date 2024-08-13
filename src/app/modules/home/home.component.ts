@@ -1,3 +1,5 @@
+import { UserBase } from 'src/app/core/models/user.model';
+import { UserService } from './../../core/services/user.service';
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import * as $ from 'jquery';
 import Swal from 'sweetalert2';
@@ -8,8 +10,13 @@ import Swal from 'sweetalert2';
   styleUrls: ['./home.component.css','./home.component.scss']
 })
 export class homeComponent implements OnInit, OnDestroy {
+  // users: UserBase =  {email: "",names:"", last_names:"",address: "",age:0}
+  constructor(
+    private userService: UserService
+  ){}
 
   ngOnInit() {
+    this.getAllUsers()
     const currentLanguage = localStorage.getItem('selectedLanguage');
     const confurmedTitle = currentLanguage === 'es' ? "Esto es mundoSteam!" : "This is MundoSteam!";
     const confirmedText = currentLanguage === 'es' ? "Esta página ha sido creada con el fin de compartir conocimiento y experiencias, de una forma agradable para todos los que la visitan" : "This page has been created in order to share knowledge and experiences, in a pleasant way for all who visit it.";
@@ -24,6 +31,15 @@ export class homeComponent implements OnInit, OnDestroy {
       imageHeight: 200,
       imageAlt: "Students"
     })
+  }
+
+  // Obteniendo todos los usuarios
+  getAllUsers():void {
+    this.userService.getUserById(1).subscribe(
+      (user: UserBase)=>{
+        console.log(user)
+      }
+    )
   }
 
   ngOnDestroy() {

@@ -1,13 +1,4 @@
 
-<!DOCTYPE html>
-<!-- Coding By CodingNepal - www.codingnepalweb.com -->
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-
-</head>
 <body *ngIf="(logueadoFunction() == null)  || !logueadoFunction()">
     <div class="row desktop-mode">
       <div class="form-box col-lg-6 order-lg-1 order-2">
@@ -101,7 +92,6 @@
 
 </body>
 
-</html>
 <ng-template #formError let-control="control" let-message="message" let-validation="validation">
   <ng-container *ngIf="control.hasError(validation) && (control.dirty || control.touched)">
     <div class="fv-plugins-message-container">
