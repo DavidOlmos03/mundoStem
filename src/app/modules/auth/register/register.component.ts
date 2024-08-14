@@ -58,8 +58,8 @@ export class RegisterComponent implements OnInit {
           0,
           Validators.compose([
             Validators.required,
-            Validators.minLength(3),
-            Validators.maxLength(100),
+            Validators.min(10),
+            Validators.max(100),
           ]),
         ],
         email: [

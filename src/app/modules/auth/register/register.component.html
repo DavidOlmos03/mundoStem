@@ -5,9 +5,9 @@
         <div class="form-wrapper">
           <!-- begin::Alert error-->
           <ng-container *ngIf="hasError">
-            <div class="mb-lg-15 alert alert-danger">
+            <div class="mb-lg-15 alert alert-danger p-3">
               <div class="alert-text font-weight-bold">
-                Los datos registrados son incorrectos
+                Por favor ingrese datos validos
               </div>
             </div>
           </ng-container>
@@ -26,17 +26,17 @@
                     />
                     <ng-container [ngTemplateOutlet]="formError" [ngTemplateOutletContext]="{
                       validation: 'required',
-                      message: 'Fullname is required',
+                      message: 'Names is required',
                       control: registrationForm.controls['names']
                     }"></ng-container>
                     <ng-container [ngTemplateOutlet]="formError" [ngTemplateOutletContext]="{
                       validation: 'minlength',
-                      message: 'Fullname should have at least 3 symbols',
+                      message: 'Names should have at least 3 symbols',
                       control: registrationForm.controls['names']
                     }"></ng-container>
                     <ng-container [ngTemplateOutlet]="formError" [ngTemplateOutletContext]="{
                       validation: 'maxLength',
-                      message: 'Fullname should have maximum 100 symbols',
+                      message: 'Names should have maximum 100 symbols',
                       control: registrationForm.controls['names']
                     }"></ng-container>
 
@@ -53,17 +53,17 @@
                     />
                     <ng-container [ngTemplateOutlet]="formError" [ngTemplateOutletContext]="{
                       validation: 'required',
-                      message: 'Fullname is required',
+                      message: 'Last Name is required',
                       control: registrationForm.controls['last_names']
                     }"></ng-container>
                     <ng-container [ngTemplateOutlet]="formError" [ngTemplateOutletContext]="{
                       validation: 'minlength',
-                      message: 'Fullname should have at least 3 symbols',
+                      message: 'Last Name should have at least 3 symbols',
                       control: registrationForm.controls['last_names']
                     }"></ng-container>
                     <ng-container [ngTemplateOutlet]="formError" [ngTemplateOutletContext]="{
                       validation: 'maxLength',
-                      message: 'Fullname should have maximum 100 symbols',
+                      message: 'Last Name should have maximum 100 symbols',
                       control: registrationForm.controls['last_names']
                     }"></ng-container>
 
@@ -82,17 +82,17 @@
                     />
                     <ng-container [ngTemplateOutlet]="formError" [ngTemplateOutletContext]="{
                       validation: 'required',
-                      message: 'Fullname is required',
+                      message: 'Address is required',
                       control: registrationForm.controls['address']
                     }"></ng-container>
                     <ng-container [ngTemplateOutlet]="formError" [ngTemplateOutletContext]="{
                       validation: 'minlength',
-                      message: 'Fullname should have at least 3 symbols',
+                      message: 'Address should have at least 3 symbols',
                       control: registrationForm.controls['address']
                     }"></ng-container>
                     <ng-container [ngTemplateOutlet]="formError" [ngTemplateOutletContext]="{
                       validation: 'maxLength',
-                      message: 'Fullname should have maximum 100 symbols',
+                      message: 'Address should have maximum 100 symbols',
                       control: registrationForm.controls['address']
                     }"></ng-container>
 
@@ -109,17 +109,17 @@
                     />
                     <ng-container [ngTemplateOutlet]="formError" [ngTemplateOutletContext]="{
                       validation: 'required',
-                      message: 'Fullname is required',
+                      message: 'Age is required',
                       control: registrationForm.controls['age']
                     }"></ng-container>
                     <ng-container [ngTemplateOutlet]="formError" [ngTemplateOutletContext]="{
-                      validation: 'minlength',
-                      message: 'Fullname should have at least 3 symbols',
+                      validation: 'min',
+                      message: 'Age should be greater than 10',
                       control: registrationForm.controls['age']
                     }"></ng-container>
                     <ng-container [ngTemplateOutlet]="formError" [ngTemplateOutletContext]="{
-                      validation: 'maxLength',
-                      message: 'Fullname should have maximum 100 symbols',
+                      validation: 'max',
+                      message: 'Age should be less than 10',
                       control: registrationForm.controls['age']
                     }"></ng-container>
 
