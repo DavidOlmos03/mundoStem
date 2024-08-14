@@ -1,31 +1,29 @@
 // import { AuthHTTPService } from './auth-http';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+
+// Models
+import { UserBase } from 'src/app/core/models/user.model';
+import { Token, Auth } from '../models/auth.model';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
   user:any = null
+  private apiUrlToken:string = environment.URL_SERVICIOS + 'auth/access-token'
+
   constructor(
     // private AuthService:AuthHTTPService,
+    private http: HttpClient,
 
   ) { }
 
+  login(formData: FormData){
+    return this.http.post<Token>(this.apiUrlToken,formData)
+  }
 
-  // registration(user: UserModel): Observable<any> {
-  //   this.isLoadingSubject.next(true);
-  //   return this.authHttpService.createUser(user).pipe(
-  //     map(() => {
-  //       this.isLoadingSubject.next(false);
-  //     }),
-  //     switchMap(() => this.login(user.email, user.password)),
-  //     catchError((err) => {
-  //       console.error('err', err);
-  //       return of(undefined);
-  //     }),
-  //     finalize(() => this.isLoadingSubject.next(false))
-  //   );
-  // }
 }

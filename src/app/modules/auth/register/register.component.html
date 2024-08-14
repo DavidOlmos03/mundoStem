@@ -15,7 +15,7 @@
           <h2>Sign Up</h2>
           <form class="form" novalidate="novalidate" [formGroup]="registrationForm" (ngSubmit)="guardarDatos()">
             <div class="row">
-              <div class="col-md-6">
+              <div class="col-12 col-md-6">
                 <label class="form-label">{{'signUp.name'|translate}}</label>
                   <div class="fv-row">
                     <input type="text" name="names" class="form-control" required
@@ -42,7 +42,7 @@
 
                   </div>
               </div>
-              <div class="col-md-6 ps-2">
+              <div class="col-12 col-md-6 ps-md-2">
                 <label class="form-label">Last Name</label>
                   <div class="fv-row">
                     <input type="text" name="last_names" class="form-control" required
@@ -98,7 +98,7 @@
 
                   </div>
               </div>
-              <div class="col-md-6 ps-2">
+              <div class="col-md-6 ps-md-2">
                 <label class="form-label">Age</label>
                   <div class="fv-row">
                     <input type="number" name="age" class="form-control" required

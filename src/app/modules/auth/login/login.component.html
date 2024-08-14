@@ -1,8 +1,18 @@
+<!-- *ngIf="(logueadoFunction() == null)  || !logueadoFunction()" -->
 
-<body *ngIf="(logueadoFunction() == null)  || !logueadoFunction()">
+<body >
     <div class="row desktop-mode">
       <div class="form-box col-lg-6 order-lg-1 order-2">
         <div class="form-wrapper">
+           <!-- begin::Alert error-->
+           <ng-container *ngIf="hasError">
+            <div class="mb-lg-15 alert alert-danger p-3">
+              <div class="alert-text font-weight-bold">
+                Por favor ingrese datos validos
+              </div>
+            </div>
+          </ng-container>
+          <!-- end::Alert error-->
           <h2>Login</h2>
           <form class="form" [formGroup]="loginForm" (ngSubmit)="enviarDatos()" >
             <label>{{'login.email'|translate}}</label>
