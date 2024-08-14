@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { UserBase } from '../models/user.model';
+import { UserBase, UserCreate } from '../models/user.model';
 
 @Injectable({
   providedIn: 'root'
@@ -25,6 +25,9 @@ export class UserService {
     return this.http.get<UserBase>(`${this.apiUrl}/${id}`)
   }
 
+  addUser(user:UserCreate):Observable<UserCreate>{
+    return this.http.post<UserCreate>(this.apiUrl, user)
+  }
 
 
   // private handleError<T>(operation = 'operation', result?: T) {

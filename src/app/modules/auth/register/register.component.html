@@ -14,58 +14,145 @@
           <!-- end::Alert error-->
           <h2>Sign Up</h2>
           <form class="form" novalidate="novalidate" [formGroup]="registrationForm" (ngSubmit)="guardarDatos()">
-            <label class="form-label">{{'signUp.name'|translate}}</label>
-              <div class="fv-row">
-                <input type="text" name="full_name" class="form-control" required
-                :placeholder="{{'signUp.name'|translate}}" formControlName="full_name" autocomplete="off" [ngClass]="{
-                  'is-invalid': registrationForm.controls['full_name'].invalid,
-                  'is-valid': registrationForm.controls['full_name'].valid
-                }"
-                />
-                <ng-container [ngTemplateOutlet]="formError" [ngTemplateOutletContext]="{
-                  validation: 'required',
-                  message: 'Fullname is required',
-                  control: registrationForm.controls['full_name']
-                }"></ng-container>
-                <ng-container [ngTemplateOutlet]="formError" [ngTemplateOutletContext]="{
-                  validation: 'minlength',
-                  message: 'Fullname should have at least 3 symbols',
-                  control: registrationForm.controls['full_name']
-                }"></ng-container>
-                <ng-container [ngTemplateOutlet]="formError" [ngTemplateOutletContext]="{
-                  validation: 'maxLength',
-                  message: 'Fullname should have maximum 100 symbols',
-                  control: registrationForm.controls['full_name']
-                }"></ng-container>
+            <div class="row">
+              <div class="col-md-6">
+                <label class="form-label">{{'signUp.name'|translate}}</label>
+                  <div class="fv-row">
+                    <input type="text" name="names" class="form-control" required
+                    :placeholder="{{'signUp.name'|translate}}" formControlName="names" autocomplete="off" [ngClass]="{
+                      'is-invalid': registrationForm.controls['names'].invalid,
+                      'is-valid': registrationForm.controls['names'].valid
+                    }"
+                    />
+                    <ng-container [ngTemplateOutlet]="formError" [ngTemplateOutletContext]="{
+                      validation: 'required',
+                      message: 'Fullname is required',
+                      control: registrationForm.controls['names']
+                    }"></ng-container>
+                    <ng-container [ngTemplateOutlet]="formError" [ngTemplateOutletContext]="{
+                      validation: 'minlength',
+                      message: 'Fullname should have at least 3 symbols',
+                      control: registrationForm.controls['names']
+                    }"></ng-container>
+                    <ng-container [ngTemplateOutlet]="formError" [ngTemplateOutletContext]="{
+                      validation: 'maxLength',
+                      message: 'Fullname should have maximum 100 symbols',
+                      control: registrationForm.controls['names']
+                    }"></ng-container>
 
+                  </div>
               </div>
+              <div class="col-md-6 ps-2">
+                <label class="form-label">Last Name</label>
+                  <div class="fv-row">
+                    <input type="text" name="last_names" class="form-control" required
+                    :placeholder="Last Name" formControlName="last_names" autocomplete="off" [ngClass]="{
+                      'is-invalid': registrationForm.controls['last_names'].invalid,
+                      'is-valid': registrationForm.controls['last_names'].valid
+                    }"
+                    />
+                    <ng-container [ngTemplateOutlet]="formError" [ngTemplateOutletContext]="{
+                      validation: 'required',
+                      message: 'Fullname is required',
+                      control: registrationForm.controls['last_names']
+                    }"></ng-container>
+                    <ng-container [ngTemplateOutlet]="formError" [ngTemplateOutletContext]="{
+                      validation: 'minlength',
+                      message: 'Fullname should have at least 3 symbols',
+                      control: registrationForm.controls['last_names']
+                    }"></ng-container>
+                    <ng-container [ngTemplateOutlet]="formError" [ngTemplateOutletContext]="{
+                      validation: 'maxLength',
+                      message: 'Fullname should have maximum 100 symbols',
+                      control: registrationForm.controls['last_names']
+                    }"></ng-container>
+
+                  </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <label class="form-label">Address</label>
+                  <div class="fv-row">
+                    <input type="text" name="address" class="form-control" required
+                    :placeholder="Address" formControlName="address" autocomplete="off" [ngClass]="{
+                      'is-invalid': registrationForm.controls['address'].invalid,
+                      'is-valid': registrationForm.controls['address'].valid
+                    }"
+                    />
+                    <ng-container [ngTemplateOutlet]="formError" [ngTemplateOutletContext]="{
+                      validation: 'required',
+                      message: 'Fullname is required',
+                      control: registrationForm.controls['address']
+                    }"></ng-container>
+                    <ng-container [ngTemplateOutlet]="formError" [ngTemplateOutletContext]="{
+                      validation: 'minlength',
+                      message: 'Fullname should have at least 3 symbols',
+                      control: registrationForm.controls['address']
+                    }"></ng-container>
+                    <ng-container [ngTemplateOutlet]="formError" [ngTemplateOutletContext]="{
+                      validation: 'maxLength',
+                      message: 'Fullname should have maximum 100 symbols',
+                      control: registrationForm.controls['address']
+                    }"></ng-container>
+
+                  </div>
+              </div>
+              <div class="col-md-6 ps-2">
+                <label class="form-label">Age</label>
+                  <div class="fv-row">
+                    <input type="number" name="age" class="form-control" required
+                    :placeholder="Age" formControlName="age" autocomplete="off" [ngClass]="{
+                      'is-invalid': registrationForm.controls['age'].invalid,
+                      'is-valid': registrationForm.controls['age'].valid
+                    }"
+                    />
+                    <ng-container [ngTemplateOutlet]="formError" [ngTemplateOutletContext]="{
+                      validation: 'required',
+                      message: 'Fullname is required',
+                      control: registrationForm.controls['age']
+                    }"></ng-container>
+                    <ng-container [ngTemplateOutlet]="formError" [ngTemplateOutletContext]="{
+                      validation: 'minlength',
+                      message: 'Fullname should have at least 3 symbols',
+                      control: registrationForm.controls['age']
+                    }"></ng-container>
+                    <ng-container [ngTemplateOutlet]="formError" [ngTemplateOutletContext]="{
+                      validation: 'maxLength',
+                      message: 'Fullname should have maximum 100 symbols',
+                      control: registrationForm.controls['age']
+                    }"></ng-container>
+
+                  </div>
+              </div>
+            </div>
               <label>{{'signUp.email'|translate}}</label>
               <div class="">
-                  <input type="text" name="email_address" class="form-control" formControlName="email_address" :placeholder="{{'signUp.email'|translate}}"
+                  <input type="text" name="email" class="form-control" formControlName="email" :placeholder="{{'signUp.email'|translate}}"
                     autocomplete="off" [ngClass]="{
-                      'is-invalid': registrationForm.controls['email_address'].invalid,
-                      'is-valid': registrationForm.controls['email_address'].valid
+                      'is-invalid': registrationForm.controls['email'].invalid,
+                      'is-valid': registrationForm.controls['email'].valid
                     }"
                   >
                   <ng-container [ngTemplateOutlet]="formError" [ngTemplateOutletContext]="{
                     validation: 'required',
                     message: 'Email is required',
-                    control: registrationForm.controls['email_address']
+                    control: registrationForm.controls['email']
                   }"></ng-container>
                 <ng-container [ngTemplateOutlet]="formError" [ngTemplateOutletContext]="{
                     validation: 'email',
                     message: 'Email is invalid',
-                    control: registrationForm.controls['email_address']
+                    control: registrationForm.controls['email']
                   }"></ng-container>
                 <ng-container [ngTemplateOutlet]="formError" [ngTemplateOutletContext]="{
                     validation: 'minlength',
                     message: 'Email should have at least 3 symbols',
-                    control: registrationForm.controls['email_address']
+                    control: registrationForm.controls['email']
                   }"></ng-container>
                 <ng-container [ngTemplateOutlet]="formError" [ngTemplateOutletContext]="{
                     validation: 'maxLength',
                     message: 'Email should have maximum 360 symbols',
-                    control: registrationForm.controls['email_address']
+                    control: registrationForm.controls['email']
                   }"></ng-container>
               </div>
               <label>{{'signUp.password'|translate}}</label>
@@ -137,13 +224,11 @@
                   <a href="#">{{'signUp.help'|translate}}</a>
               </div>
           </form>
-
-
           <p>{{'signUp.account'|translate}} <a href="login">{{'signUp.loginNow'|translate}}</a></p>
-      </div>
+        </div>
       </div>
       <div class="description-box col-lg-6 order-lg-2 order-1">
-        <div class="description">
+        <div class="description order-lg-2 order-1">
           <h1>MUNDO STEM</h1>
           <p><b>{{'login.advantages'|translate}}</b>
             <br>

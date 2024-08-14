@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { ConfirmPasswordValidator } from './confirm-password.validator';
 import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
-
+import { UserService } from 'src/app/core/services/user.service';
 
 @Component({
   selector: 'app-register',
@@ -11,26 +10,27 @@ import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms'
   styleUrl: './register.component.css'
 })
 export class RegisterComponent implements OnInit {
+  registrationForm!: FormGroup;
+  hasError:boolean = false;
+  errorMessage: string = '';
+  successMessage: string = '';
+
   constructor(
-    private http: HttpClient,
     private router: Router,
     private fb: FormBuilder,
+    private userService: UserService
   ) {
 
   }
-  // Control errores
-  registrationForm!: FormGroup;
-  hasError:boolean = false;
 
-  // convenience getter for easy access to form fields
-  get f() {
-    return this.registrationForm.controls;
+  ngOnInit() {
+    this.initForm();
   }
-
+  // Constrol en el formulario de registro
   initForm() {
     this.registrationForm = this.fb.group(
       {
-        full_name: [
+        names: [
           '',
           Validators.compose([
             Validators.required,
@@ -38,7 +38,31 @@ export class RegisterComponent implements OnInit {
             Validators.maxLength(100),
           ]),
         ],
-        email_address: [
+        last_names: [
+          '',
+          Validators.compose([
+            Validators.required,
+            Validators.minLength(3),
+            Validators.maxLength(100),
+          ]),
+        ],
+        address: [
+          '',
+          Validators.compose([
+            Validators.required,
+            Validators.minLength(3),
+            Validators.maxLength(100),
+          ]),
+        ],
+        age: [
+          0,
+          Validators.compose([
+            Validators.required,
+            Validators.minLength(3),
+            Validators.maxLength(100),
+          ]),
+        ],
+        email: [
           '',
           Validators.compose([
             Validators.required,
@@ -70,77 +94,29 @@ export class RegisterComponent implements OnInit {
       }
     );
   }
-  id: number  = 0;
-  // full_name: string = "";
-  bioSection = new FormGroup({
-    full_name: new FormControl<string>(''),
-    email_address: new FormControl<string>(''),
-    password: new FormControl<string>('')
-  });
-
-  // email_address: string = "";
-  // password: string = "";
-  datosIngresados: any;
-  errorMessage: string = '';
-  successMessage: String = '';
-  url = 'http://localhost:8000/api/Create_user'; // Dirección de la API
 
 
-  /**
-   * Se verifica que el usuario no este logueado para que pueda acceder al login
-   */
-  logueadoFunction() {
-    return localStorage.getItem('acceso');
-  }
-  /**
-   * Desde que se inicia la página se verifica si el usuario esta logueado o no
-   */
-  ngOnInit() {
-    if (this.logueadoFunction() !== null) {
-      this.router.navigate(['']);
-    }
-
-    this.initForm();
-  }
-  //OBS. el control del ingreso de datos, deberia hacerse desde el backend, ie verificar que el usuario no exista
-  //deberia controlarse desde el backend
   guardarDatos(): void {
-    this.hasError = false
-    this.datosIngresados = {
-      id: this.id,
-      full_name: this.bioSection.get('full_name')?.value,
-      email_address: this.bioSection.get('email_address')?.value,
-      password: this.bioSection.get('password')?.value
-    };
-    const body = { id: this.id, full_name: this.bioSection.get('full_name')?.value, email_address: this.bioSection.get('email_address')?.value, password: this.bioSection.get('password')?.value}; // Reemplaza esto con el cuerpo de tu solicitud POST
-    // Realizar la llamada al backend y manejar la respuesta
-    this.http.post(this.url, body).subscribe(
-      (response) => {
-        console.log('Solicitud POST exitosa', response);
-        this.successMessage = 'Usuario registrado con exito'
-        // Realizar acciones adicionales con la respuesta de la API
+    const body = {
+      email: this.registrationForm.get('email')?.value,
+      names: this.registrationForm.get('names')?.value,
+      address: this.registrationForm.get('address')?.value,
+      last_names: this.registrationForm.get('last_names')?.value,
+      age: this.registrationForm.get('age')?.value,
+      password: this.registrationForm.get('password')?.value};
 
-        localStorage.setItem('acceso', 'true'); //Al darse el acceso se cuarda la variable de sesion en localStorage
+    this.userService.addUser(body)
+      .subscribe(response=>{
+        console.log("El Usuario se creo correctamente")
+        // this.router.navigate(['']);
+      }, error =>{
 
-        // Redireccionar a la URL deseada
-        window.location.href = 'http://localhost:4200/';
-        // Por ejemplo, mostrar un mensaje de éxito
-        this.errorMessage = '';
-      },
-      (error) => {
-        // Control del tiempo del mensaje de error
         this.hasError = true
         setTimeout(()=>{
           this.hasError = false
-        },3000)
-        // console.error('Error en la solicitud POST', error);
-        // Manejar el error de la solicitud
+        },5000)
 
-        // Verificar si el error es debido a que el ID ya existe
-        if (error.status === 400 && error.error && error.error.detail === `Product ${this.id} already exists`) {
-          this.errorMessage = 'El ID del usuario ya existe, no se puede registrar en el sistema';
-        }
-      }
-    );
+        console.log(error)
+      })
   }
 }
