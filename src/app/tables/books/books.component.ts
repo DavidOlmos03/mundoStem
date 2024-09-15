@@ -10,7 +10,9 @@ import * as $ from 'jquery';
   styleUrls: ['./books.component.css', './books.component.scss']
 })
 export class BooksGridComponent implements OnInit,OnDestroy {
-
+  tableName:string = "calculus"
+  subjectId:number = 1
+  topicId:number = 1
   constructor(private http: HttpClient, private router: Router) { }
   /**
    * Se verifica que el usuario no este logueado para que pueda acceder al login
@@ -23,16 +25,20 @@ export class BooksGridComponent implements OnInit,OnDestroy {
   /**
    * Para el contenedor lateral
    */
-  @Output() tableNameChange = new EventEmitter<string>();
-  tableName:string='mechanics_books'
-  tableNameTitle:string="Mecánica"
-  enterTableName(tableNameIntro:string){
-    this.tableName = tableNameIntro
-    this.tableNameChange.emit(this.tableName)
-    if(this.tableName == 'mechanics_books'){
-      this.tableNameTitle = "Mecánica"
-    }else if(this.tableName == 'electromagnetism_books'){
-      this.tableNameTitle = "Electromagnetismo"
+  @Output() subjectChange = new EventEmitter<number>();
+  @Output() topicChange = new EventEmitter<number>();
+
+
+  changeTable(subjectId:number = 1, topicId: number = 1){
+    this.subjectId = subjectId
+    this.topicId = topicId
+    this.subjectChange.emit(this.subjectId)
+    this.topicChange.emit(this.topicId)
+
+    if(this.topicId == 1){
+      this.topicId = 1
+    }else if(this.topicId == 2){
+      this.topicId = 2
     }
   }
 
@@ -47,7 +53,7 @@ export class BooksGridComponent implements OnInit,OnDestroy {
      * Desde que se inicia la página se verifica si el usuario esta logueado o no
      */
     if (!this.logueadoFunction()) {
-        this.router.navigate(['']);
+        //this.router.navigate(['']);
     }
   }
 

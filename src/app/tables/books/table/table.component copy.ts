@@ -6,10 +6,6 @@ import {
   ICellRendererParams,
   ValueGetterParams,
 } from 'ag-grid-community';
-import { BookService } from '../../../core/services/book.service'
-
-
-
 
 @Component({
   selector: 'app-custom-button',
@@ -66,10 +62,7 @@ export class TableComponent implements OnChanges{
   public paginationPageSize = 10;
   public paginationPageSizeSelector: number[] | boolean = [10, 20, 50];
 
-  constructor(
-    private http: HttpClient,
-    private BookService:BookService
-  ) {
+  constructor(private http: HttpClient) {
     this.gridOptions = {
       columnDefs: [
         //{ headerName: 'ID', field: 'id', filter:  'agNumberColumnFilter', width:70},
@@ -163,13 +156,12 @@ export class TableComponent implements OnChanges{
   /**
    * Para manejar el cargue dinamico de la tabla
    */
-  @Input() subjectId: number = 1
-  @Input() topicId: number = 1
-  tableToShow:number = this.topicId
+  @Input() tableName: string = 'mechanics_books'
+  tableToShow:string = this.tableName
 
   ngOnChanges(changes: SimpleChanges) {
-    if ('topicId' in changes) {
-      this.tableToShow = changes['topicId'].currentValue;
+    if ('tableName' in changes) {
+      this.tableToShow = changes['tableName'].currentValue;
       this.loadData();
     }
   }
@@ -177,16 +169,10 @@ export class TableComponent implements OnChanges{
    * Función para hacer la consulta a la API
    */
   loadData() {
-    /*
+
     this.http.get<any[]>('http://localhost:8000/books/'+this.tableToShow).subscribe(data => {
       this.rowData = data;
-    });*/
-    this.BookService.getBooksBySubjectAndTopic(this.subjectId, this.topicId)
-    .subscribe(data=>{
-      this.rowData = data;
-    },error=>{
-      console.log(error)
-    })
+    });
   }
 
 

@@ -1,9 +1,9 @@
 <head>
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
 </head>
 
 <body>
+  <!--lateral menu-->
   <div class="offcanvas offcanvas-start w-25" tabindex="-1" id="offcanvas" data-bs-keyboard="false" data-bs-backdrop="false">
     <div class="offcanvas-header">
         <h6 class="offcanvas-title d-none d-sm-block" id="offcanvas">Menu</h6>
@@ -36,8 +36,8 @@
               </a>
               <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdown">
                 <!---Estoy probando el funcionamiento de esta función para cambiar el nombre de tableName-->
-                  <li><a class="dropdown-item" (click)="enterTableName('mechanics_books')">Mechanics</a></li>
-                  <li><a class="dropdown-item" (click)="enterTableName('electromagnetism_books')">Electromagnetism</a></li>
+                  <li><a class="dropdown-item" (click)="changeTable(1,1)">Mechanics</a></li>
+                  <li><a class="dropdown-item" (click)="changeTable(1,1)">Electromagnetism</a></li>
                   <li><a class="dropdown-item" href="#">Computational physics</a></li>
                   <li>
                       <hr class="dropdown-divider">
@@ -63,28 +63,30 @@
         </ul>
     </div>
   </div>
+  <!--End lateral menu-->
   <div class="container-fluid">
     <div class="col min-vh-100 py-3">
+      <!--Start header-->
       <header>
         <h1 class="display-4">
           <div class="text-center" id="Tittle">
-            {{tableNameTitle}}
+            {{topicId}}
           </div>
         </h1>
         <nav class="navbar">
           <app-navbar></app-navbar>
         </nav>
       </header>
-
-
+      <!--End header-->
+      <!--Start Table-->
       <div id="table">
         <!-- toggler -->
         <button class="btn float-end" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" role="button">
           <i class="bi fa-solid fa-arrow-right fs-3" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"></i>
         </button>
-        <app-table [tableName]="tableName"></app-table>
+        <app-table [topicId]="topicId"></app-table>
       </div>
-
+      <!--End Table-->
     </div>
   </div>
 </body>
