@@ -21,13 +21,13 @@
                   <i class="fa-solid fa-subscript"></i><span class="ms-1 d-none d-sm-inline">Mathematics</span>
                 </a>
                 <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdown">
-                    <li><a class="dropdown-item" href="#">Calculus</a></li>
-                    <li><a class="dropdown-item" href="#">Algebra</a></li>
-                    <li><a class="dropdown-item" href="#">Vector Geometry</a></li>
+                    <li><a class="dropdown-item" (click)="changeTable(1,1)">Calculus</a></li>
+                    <li><a class="dropdown-item" (click)="changeTable(1,2)">Algebra</a></li>
+                    <li><a class="dropdown-item" (click)="changeTable(1,3)">Vector Geometry</a></li>
                     <li>
                         <hr class="dropdown-divider">
                     </li>
-                    <li><a class="dropdown-item" href="#">Motivation</a></li>
+                    <li><a class="dropdown-item" (click)="changeTable(1,4)">Motivation</a></li>
                 </ul>
             </li>
             <li class="dropdown">
@@ -36,13 +36,13 @@
               </a>
               <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdown">
                 <!---Estoy probando el funcionamiento de esta función para cambiar el nombre de tableName-->
-                  <li><a class="dropdown-item" (click)="changeTable(1,1)">Mechanics</a></li>
-                  <li><a class="dropdown-item" (click)="changeTable(1,1)">Electromagnetism</a></li>
-                  <li><a class="dropdown-item" href="#">Computational physics</a></li>
+                  <li><a class="dropdown-item" (click)="changeTable(2,1)">Mechanics</a></li>
+                  <li><a class="dropdown-item" (click)="changeTable(2,2)">Electromagnetism</a></li>
+                  <li><a class="dropdown-item" (click)="changeTable(2,3)">Computational physics</a></li>
                   <li>
                       <hr class="dropdown-divider">
                   </li>
-                  <li><a class="dropdown-item" href="#">Motivation</a></li>
+                  <li><a class="dropdown-item" (click)="changeTable(2,4)">Motivation</a></li>
               </ul>
           </li>
           <li class="dropdown">
@@ -70,8 +70,8 @@
       <header>
         <h1 class="display-4">
           <div class="text-center" id="Tittle">
-            {{topicId}}
           </div>
+          {{tableName}}
         </h1>
         <nav class="navbar">
           <app-navbar></app-navbar>
@@ -84,7 +84,10 @@
         <button class="btn float-end" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" role="button">
           <i class="bi fa-solid fa-arrow-right fs-3" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"></i>
         </button>
-        <app-table [topicId]="topicId"></app-table>
+        <app-table 
+        [topicId]="topicId"
+        [subjectId]="subjectId"
+        ></app-table>
       </div>
       <!--End Table-->
     </div>

@@ -49,7 +49,7 @@ export class CustomButtonComponent implements ICellRendererAngularComp {
  */
 import { Component, Input, OnChanges, SimpleChanges} from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { ColDef, GridOptions } from 'ag-grid-community';
+import { ColDef, GridOptions} from 'ag-grid-community';
 import { window } from 'rxjs';
 
 @Component({
@@ -68,7 +68,8 @@ export class TableComponent implements OnChanges{
 
   constructor(
     private http: HttpClient,
-    private BookService:BookService
+    private BookService:BookService,
+    //private gridApi: GridApi
   ) {
     this.gridOptions = {
       columnDefs: [
@@ -102,9 +103,18 @@ export class TableComponent implements OnChanges{
         autoHeight:true,
         cellStyle:{whiteSpace:'normal'}
       },
-        { headerName: 'Subject',
+        { headerName: 'Topic',
+        field: 'topic',
+        filter:  'agNumberColumnFilter',
+        width:100 ,
+        minWidth:100,
+        maxWidth:100,
+        autoHeight:true,
+        cellStyle:{whiteSpace:'normal'}
+      },
+      { headerName: 'Subject',
         field: 'subject',
-        filter:  'agTextColumnFilter',
+        filter:  'agNumberColumnFilter',
         width:100 ,
         minWidth:100,
         maxWidth:100,
@@ -163,26 +173,43 @@ export class TableComponent implements OnChanges{
   /**
    * Para manejar el cargue dinamico de la tabla
    */
+  //aqui no se esta actualizando
   @Input() subjectId: number = 1
   @Input() topicId: number = 1
-  tableToShow:number = this.topicId
-
-  ngOnChanges(changes: SimpleChanges) {
-    if ('topicId' in changes) {
-      this.tableToShow = changes['topicId'].currentValue;
+  //tableToShow:number = this.topicId
+  
+  ngOnChanges(changes: SimpleChanges):void {
+    console.log(this.subjectId,this.topicId)
+    if ('subjectId' in changes) {
+      console.log('subjectId cambió:', this.subjectId);
       this.loadData();
     }
+    if ('topicId' in changes) {
+      console.log('topicId cambió:', this.topicId);
+      //this.tableToShow = changes['topicId'].currentValue;
+      this.loadData();
+    }
+  
+    console.log("subject y topic en table",this.subjectId, this.topicId)
+    /*
+    if ('topicId' in changes || 'subjectId' in changes) {
+      const filterModel = {
+        subjectId: { filter: this.subjectId, filterType: 'number' },
+        topicId: { filter: this.topicId, filterType: 'number' }
+      };
+      this.gridApi.setFilterModel(filterModel);
+      this.loadData();
+
+    }*/
   }
   /**
    * Función para hacer la consulta a la API
    */
   loadData() {
-    /*
-    this.http.get<any[]>('http://localhost:8000/books/'+this.tableToShow).subscribe(data => {
-      this.rowData = data;
-    });*/
     this.BookService.getBooksBySubjectAndTopic(this.subjectId, this.topicId)
     .subscribe(data=>{
+
+      console.log(data)
       this.rowData = data;
     },error=>{
       console.log(error)

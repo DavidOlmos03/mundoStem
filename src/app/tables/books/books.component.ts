@@ -13,7 +13,8 @@ export class BooksGridComponent implements OnInit,OnDestroy {
   tableName:string = "calculus"
   subjectId:number = 1
   topicId:number = 1
-  constructor(private http: HttpClient, private router: Router) { }
+  constructor(private http: HttpClient, private router: Router) { 
+  }
   /**
    * Se verifica que el usuario no este logueado para que pueda acceder al login
    */
@@ -29,16 +30,36 @@ export class BooksGridComponent implements OnInit,OnDestroy {
   @Output() topicChange = new EventEmitter<number>();
 
 
-  changeTable(subjectId:number = 1, topicId: number = 1){
+  changeTable(subjectId:number, topicId: number){
     this.subjectId = subjectId
-    this.topicId = topicId
+    this.topicId = topicId 
+    
+    console.log("suject y topic en books(emitiendo)",subjectId, topicId)
     this.subjectChange.emit(this.subjectId)
     this.topicChange.emit(this.topicId)
 
-    if(this.topicId == 1){
-      this.topicId = 1
-    }else if(this.topicId == 2){
-      this.topicId = 2
+    if (this.subjectId==1){
+      if(this.topicId == 1){
+        //this.topicId = 1
+        this.tableName = "Calculus"
+      }else if(this.topicId == 2){
+        this.tableName = "Algebra"
+      }else if(this.topicId == 3){
+        this.tableName = "Vector Geometry"
+      }else if(this.topicId == 4){
+      this.tableName = "Calculus Motivation"
+      }
+    }
+    if (this.subjectId==2){
+      if(this.topicId == 1){
+        this.tableName = "Mechanics"
+      }else if(this.topicId == 2){
+        this.tableName = "Electromagnetism"
+      }else if(this.topicId == 3){
+        this.tableName = "Computational Physics"
+      }else if(this.topicId == 4){
+      this.tableName = "Physics Motivation"
+    }
     }
   }
 
@@ -55,6 +76,7 @@ export class BooksGridComponent implements OnInit,OnDestroy {
     if (!this.logueadoFunction()) {
         //this.router.navigate(['']);
     }
+    this.changeTable(1,1)
   }
 
   ngOnDestroy() {
