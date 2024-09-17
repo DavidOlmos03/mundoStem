@@ -15,6 +15,21 @@ export class BooksGridComponent implements OnInit,OnDestroy {
   topicId:number = 1
   constructor(private http: HttpClient, private router: Router) { 
   }
+
+  ngOnInit() {
+    /**
+     * Para controlar el scroll en en header y este se oculte
+     */
+    $(window).on('scroll', this.handleScroll);
+    /**
+     * Desde que se inicia la página se verifica si el usuario esta logueado o no
+     */
+    if (!this.logueadoFunction()) {
+        //this.router.navigate(['']);
+    }
+    this.changeTable(1,1)
+  }
+
   /**
    * Se verifica que el usuario no este logueado para que pueda acceder al login
    */
@@ -31,16 +46,17 @@ export class BooksGridComponent implements OnInit,OnDestroy {
 
 
   changeTable(subjectId:number, topicId: number){
+    /*
+    * Se asignan los valores a subjectId y topicId, para emitirlos a componente table
+    */
     this.subjectId = subjectId
-    this.topicId = topicId 
-    
-    console.log("suject y topic en books(emitiendo)",subjectId, topicId)
+    this.topicId = topicId     
     this.subjectChange.emit(this.subjectId)
     this.topicChange.emit(this.topicId)
 
+    // Se clasifica según el subjectId
     if (this.subjectId==1){
       if(this.topicId == 1){
-        //this.topicId = 1
         this.tableName = "Calculus"
       }else if(this.topicId == 2){
         this.tableName = "Algebra"
@@ -63,21 +79,6 @@ export class BooksGridComponent implements OnInit,OnDestroy {
     }
   }
 
-
-
-  ngOnInit() {
-    /**
-     * Para controlar el scroll en en header y este se oculte
-     */
-    $(window).on('scroll', this.handleScroll);
-    /**
-     * Desde que se inicia la página se verifica si el usuario esta logueado o no
-     */
-    if (!this.logueadoFunction()) {
-        //this.router.navigate(['']);
-    }
-    this.changeTable(1,1)
-  }
 
   ngOnDestroy() {
     $(window).off('scroll', this.handleScroll);

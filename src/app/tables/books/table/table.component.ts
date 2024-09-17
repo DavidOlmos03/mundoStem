@@ -20,8 +20,11 @@ import { BookService } from '../../../core/services/book.service'
   <button id="deteleButton" (click)="buttonDelete()"><i class="fas fa-trash-alt"></i></button>`
 })
 export class CustomButtonComponent implements ICellRendererAngularComp {
+  private params: any //Para almacenar los parametros de la fila
 
-  agInit(params: ICellRendererParams): void {}
+  agInit(params: ICellRendererParams): void {
+    this.params = params
+  }
   refresh(params: ICellRendererParams) {
     return true;
   }
@@ -31,26 +34,26 @@ export class CustomButtonComponent implements ICellRendererAngularComp {
    */
   buttonDelete() {
    /**
-    * Se hace lee el id de la tabla y se hace la solicitud al backend para eliminar el registro con este id
+    * Se hace lee el id del libro y se hace la solicitud al backend para eliminar el registro con este id
     *  */
-    alert('clicked delete');
+    const bookId = this.params.data.id
+    alert('clicked delete '+ bookId);
   }
   buttonEdit() {
     /**
-    * Se hace lee el id de la tabla y se hace la solicitud al backend para editar el registro con este id
+    * Se hace lee el id del libro y se hace la solicitud al backend para editar el registro con este id
     *  */
+    
     alert('clicked edit');
   }
 }
-
-
 /***
  * El segundo component que se encarga de la estructura de la tabla
  */
 import { Component, Input, OnChanges, SimpleChanges} from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { ColDef, GridOptions} from 'ag-grid-community';
-import { window } from 'rxjs';
+import { GridOptions} from 'ag-grid-community';
+import { param } from 'jquery';
 
 @Component({
   selector: 'app-table',
@@ -69,7 +72,6 @@ export class TableComponent implements OnChanges{
   constructor(
     private http: HttpClient,
     private BookService:BookService,
-    //private gridApi: GridApi
   ) {
     this.gridOptions = {
       columnDefs: [
@@ -110,7 +112,8 @@ export class TableComponent implements OnChanges{
         minWidth:100,
         maxWidth:100,
         autoHeight:true,
-        cellStyle:{whiteSpace:'normal'}
+        cellStyle:{whiteSpace:'normal'},
+        hide: true
       },
       { headerName: 'Subject',
         field: 'subject',
@@ -119,7 +122,8 @@ export class TableComponent implements OnChanges{
         minWidth:100,
         maxWidth:100,
         autoHeight:true,
-        cellStyle:{whiteSpace:'normal'}
+        cellStyle:{whiteSpace:'normal'},
+        hide: true
       },
         {
           headerName: 'Pages',
@@ -173,34 +177,11 @@ export class TableComponent implements OnChanges{
   /**
    * Para manejar el cargue dinamico de la tabla
    */
-  //aqui no se esta actualizando
   @Input() subjectId: number = 1
   @Input() topicId: number = 1
-  //tableToShow:number = this.topicId
-  
-  ngOnChanges(changes: SimpleChanges):void {
-    console.log(this.subjectId,this.topicId)
-    if ('subjectId' in changes) {
-      console.log('subjectId cambió:', this.subjectId);
-      this.loadData();
-    }
-    if ('topicId' in changes) {
-      console.log('topicId cambió:', this.topicId);
-      //this.tableToShow = changes['topicId'].currentValue;
-      this.loadData();
-    }
-  
-    console.log("subject y topic en table",this.subjectId, this.topicId)
-    /*
-    if ('topicId' in changes || 'subjectId' in changes) {
-      const filterModel = {
-        subjectId: { filter: this.subjectId, filterType: 'number' },
-        topicId: { filter: this.topicId, filterType: 'number' }
-      };
-      this.gridApi.setFilterModel(filterModel);
-      this.loadData();
 
-    }*/
+  ngOnChanges(changes: SimpleChanges):void {
+    this.loadData();
   }
   /**
    * Función para hacer la consulta a la API
@@ -208,8 +189,6 @@ export class TableComponent implements OnChanges{
   loadData() {
     this.BookService.getBooksBySubjectAndTopic(this.subjectId, this.topicId)
     .subscribe(data=>{
-
-      console.log(data)
       this.rowData = data;
     },error=>{
       console.log(error)
