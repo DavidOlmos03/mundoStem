@@ -1,3 +1,5 @@
+import { NG_EVENT_PLUGINS } from "@taiga-ui/event-plugins";
+import { TuiRoot } from "@taiga-ui/core";
 // Angular
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -55,10 +57,10 @@ import { TablesModule } from './tables/tables.module';
       }
     }),
     AgGridModule,
-    TablesModule
-
-  ],
-  providers: [TranslateService],
+    TablesModule,
+      TuiRoot
+],
+  providers: [TranslateService, NG_EVENT_PLUGINS],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

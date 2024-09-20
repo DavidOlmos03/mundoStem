@@ -2,26 +2,35 @@
  * El primer component que maneja caracteristicas de la tabla como los botones
  */
 import { AgGridAngular, ICellRendererAngularComp } from 'ag-grid-angular';
+import {ChangeDetectionStrategy, inject, INJECTOR} from '@angular/core';
 import {
   ICellRendererParams,
   ValueGetterParams,
 } from 'ag-grid-community';
 import { BookService } from '../../../core/services/book.service'
-
-
-
+import {TuiButton, TuiDialogService, TuiAlertService} from '@taiga-ui/core';
+import {PolymorpheusComponent} from '@taiga-ui/polymorpheus';
+import {NgForOf} from '@angular/common';
+import { AddBookComponent } from './add-book/add-book.component';
+import { DeleteBookComponent } from './delete-book/delete-book.component';
+import {switchMap, takeUntil} from 'rxjs';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-custom-button',
+  imports: [TuiButton, NgForOf],
   standalone: true,
   styleUrls: ['./table.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
   template: `<button id="editButton" (click)="buttonEdit()"><i class="fa-solid fa-pencil"></i></button>
 
   <button id="deteleButton" (click)="buttonDelete()"><i class="fas fa-trash-alt"></i></button>`
 })
 export class CustomButtonComponent implements ICellRendererAngularComp {
   private params: any //Para almacenar los parametros de la fila
-
+  private readonly dialogs = inject(TuiDialogService);
+  private readonly injector = inject(INJECTOR);
+  
   agInit(params: ICellRendererParams): void {
     this.params = params
   }
@@ -32,21 +41,55 @@ export class CustomButtonComponent implements ICellRendererAngularComp {
    * OBS. revisar documentación de ag gred a ver si puedo hacer el delete y el edit con esa herramienta, si no buscar en alguna IA
    * como obtener este id de ag grid
    */
-  buttonDelete() {
+  private readonly alerts = inject(TuiAlertService);
+    private readonly notification = this.alerts
+        .open<boolean>(new PolymorpheusComponent(DeleteBookComponent), {
+            label: 'Question',
+            appearance: 'error',
+            autoClose: 0,
+        })
+        .pipe(
+            switchMap((response) =>
+                this.alerts.open(`Got a value — ${response}`, {label: 'Information'}),
+            ),
+            takeUntil(inject(Router).events),
+        );
+ 
+    protected buttonDelete(): void {
+        this.notification.subscribe();
+    }
+
+  OldButtonDelete() {
    /**
     * Se hace lee el id del libro y se hace la solicitud al backend para eliminar el registro con este id
     *  */
     const bookId = this.params.data.id
     alert('clicked delete '+ bookId);
   }
-  buttonEdit() {
-    /**
-    * Se hace lee el id del libro y se hace la solicitud al backend para editar el registro con este id
-    *  */
-    
-    alert('clicked edit');
+
+  private readonly dialogEdit = this.dialogs.open<number>(
+    new PolymorpheusComponent(AddBookComponent, this.injector),
+    {
+        data: 237,
+        dismissible: true,
+        label: 'Heading',
+    },
+  );
+
+
+  protected buttonEdit(): void {
+    this.dialogEdit.subscribe({
+        next: (data) => {
+            console.info(`Dialog emitted data = ${data}`);
+        },
+        complete: () => {
+            console.info('Dialog closed');
+        },
+    });
   }
 }
+
+
 /***
  * El segundo component que se encarga de la estructura de la tabla
  */
