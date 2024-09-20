@@ -11,7 +11,7 @@ import { BookService } from '../../../core/services/book.service'
 import {TuiButton, TuiDialogService, TuiAlertService} from '@taiga-ui/core';
 import {PolymorpheusComponent} from '@taiga-ui/polymorpheus';
 import {NgForOf} from '@angular/common';
-import { AddBookComponent } from './add-book/add-book.component';
+import { EditBookComponent } from './edit-book/edit-book.component';
 import { DeleteBookComponent } from './delete-book/delete-book.component';
 import {switchMap, takeUntil} from 'rxjs';
 import {Router} from '@angular/router';
@@ -68,7 +68,7 @@ export class CustomButtonComponent implements ICellRendererAngularComp {
   }
 
   private readonly dialogEdit = this.dialogs.open<number>(
-    new PolymorpheusComponent(AddBookComponent, this.injector),
+    new PolymorpheusComponent(EditBookComponent, this.injector),
     {
         data: 237,
         dismissible: true,
