@@ -45,15 +45,15 @@ export class EditBookComponent{
   private readonly context = injectContext<TuiDialogContext<number, number>>();
   
   protected value: number | null = null;
-  protected title = this.bookTitle;
-  protected language = this.bookAuthors;
-  protected authors = '';
-  protected pages = '';
-  protected subject = '';
-  protected topic = '';
-  protected extension = '';
-  protected size = '';
-  protected summary = '';
+  protected title = this.bookData.title;
+  protected language = this.bookData.language;
+  protected authors = this.bookData.authors;
+  protected pages = this.bookData.pages;
+  protected subject = this.bookData.subject;
+  protected topic = this.bookData.topic;
+  protected extension = this.bookData.extension;
+  protected size = this.bookData.size;
+  protected summary = this.bookData.summary;
 
   protected subjects = ['1. mathematics', '2. physics', '3. programming'];
   protected topicsMath = ['1. mathematics', '2. physics', '3. programming'];
@@ -67,14 +67,9 @@ export class EditBookComponent{
       return this.context.data;
   }
 
-  protected get bookTitle(): string {
+  protected get bookData(): BookBase {
     const bookData = this.data as BookBase; 
-    return bookData.title;
-  }
-
-  protected get bookAuthors(): string {
-    const bookData = this.data as BookBase; 
-    return bookData.authors;
+    return bookData
   }
   
   protected submit(): void {
