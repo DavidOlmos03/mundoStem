@@ -2,7 +2,7 @@
  * El primer component que maneja caracteristicas de la tabla como los botones
  */
 import { AgGridAngular, ICellRendererAngularComp } from 'ag-grid-angular';
-import {ChangeDetectionStrategy, inject, INJECTOR} from '@angular/core';
+import {ChangeDetectionStrategy, inject, INJECTOR,EventEmitter, Output} from '@angular/core';
 import {
   ICellRendererParams,
   ValueGetterParams,
@@ -15,7 +15,7 @@ import { EditBookComponent } from './edit-book/edit-book.component';
 import { DeleteBookComponent } from './delete-book/delete-book.component';
 import {switchMap, takeUntil} from 'rxjs';
 import {Router} from '@angular/router';
-
+import { BookBase } from 'src/app/core/models/book.model';
 @Component({
   selector: 'app-custom-button',
   imports: [TuiButton, NgForOf],
@@ -59,26 +59,21 @@ export class CustomButtonComponent implements ICellRendererAngularComp {
         this.notification.subscribe();
     }
 
-  OldButtonDelete() {
-   /**
-    * Se hace lee el id del libro y se hace la solicitud al backend para eliminar el registro con este id
-    *  */
-    const bookId = this.params.data.id
-    alert('clicked delete '+ bookId);
-  }
+  
 
-  private readonly dialogEdit = this.dialogs.open<number>(
-    new PolymorpheusComponent(EditBookComponent, this.injector),
-    {
-        data: 237,
-        dismissible: true,
-        label: 'Heading',
-    },
-  );
-
-
+  //@Output() dataEdit = new EventEmitter<number>();
+  
   protected buttonEdit(): void {
-    this.dialogEdit.subscribe({
+    const dialogEdit = this.dialogs.open<BookBase>(
+      new PolymorpheusComponent(EditBookComponent, this.injector),
+      {
+          data: this.params?.data,
+          dismissible: true,
+          label: 'Edit Book',
+      },
+    );
+
+    dialogEdit.subscribe({
         next: (data) => {
             console.info(`Dialog emitted data = ${data}`);
         },
@@ -91,7 +86,7 @@ export class CustomButtonComponent implements ICellRendererAngularComp {
 
 
 /***
- * El segundo component que se encarga de la estructura de la tabla
+ * Componente que se encarga de la estructura de la tabla
  */
 import { Component, Input, OnChanges, SimpleChanges} from '@angular/core';
 import { HttpClient } from '@angular/common/http';
@@ -123,10 +118,12 @@ export class TableComponent implements OnChanges{
           headerName: 'Title',
           field: 'title',
           filter:  'agTextColumnFilter',
-          width:180,
+          width:200,
+          minWidth:230,
+          maxWidth:250,
+          editable:true,
           autoHeight:true,
           cellStyle:{whiteSpace:'normal'},
-          editable:true
         },
         {
           headerName: 'Authors',
@@ -135,9 +132,9 @@ export class TableComponent implements OnChanges{
           width:150 ,
           minWidth:100,
           maxWidth:150,
+          editable:true,
           autoHeight:true,
           cellStyle:{whiteSpace:'normal'},
-          editable:true
         },
         { headerName: 'Language',
         field: 'language',
@@ -200,11 +197,11 @@ export class TableComponent implements OnChanges{
           headerName: 'Summary',
           field: 'summary',
           filter:  'agTextColumnFilter',
-          minWidth:310,
-          maxWidth:500,
+          minWidth:510,
+          maxWidth:550,
+          editable:true,
           autoHeight:true,
           cellStyle:{whiteSpace:'normal'},
-          editable:true
         },
         {
           headerName: 'Actions',

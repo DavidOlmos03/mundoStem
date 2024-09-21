@@ -13,7 +13,7 @@ import {
     TuiTextfieldControllerModule,
 } from '@taiga-ui/legacy';
 import {injectContext} from '@taiga-ui/polymorpheus';
-
+import { BookBase } from 'src/app/core/models/book.model';
 
 @Component({
   selector: 'app-edit-book',
@@ -35,22 +35,48 @@ import {injectContext} from '@taiga-ui/polymorpheus';
   templateUrl: './edit-book.component.html',
   styleUrl: './edit-book.component.css'
 })
-export class EditBookComponent {
+export class EditBookComponent{
+  //dataBook = this.data
+  constructor(){
+    //console.log(this.data);
+    
+  }
   private readonly dialogs = inject(TuiDialogService);
   private readonly context = injectContext<TuiDialogContext<number, number>>();
-
+  
   protected value: number | null = null;
-  protected name = '';
-  protected items = [10, 50, 100];
+  protected title = this.bookTitle;
+  protected language = this.bookAuthors;
+  protected authors = '';
+  protected pages = '';
+  protected subject = '';
+  protected topic = '';
+  protected extension = '';
+  protected size = '';
+  protected summary = '';
+
+  protected subjects = ['1. mathematics', '2. physics', '3. programming'];
+  protected topicsMath = ['1. mathematics', '2. physics', '3. programming'];
+  
 
   protected get hasValue(): boolean {
       return this.value !== null;
   }
 
-  protected get data(): number {
+  protected get data(): Object {
       return this.context.data;
   }
 
+  protected get bookTitle(): string {
+    const bookData = this.data as BookBase; 
+    return bookData.title;
+  }
+
+  protected get bookAuthors(): string {
+    const bookData = this.data as BookBase; 
+    return bookData.authors;
+  }
+  
   protected submit(): void {
       if (this.value !== null) {
           this.context.completeWith(this.value);
@@ -60,4 +86,5 @@ export class EditBookComponent {
   protected showDialog(content: TemplateRef<TuiDialogContext>): void {
       this.dialogs.open(content, {dismissible: true}).subscribe();
   }
+  
 }

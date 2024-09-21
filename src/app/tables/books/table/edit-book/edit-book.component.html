@@ -1,42 +1,127 @@
-<p class="text">
+<!--<p class="text">
     Your balance:
     <span>{{ data | tuiAmount: 'RUB' | async }}</span>
-</p>
- 
-<tui-input
-    tuiAutoFocus
-    tuiTextfieldSize="m"
-    [(ngModel)]="name"
->
-    Type a name
-</tui-input>
- 
-<tui-select
-    tuiTextfieldSize="m"
-    class="tui-space_top-3 tui-space_bottom-5"
-    [tuiTextfieldLabelOutside]="true"
-    [(ngModel)]="value"
->
-    Select a sum
-    <tui-data-list-wrapper
-        *tuiDataList
-        [items]="items"
-    />
-</tui-select>
- 
- 
-<button
-    size="m"
-    tuiButton
-    type="button"
-    [disabled]="!hasValue"
-    (click)="submit()"
->
-    Submit
-</button>
- 
+</p>-->
+
+<!--
+title: str
+    authors: str | None
+    language: str | None
+    subject: int | None
+    topic: int | None
+    pages: int | None
+    extension: str | None
+    size: int | None
+    summary: str | None
+-->
+
+<div class="bg-dark p-3 rounded">
+    <div class="row">
+        <div class="col-6">
+            <tui-input
+                tuiAutoFocus
+                tuiTextfieldSize="m"
+                [(ngModel)]="title"
+                class="mt-3"
+            >
+                Title
+            </tui-input>
+            <tui-input
+                tuiAutoFocus
+                tuiTextfieldSize="m"
+                [(ngModel)]="authors"
+                class="mt-3"
+            >
+                Authors
+            </tui-input>
+            <tui-select
+                tuiTextfieldSize="m"
+                class="tui-space_top-3 tui-space_bottom-5"
+                [tuiTextfieldLabelOutside]="true"
+                [(ngModel)]="value"
+                class="mt-3"
+            >
+                Subject
+                <tui-data-list-wrapper
+                    *tuiDataList
+                    [items]="subjects"
+                />
+            </tui-select>
+            <tui-input
+                tuiAutoFocus
+                tuiTextfieldSize="m"
+                [(ngModel)]="extension"
+                class="mt-3"
+            >
+                Extension
+            </tui-input>
+        </div>
+        <div class="col-6">
+            <tui-input
+                tuiAutoFocus
+                tuiTextfieldSize="m"
+                [(ngModel)]="language"
+                class="mt-3"
+            >
+                Language
+            </tui-input>
+            <tui-input
+                tuiAutoFocus
+                tuiTextfieldSize="m"
+                [(ngModel)]="pages"
+                class="mt-3"
+            >
+                Pages
+            </tui-input>
+            <tui-select
+            tuiTextfieldSize="m"
+            class="tui-space_top-3 tui-space_bottom-5"
+            [tuiTextfieldLabelOutside]="true"
+            [(ngModel)]="value"
+            class="mt-3"
+            >
+                Topic
+                <tui-data-list-wrapper
+                    *tuiDataList
+                    [items]="topicsMath"
+                />
+            </tui-select>
+            <tui-input
+                tuiAutoFocus
+                tuiTextfieldSize="m"
+                [(ngModel)]="size"
+                class="mt-3"
+            >
+                Size
+            </tui-input>
+        </div>
+        
+        <tui-input
+            tuiAutoFocus
+            tuiTextfieldSize="l"
+            [(ngModel)]="summary"
+            class="mt-3 col-md-12"
+        >
+            summary
+        </tui-input>
+       
+    </div>
+    <button
+        size="m"
+        class="mt-3"
+        tuiButton
+        type="button"
+        [disabled]="!hasValue"
+        (click)="submit()"
+    >
+        Submit
+    </button>
+</div>
+
+<!--
 <ng-template #template>
     <div class="dialog">
         <p>This one is a template dialog</p>
     </div>
 </ng-template>
+-->
