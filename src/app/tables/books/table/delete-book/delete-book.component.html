@@ -1,11 +1,11 @@
-<p>Yes?</p>
+<p>Are you sure?</p>
 <button
     *ngFor="let response of [true, false]"
     appearance="whiteblock"
-    size="s"
+    size="l"
     tuiButton
     type="button"
-    class="tui-space_right-1"
+    class="tui-space_right-1 me-2"
     (click)="context.completeWith(response)"
 >
     {{ response ? 'Yes' : 'No' }}

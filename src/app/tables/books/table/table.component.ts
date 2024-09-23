@@ -7,15 +7,23 @@ import {
   ICellRendererParams,
   ValueGetterParams,
 } from 'ag-grid-community';
-import { BookService } from '../../../core/services/book.service'
 import {TuiButton, TuiDialogService, TuiAlertService} from '@taiga-ui/core';
 import {PolymorpheusComponent} from '@taiga-ui/polymorpheus';
 import {NgForOf} from '@angular/common';
+import {switchMap, takeUntil, tap} from 'rxjs';
+import {Router} from '@angular/router';
+/**
+ * components
+ */
 import { EditBookComponent } from './edit-book/edit-book.component';
 import { DeleteBookComponent } from './delete-book/delete-book.component';
-import {switchMap, takeUntil} from 'rxjs';
-import {Router} from '@angular/router';
+/**
+ * Models and Services
+ */
 import { BookBase } from 'src/app/core/models/book.model';
+import { BookService } from '../../../core/services/book.service'
+
+
 @Component({
   selector: 'app-custom-button',
   imports: [TuiButton, NgForOf],
@@ -31,6 +39,10 @@ export class CustomButtonComponent implements ICellRendererAngularComp {
   private readonly dialogs = inject(TuiDialogService);
   private readonly injector = inject(INJECTOR);
   
+  constructor(
+    private BookService:BookService
+  ){}
+
   agInit(params: ICellRendererParams): void {
     this.params = params
   }
@@ -44,13 +56,18 @@ export class CustomButtonComponent implements ICellRendererAngularComp {
   private readonly alerts = inject(TuiAlertService);
     private readonly notification = this.alerts
         .open<boolean>(new PolymorpheusComponent(DeleteBookComponent), {
-            label: 'Question',
+            label: 'Delete record',
             appearance: 'error',
             autoClose: 0,
         })
         .pipe(
-            switchMap((response) =>
-                this.alerts.open(`Got a value — ${response}`, {label: 'Information'}),
+            tap((response)=>{
+              if (response){
+                this.BookService.deleteBookById(this.params.data.id)
+              }
+            }),
+            switchMap((response) => 
+                this.alerts.open(`Book deleted — ${response}`, {label: 'Information'})
             ),
             takeUntil(inject(Router).events),
         );

@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { Component, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { BookBase, BookCreate } from '../models/book.model';
@@ -9,6 +9,8 @@ import { BookBase, BookCreate } from '../models/book.model';
 })
 export class BookService {
   private apiUrl: string = environment.URL_SERVICIOS +"book"
+  status: string = '';           // Almacena el estado de la solicitud
+  errorMessage: string = '';      // Almacena el mensaje d
 
   constructor(
     private http: HttpClient,
@@ -32,5 +34,23 @@ export class BookService {
 
   addBook(book:BookCreate):Observable<BookCreate>{
     return this.http.post<BookCreate>(this.apiUrl, book)
+  }
+
+  deleteBookById(id: number){
+    this.http.delete(`${this.apiUrl}/${id}`)
+    .subscribe(
+      {
+        next: data => {
+            this.status = 'Delete successful';
+            setTimeout(()=>{
+              window.location.reload()
+            },2000)
+        },
+        error: error => {
+            this.errorMessage = error.message;
+            console.error('There was an error!', error);
+        }
+    }
+    );
   }
 }
