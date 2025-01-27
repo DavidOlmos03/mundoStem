@@ -1,5 +1,5 @@
 import { Component} from '@angular/core';
-
+import { AuthService } from 'src/app/modules/auth/services/auth.service';
 import Swal from 'sweetalert2';
 
 @Component({
@@ -8,13 +8,16 @@ import Swal from 'sweetalert2';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent{
-
+  constructor(
+    private autService: AuthService
+  ){}
 
   logueadoFunction() {
-    return localStorage.getItem('acceso');
+    return this.autService.userLogin
   }
+  
   cerrarSesion(): void {
-    localStorage.removeItem('acceso');
+    localStorage.removeItem('auth-token');
     window.location.reload();
   }
 

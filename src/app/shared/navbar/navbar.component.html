@@ -77,12 +77,12 @@
         </li>
         <!-- End Tables -->
       </ul>
-      <div class="buttons" *ngIf="logueadoFunction() == null">
+      <div class="buttons" *ngIf="!logueadoFunction()">
         <!-- href="auth/login" -->
         <a href="auth/login" class="btn buttom_Form btn-dark">{{'navbar.login'|translate}}</a>
         <a href="auth/registro" class="btn buttom_Form btn-dark">{{'navbar.signup'|translate}}</a>
       </div>
-      <div class="exit" *ngIf="logueadoFunction() !== null">
+      <div class="exit" *ngIf="logueadoFunction()">
         <a (click)="showAlertExit()" class="btn buttom_Form btn-dark">{{'navbar.exit'|translate}}</a>
       </div>
     </div>

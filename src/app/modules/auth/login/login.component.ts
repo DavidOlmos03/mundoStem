@@ -60,7 +60,11 @@ export class LoginComponent implements OnInit {
       ],
     });
   }
-
+  /**
+   * ? Funciona correctamente
+   * ! revisar
+   * @param data parametros para este método implicito dentro del método
+   */
   enviarDatos(): void {
     const formData = new FormData()
 
