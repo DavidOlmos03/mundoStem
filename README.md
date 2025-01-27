@@ -1,27 +1,33 @@
-# Project11
+# 🌐 MundoStem Frontend - Execution Instructions
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.1.
+This document provides instructions on how to run the **MundoStem** application. The project uses **PostgreSQL** as the database and is divided into two parts: the backend and the frontend. You can find the backend in the [MundoStem Backend Repository](https://github.com/DavidOlmos03/mundoStemBackendv2/tree/main).
 
-## Development server
+---
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version **16.0.1**.
 
-## Code scaffolding
+---
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## 🚀 Running the Application
 
-## Build
+To run the **MundoStem** application, follow these steps carefully. You will need to run both the **backend** and the **frontend** to use the application.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### 🛠 Prerequisites
+- [Node.js](https://nodejs.org/) installed on your system.
+- [Angular CLI](https://angular.io/cli) installed globally.
+- Docker (optional for database setup).
 
-## Running unit tests
+---
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### ⚙️ Steps to Run
 
-## Running end-to-end tests
+1. **🌐 Create the network `mundostem`:**
+   ```bash
+   npm start
+2. 📂 Open the application in your browser: Navigate to
+   ```bash
+   http://localhost:4200/
+   ```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+---
+![MundoStem - Frontend](./src/assets/imgs/mundostem.png "mundoStem")
