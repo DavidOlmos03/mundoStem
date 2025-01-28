@@ -21,7 +21,7 @@ To run the **MundoStem** application, follow these steps carefully. You will nee
 
 ### ⚙️ Steps to Run
 
-1. **🌐 Create the network `mundostem`:**
+1. **🌐 Start `mundostem`:**
    ```bash
    npm start
 2. 📂 Open the application in your browser: Navigate to
