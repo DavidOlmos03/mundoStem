@@ -42,6 +42,7 @@
     "bootstrap": "^5.2.3",
     "compass-mixins": "^0.12.12",
     "jquery": "^3.7.1",
+    "lite-youtube-embed": "^0.3.3",
     "rxjs": "^7.8.1",
     "sweetalert2": "^11.6.13",
     "tslib": "^2.3.0",

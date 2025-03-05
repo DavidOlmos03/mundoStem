@@ -15,5 +15,7 @@
 router-outlet{
   width: 100%;
 }
-
+lite-youtube button{
+  background-color: red;
+}
 

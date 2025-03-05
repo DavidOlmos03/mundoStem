@@ -1,0 +1,6 @@
+projectKey=mundoStem-david
+serverUrl=http://localhost:9000
+serverVersion=25.2.0.102705
+dashboardUrl=http://localhost:9000/dashboard?id=mundoStem-david
+ceTaskId=0083a7bd-629e-46cc-be19-6376db9eba27
+ceTaskUrl=http://localhost:9000/api/ce/task?id=0083a7bd-629e-46cc-be19-6376db9eba27

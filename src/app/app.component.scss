@@ -6,3 +6,39 @@ nav{
 nav.sticky-header{
   background-color: rgba(0, 0, 0, 0.9);
 }
+
+::ng-deep lite-youtube .lty-playbtn {
+  position: relative;
+  font-family: 'Arial', sans-serif;
+  background-color: #ff0000 !important; // Rojo clásico de YouTube
+  border-radius: 10% !important;
+  width: 70px;
+  height: 70px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+
+  &::before {
+    content: "▶"; // Ícono de reproducción (puedes usar una imagen de fondo si prefieres)
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  &:hover {
+    transform: scale(1.1) rotate(360deg);
+    transition: transform 0.7s ease-in-out;
+    font-weight: bold;
+    box-shadow: 0 6px 15px rgba(255, 0, 0, 0.6);
+  }
+
+  &:active {
+    transform: scale(0.9);
+    transition: transform 0.1s;
+  }
+}
+
