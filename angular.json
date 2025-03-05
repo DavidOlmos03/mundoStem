@@ -43,7 +43,9 @@
               "node_modules/ag-grid-community/styles/ag-theme-quartz.css"
             ],
             "scripts": ["node_modules/@popperjs/core/dist/umd/popper.min.js",
-                        "node_modules/bootstrap/dist/js/bootstrap.min.js"]
+                        "node_modules/bootstrap/dist/js/bootstrap.min.js",
+                        "node_modules/lite-youtube-embed/src/lite-yt-embed.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -113,7 +115,9 @@
               "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": ["node_modules/@popperjs/core/dist/umd/popper.min.js",
-            "node_modules/bootstrap/dist/js/bootstrap.min.js"]
+            "node_modules/bootstrap/dist/js/bootstrap.min.js",
+            "node_modules/lite-youtube-embed/src/lite-yt-embed.js"
+            ]
           }
         }
       }

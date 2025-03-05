@@ -1,6 +1,6 @@
 // Modules
 
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { LateralComponent } from './lateral/lateral.component';
@@ -13,6 +13,10 @@ import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { homeComponent } from './home.component';
+/**
+  * Components
+  */
+import { TitleComponent } from 'src/app/shared/title/title.component';
 
 @NgModule({
   declarations: [
@@ -31,8 +35,10 @@ import { homeComponent } from './home.component';
         useFactory:HttLoaderFactory,
         deps:[HttpClient]
       }
-    })
-  ]
+    }),
+    TitleComponent
+  ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class HomeModule { }
 
