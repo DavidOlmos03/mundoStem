@@ -2,11 +2,26 @@
   z-index: 1;
 }
 .page-container{
+  background: white;
+  border-radius: 15px;
+  transition: box-shadow 0.3s ease-in-out;
   z-index: 0;
+  margin: 5rem 2rem 5rem 2rem;
+}
+
+.page-container{
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.page-container:hover {
+  box-shadow: 0 10px 30px rgba(255, 0, 0, 0.5);
 }
 body{
   margin: auto;
   height: auto;
+}
+router-outlet{
+  background: white;
 }
 app-footer{
   padding: 0px;
