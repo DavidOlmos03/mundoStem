@@ -17,6 +17,7 @@ import { homeComponent } from './home.component';
   * Components
   */
 import { TitleComponent } from 'src/app/shared/title/title.component';
+import { SubtitleComponent } from 'src/app/shared/subtitle/subtitle.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { TitleComponent } from 'src/app/shared/title/title.component';
         deps:[HttpClient]
       }
     }),
-    TitleComponent
+    TitleComponent,
+    SubtitleComponent
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
