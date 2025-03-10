@@ -13,11 +13,6 @@ import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { homeComponent } from './home.component';
-/**
-  * Components
-  */
-import { TitleComponent } from 'src/app/shared/title/title.component';
-import { SubtitleComponent } from 'src/app/shared/subtitle/subtitle.component';
 
 @NgModule({
   declarations: [
@@ -37,8 +32,6 @@ import { SubtitleComponent } from 'src/app/shared/subtitle/subtitle.component';
         deps:[HttpClient]
       }
     }),
-    TitleComponent,
-    SubtitleComponent
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

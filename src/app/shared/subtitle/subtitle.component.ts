@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 @Component({
   selector: 'app-subtitle',
@@ -9,7 +9,7 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class SubtitleComponent {
 
-  @Input() text: string = 'Default Subtitle';
+  @Input() text: string = '';
   translatedText: string = '';
 
   constructor(private translateService: TranslateService){}

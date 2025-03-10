@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -9,7 +9,7 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrl: './title.component.css'
 })
 export class TitleComponent {
-  @Input() text: string = 'Default Title';
+  @Input() text: string = '';
   translatedText: string = '';
 
   constructor(private translateService: TranslateService){}

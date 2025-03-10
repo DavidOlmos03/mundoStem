@@ -3,6 +3,11 @@ import { CommonModule } from '@angular/common';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { SwitchLanguagesComponent } from './switch-languages/switch-languages.component';
+
+//Standalone Components
+import { TitleComponent } from './title/title.component';
+import { SubtitleComponent } from './subtitle/subtitle.component';
+
 import { RouterModule } from '@angular/router'; // Asegúrate de importar RouterModule
 
 import { TranslateService } from '@ngx-translate/core';
@@ -34,12 +39,16 @@ import { HeaderComponent } from './header/header.component';
         useFactory:HttLoaderFactory,
         deps:[HttpClient]
       }
-    })
+    }),
+    TitleComponent,
+    SubtitleComponent
   ], exports: [
     NavbarComponent,
     FooterComponent,
     HeaderComponent,
-    SwitchLanguagesComponent
+    SwitchLanguagesComponent,
+    TitleComponent,
+    SubtitleComponent
   ]
 })
 export class SharedModule { }

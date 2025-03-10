@@ -58,7 +58,7 @@ import { TablesModule } from './tables/tables.module';
     }),
     AgGridModule,
     TablesModule,
-      TuiRoot
+    TuiRoot
 ],
   providers: [TranslateService, NG_EVENT_PLUGINS],
   bootstrap: [AppComponent]

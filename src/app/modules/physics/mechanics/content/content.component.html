@@ -1,5 +1,5 @@
 <div class="content">
-  <h1>{{"physics-module.history"|translate}}</h1>
+  <app-title [text]="'physics-module.history'"></app-title>
   <br>
   <!--Desktop mode for index-->
   <div class="desktop-mode">
@@ -63,7 +63,7 @@
         Aristoteles
       -->
   <div id="Aristotle" *ngIf="selectedPart == 'Aristotle'">
-    <h3>{{'physics-module.mechanics.Aristotle.title'|translate}}</h3>
+    <app-subtitle [text]="'physics-module.mechanics.Aristotle.title'"></app-subtitle>
     <p>{{'physics-module.mechanics.Aristotle.text1'|translate}}</p>
     <div class="row desktop-mode">
         <div class="col-6">
@@ -127,7 +127,7 @@
     Galileo Galilei
       -->
   <div id="Galileo" *ngIf="selectedPart == 'Galileo'">
-    <h3>Galileo Galilei</h3>
+    <app-subtitle [text]="'Galileo Galilei'"></app-subtitle>
     <p>
       {{'physics-module.mechanics.Galileo.text1'|translate}}
     </p>
@@ -153,7 +153,7 @@
     </div>
     <div class="row internal-section">
       <div class="row">
-        <h3> {{'physics-module.mechanics.Galileo.quotes.title'|translate}} </h3>
+        <app-subtitle [text]="'physics-module.mechanics.Galileo.quotes.title'"></app-subtitle>
         <p>"{{'physics-module.mechanics.Galileo.quotes.quote1'|translate}}"
           <br>
           -Galileo Galilei
@@ -172,7 +172,7 @@
     Isaac Newton
   -->
   <div id="Newton" *ngIf="selectedPart == 'Newton'">
-    <h3>Isaac Newton</h3>
+    <app-subtitle [text]="'Isaac Newton'"></app-subtitle>
     <p>
       {{'physics-module.mechanics.Newton.text1'|translate}}
     </p>
@@ -199,7 +199,7 @@
     Three body problem
   -->
   <div id="three-body" *ngIf="selectedPart == 'three-body'">
-    <h3>{{'physics-module.mechanics.threeBody.threeBodyProblem'|translate}}</h3>
+    <app-subtitle [text]="'physics-module.mechanics.threeBody.threeBodyProblem'"></app-subtitle>
     <p>
       {{'physics-module.mechanics.threeBody.text1'|translate}}
     </p>
@@ -223,7 +223,7 @@
     Double pendulum problem
   -->
   <div id="double-pendulum" *ngIf="selectedPart == 'double-pendulum'">
-      <h3>{{'physics-module.mechanics.doublePendulum.doublePendulum'|translate}}</h3>
+    <app-subtitle [text]="'physics-module.mechanics.doublePendulum.doublePendulum'"></app-subtitle>
     <p>
       {{'physics-module.mechanics.doublePendulum.text1'|translate}}
     </p>
@@ -241,7 +241,7 @@
     Rigid body problem
   -->
   <div id="rigid-body" *ngIf="selectedPart == 'rigid-body'">
-    <h3>{{'physics-module.mechanics.rigidBody.rigidBody'|translate}}</h3>
+    <app-subtitle [text]="'physics-module.mechanics.rigidBody.rigidBody'"></app-subtitle>
     <p>
       {{'physics-module.mechanics.rigidBody.text1'|translate}}
     </p>
@@ -250,7 +250,7 @@
     Einstein's theory of relativity
   -->
   <div id="Einstein's-theory" *ngIf="selectedPart == 'Einsteins-theory'">
-    <h3>{{'physics-module.mechanics.Einstein.EinsteinTheory'|translate}}</h3>
+    <app-subtitle [text]="'physics-module.mechanics.Einstein.EinsteinTheory'"></app-subtitle>
     <p>
       {{'physics-module.mechanics.Einstein.text1'|translate}}
     </p>
@@ -276,7 +276,7 @@
      Quantum mechanics
   -->
   <div id="Quantum" *ngIf="selectedPart == 'Quantum'">
-  <h3>{{'physics-module.mechanics.quantumMechanics.quantumMechanics'|translate}}</h3>
+  <app-subtitle [text]="'physics-module.mechanics.quantumMechanics.quantumMechanics'"></app-subtitle>
   <p>
     {{'physics-module.mechanics.quantumMechanics.text1'|translate}}
   </p>
@@ -317,7 +317,7 @@
      Celestial Mechanics
   -->
   <div id="celestial-mechanics" *ngIf="selectedPart == 'celestial-mechanics'">
-    <h3>{{'physics-module.mechanics.celestialMechanics.celestialMechanics'|translate}}</h3>
+    <app-subtitle [text]="'physics-module.mechanics.celestialMechanics.celestialMechanics'"></app-subtitle>
     <p>
       {{'physics-module.mechanics.celestialMechanics.text1'|translate}}
       <br>
